@@ -29,13 +29,12 @@ body.profile-site {
 
 .site-nav {
 	align-items: center;
-	backdrop-filter: blur(16px);
-	background: rgba(255, 255, 255, 0.92);
-	border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+	background: #ffffff;
+	border-bottom: 1px solid #e2e8f0;
 	display: flex;
 	justify-content: space-between;
 	left: 0;
-	padding: 0.9rem clamp(1.25rem, 4vw, 3.5rem);
+	padding: 0.9rem clamp(1.25rem, 7vw, 6rem);
 	position: sticky;
 	top: 0;
 	z-index: 20;
@@ -66,27 +65,39 @@ body.profile-site {
 
 .identity-copy {
 	appearance: none;
-	background: #f8fafc;
-	border: 1px solid #e2e8f0;
+	background: #ffffff;
+	border: 1px solid transparent;
 	border-radius: 999px;
 	color: #1e40af;
 	cursor: pointer;
 	display: inline-flex;
-	flex-direction: column;
+	gap: 0.35rem;
 	font: inherit;
-	font-size: 0.8rem;
+	font-size: 0.82rem;
 	font-weight: 800;
+	align-items: center;
 	line-height: 1;
-	padding: 0.55rem 0.7rem;
+	padding: 0.45rem 0.55rem;
 	text-align: left;
+	transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
-.identity-copy small {
+.contact-icon {
 	color: #64748b;
-	font-size: 0.62rem;
-	font-weight: 700;
+	font-size: 0.78rem;
+	line-height: 1;
+}
+
+.identity-copy:hover .contact-icon,
+.identity-copy.is-copied .contact-icon {
+	color: #1d4ed8;
+}
+
+.copy-hint {
+	color: #64748b;
+	font-size: 0.72rem;
+	font-weight: 800;
 	letter-spacing: 0.04em;
-	margin-top: 0.18rem;
 	text-transform: uppercase;
 }
 
@@ -94,10 +105,6 @@ body.profile-site {
 .identity-copy.is-copied {
 	background: #eaf1ff;
 	border-color: #93c5fd;
-	color: #1d4ed8;
-}
-
-.identity-copy.is-copied small {
 	color: #1d4ed8;
 }
 
@@ -177,9 +184,7 @@ body.profile-site {
 }
 
 .cover-shade {
-	background:
-		linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.76) 55%, rgba(30, 64, 175, 0.58)),
-		radial-gradient(circle at 78% 18%, rgba(96, 165, 250, 0.35), transparent 34%);
+	background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.82) 58%, rgba(30, 41, 59, 0.72));
 	inset: 0;
 	position: absolute;
 }
@@ -243,10 +248,10 @@ body.profile-site {
 
 .cover-panel {
 	align-self: end;
-	background: rgba(255, 255, 255, 0.1);
-	border: 1px solid rgba(255, 255, 255, 0.18);
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
 	border-radius: 0.85rem;
-	box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.24);
+	box-shadow: 0 1rem 2.75rem rgba(15, 23, 42, 0.18);
 	padding: 1.25rem;
 }
 
@@ -260,7 +265,7 @@ body.profile-site {
 }
 
 .cover-panel div {
-	border-top: 1px solid rgba(255, 255, 255, 0.18);
+	border-top: 1px solid #e2e8f0;
 	padding: 1rem 0;
 }
 
@@ -269,7 +274,7 @@ body.profile-site {
 }
 
 .cover-panel span {
-	color: rgba(255, 255, 255, 0.58);
+	color: #64748b;
 	display: block;
 	font-size: 0.78rem;
 	font-weight: 800;
@@ -280,13 +285,13 @@ body.profile-site {
 
 .cover-panel strong,
 .cover-panel a {
-	color: #ffffff;
+	color: #0f172a;
 	font-weight: 700;
 }
 
 .role-selector {
-	background: rgba(255, 255, 255, 0.09);
-	border: 1px solid rgba(255, 255, 255, 0.18);
+	background: #ffffff;
+	border: 1px solid #dbeafe;
 	border-radius: 0.9rem;
 	margin-top: 2.2rem;
 	max-width: 48rem;
@@ -301,10 +306,10 @@ body.profile-site {
 }
 
 .selector-tabs button {
-	background: rgba(255, 255, 255, 0.08);
-	border: 1px solid rgba(255, 255, 255, 0.22);
+	background: #f8fafc;
+	border: 1px solid #dbeafe;
 	border-radius: 999px;
-	color: rgba(255, 255, 255, 0.78);
+	color: #475569;
 	cursor: pointer;
 	font: inherit;
 	font-size: 0.86rem;
@@ -315,8 +320,9 @@ body.profile-site {
 
 .selector-tabs button.active,
 .selector-tabs button:hover {
-	background: #ffffff;
-	color: #1d4ed8;
+	background: #2563eb;
+	border-color: #2563eb;
+	color: #ffffff;
 }
 
 .role-panel {
@@ -328,7 +334,7 @@ body.profile-site {
 }
 
 .role-panel h2 {
-	color: #ffffff;
+	color: #0f172a;
 	font-size: 1.25rem;
 	font-weight: 800;
 	line-height: 1.2;
@@ -336,7 +342,7 @@ body.profile-site {
 }
 
 .role-panel p {
-	color: rgba(255, 255, 255, 0.74);
+	color: #475569;
 	font-size: 0.95rem;
 	margin-bottom: 0;
 }
@@ -420,7 +426,8 @@ body.profile-site {
 
 .route-grid,
 .card-grid,
-.contact-grid {
+.contact-grid,
+.project-grid {
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -429,6 +436,8 @@ body.profile-site {
 .route-card,
 .info-card,
 .contact-card,
+.project-card,
+.thought-card,
 .role-card,
 .education-card,
 .skill-panel,
@@ -442,6 +451,8 @@ body.profile-site {
 .route-card,
 .info-card,
 .contact-card,
+.project-card,
+.thought-card,
 .role-card,
 .education-card,
 .skill-panel,
@@ -476,6 +487,8 @@ body.profile-site {
 .route-card h3,
 .info-card h3,
 .contact-card h2,
+.project-card h2,
+.thought-card h2,
 .education-card h2,
 .skill-panel h2 {
 	font-size: 1.25rem;
@@ -487,6 +500,8 @@ body.profile-site {
 .route-card p,
 .info-card p,
 .contact-card h2,
+.project-card p,
+.thought-card p,
 .education-card p,
 .role-summary {
 	color: #64748b;
@@ -621,6 +636,19 @@ body.profile-site {
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+}
+
+.thought-list {
+	display: grid;
+	gap: 1rem;
+}
+
+.thought-card {
+	border-left: 4px solid #bfdbfe;
+}
+
+.project-card .skill-pills {
+	margin-top: 1.1rem;
 }
 
 .tool-cluster {
@@ -839,8 +867,8 @@ body.profile-site {
 }
 
 .search-wrap {
-	background: rgba(255, 255, 255, 0.11);
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
 	border-radius: 0.85rem;
 	margin-top: 2rem;
 	max-width: 40rem;
@@ -848,7 +876,7 @@ body.profile-site {
 }
 
 .search-wrap label {
-	color: rgba(255, 255, 255, 0.7);
+	color: #64748b;
 	display: block;
 	font-size: 0.78rem;
 	font-weight: 800;
@@ -957,6 +985,7 @@ body.profile-site {
 	.route-grid,
 	.card-grid,
 	.contact-grid,
+	.project-grid,
 	.capability-board,
 	.outcome-strip {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1035,6 +1064,7 @@ body.profile-site {
 	.route-grid,
 	.card-grid,
 	.contact-grid,
+	.project-grid,
 	.capability-board,
 	.outcome-strip {
 		grid-template-columns: 1fr;

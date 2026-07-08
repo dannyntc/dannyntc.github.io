@@ -115,23 +115,44 @@
 		var matchingFilter = document.querySelector(".filter-btn[data-filter=\"" + filter + "\"]");
 		if (matchingFilter) {
 			matchingFilter.click();
+			var experienceSection = document.getElementById("experience");
+			if (experienceSection) {
+				window.setTimeout(function () {
+					experienceSection.scrollIntoView({ behavior: "smooth", block: "start" });
+				}, 80);
+			}
 		}
 	}
 
 	applyProofHash();
 	window.addEventListener("hashchange", applyProofHash);
 
+	var copiedButton = null;
+	var copiedTimer = null;
+
+	function restoreCopiedButton() {
+		if (!copiedButton) return;
+		copiedButton.innerHTML = copiedButton.getAttribute("data-copy-html") || copiedButton.textContent;
+		copiedButton.classList.remove("is-copied");
+		copiedButton = null;
+		if (copiedTimer) {
+			window.clearTimeout(copiedTimer);
+			copiedTimer = null;
+		}
+	}
+
 	Array.prototype.slice.call(document.querySelectorAll("[data-copy]")).forEach(function (button) {
+		button.setAttribute("data-copy-html", button.innerHTML);
 		button.addEventListener("click", function () {
 			var value = button.getAttribute("data-copy");
 			if (!value || !navigator.clipboard) return;
 			navigator.clipboard.writeText(value).then(function () {
-				var oldHtml = button.innerHTML;
+				restoreCopiedButton();
+				copiedButton = button;
 				button.classList.add("is-copied");
-				button.innerHTML = "<span>Copied</span><small>saved</small>";
-				window.setTimeout(function () {
-					button.innerHTML = oldHtml;
-					button.classList.remove("is-copied");
+				button.textContent = "Copied";
+				copiedTimer = window.setTimeout(function () {
+					restoreCopiedButton();
 				}, 1400);
 			});
 		});
