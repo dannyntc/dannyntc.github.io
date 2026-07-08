@@ -11,15 +11,18 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/profile.css" />
 	</head>
-	<body class="profile-site">
+	<body class="profile-site home-page">
 		<nav class="site-nav" aria-label="Primary navigation">
-			<div class="nav-identity">
-				<a class="brand" href="index.html">Danny Ng</a>
-				<div class="identity-links" aria-label="Copy contact details">
-					<span class="copy-hint">click to copy</span>
-					<button class="identity-copy" type="button" data-copy="danny.ntc@outlook.com" aria-label="Copy email address"><span class="fas fa-envelope contact-icon" aria-hidden="true"></span>danny.ntc@outlook.com</button>
-					<button class="identity-copy" type="button" data-copy="https://www.linkedin.com/in/dannyntc/" aria-label="Copy LinkedIn profile"><span class="fab fa-linkedin contact-icon" aria-hidden="true"></span>linkedin.com/in/dannyntc</button>
-					<button class="identity-copy" type="button" data-copy="9646 1043" aria-label="Copy phone number"><span class="fas fa-phone-alt contact-icon" aria-hidden="true"></span>9646 1043</button>
+			<div class="nav-identity has-photo">
+				<img class="nav-photo" src="images/avatar.jpg" alt="Danny Ng" />
+				<div class="identity-stack">
+					<a class="brand" href="index.html"><span class="brand-first">Danny</span><span class="brand-last">Ng</span></a>
+					<div class="identity-links" aria-label="Copy contact details">
+						<span class="copy-hint">(click to copy)</span>
+						<button class="identity-copy" type="button" data-copy="danny.ntc@outlook.com" aria-label="Copy email address"><span class="fas fa-envelope contact-icon" aria-hidden="true"></span>danny.ntc@outlook.com</button>
+						<button class="identity-copy" type="button" data-copy="https://www.linkedin.com/in/dannyntc/" aria-label="Copy LinkedIn profile"><span class="fab fa-linkedin contact-icon" aria-hidden="true"></span>linkedin.com/in/dannyntc</button>
+						<button class="identity-copy" type="button" data-copy="9646 1043" aria-label="Copy phone number"><span class="fas fa-phone-alt contact-icon" aria-hidden="true"></span>9646 1043</button>
+					</div>
 				</div>
 			</div>
 			<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
@@ -27,15 +30,15 @@
 				<a class="active" href="index.html">Home</a>
 				<a href="capabilities.html">Capabilities</a>
 				<a href="side-projects.html">Side Projects</a>
-				<a href="thoughts.html">Thoughts</a>
+				<a href="thoughts.html">Thought Process</a>
+				<a href="musings.html">Musings</a>
 			</div>
 		</nav>
 
 		<header class="cover-hero">
 			<div class="cover-shade"></div>
 			<div class="cover-content reveal">
-				<h1>Strategy, operations, and AI-enabled transformation.</h1>
-				<p class="hero-role">Business Consultant | Growth Strategy, Operations Improvement &amp; Market Entry</p>
+				<h1>Strategy | Operations | AI-enabled transformation | Market-Growth</h1>
 				<p class="hero-summary">I help teams turn research into practical execution: strategy pivots, market-entry groundwork, process redesign, B2B prospecting systems, stakeholder coordination, and AI-assisted workflow improvement.</p>
 				<div class="hero-actions">
 					<a class="button primary" href="#case-studies">View Case Studies</a>
@@ -67,49 +70,25 @@
 					</div>
 				</div>
 			</div>
-			<div class="cover-panel reveal">
-				<img src="images/avatar.jpg" alt="Danny Ng" />
-				<div>
-					<span>Target roles</span>
-					<strong>Consulting, Strategy, Operations, Transformation, Growth</strong>
-				</div>
-				<div>
-					<span>Location</span>
-					<strong>Singapore</strong>
-				</div>
-				<div>
-					<span>Contact</span>
-					<strong><a href="mailto:danny.ntc@outlook.com">danny.ntc@outlook.com</a></strong>
-				</div>
-			</div>
 		</header>
 
 		<main>
-			<section class="section-wrap two-column">
-				<div class="reveal">
-					<p class="eyebrow">Professional fit</p>
-					<h2>Structured business problem-solver with consulting, growth, operations, and transformation experience.</h2>
-					<p>I am targeting business-facing roles in consulting, strategy, operations, transformation, business analysis, growth, and related functions.</p>
-					<p>My background spans market entry, client implementation, operations improvement, B2B prospecting, CRM setup, workflow digitisation, and AI-assisted productivity.</p>
-					<div class="proof-links">
-						<a class="proof-link" href="#consulting">Consulting proof</a>
-						<a class="proof-link" href="#growth">Growth proof</a>
-						<a class="proof-link" href="#operations">Operations proof</a>
-						<a class="proof-link" href="#automation">Transformation proof</a>
-					</div>
+			<section class="section-wrap overview-section" id="overview">
+				<div class="section-heading profile-section-title reveal">
+					<h2>Overview</h2>
+					<p>Structured business problem-solver with consulting, growth, operations, and transformation experience</p>
 				</div>
-				<aside class="profile-facts reveal">
-					<div><span>Useful in</span><strong>Strategy, operations, transformation, growth, business analysis</strong></div>
-					<div><span>Working style</span><strong>Research-led, structured, practical, execution-focused</strong></div>
-					<div><span>Differentiator</span><strong>Business foundation with hands-on AI and workflow automation exposure</strong></div>
-				</aside>
-			</section>
-
-			<section class="section-wrap">
-				<div class="section-heading reveal">
-					<p class="eyebrow">Recruiter snapshot</p>
-					<h2>Proof points first, full evidence one click away.</h2>
-					<p>Each headline metric is tied to a real operating context, so the site reads less like a claim and more like a business-impact record.</p>
+				<div class="two-column overview-grid">
+					<div class="reveal">
+						<p>I am targeting business-facing roles in consulting, strategy, operations, transformation, business analysis, growth, and related functions.</p>
+						<p>My background spans market entry, client implementation, operations improvement, B2B prospecting, CRM setup, workflow digitisation, and AI-assisted productivity.</p>
+						<p>Each headline metric is tied to a real operating context, so the site reads less like a claim and more like a business-impact record.</p>
+					</div>
+					<aside class="profile-facts reveal">
+						<div><span>Useful in</span><strong>Strategy, operations, transformation, growth, business analysis</strong></div>
+						<div><span>Working style</span><strong>Research-led, structured, practical, execution-focused</strong></div>
+						<div><span>Differentiator</span><strong>Business foundation with hands-on AI and workflow automation exposure</strong></div>
+					</aside>
 				</div>
 				<div class="metric-strip reveal" data-animate-metrics>
 					<article>
@@ -132,9 +111,9 @@
 			</section>
 
 			<section class="section-wrap">
-				<div class="section-heading reveal">
-					<p class="eyebrow">Strengths</p>
-					<h2>Where I can contribute.</h2>
+				<div class="section-heading profile-section-title reveal">
+					<h2>Strengths</h2>
+					<p>Where I can contribute</p>
 				</div>
 				<div class="card-grid">
 					<article class="info-card reveal">
@@ -157,10 +136,9 @@
 			</section>
 
 			<section class="section-wrap" id="case-studies">
-				<div class="section-heading reveal">
-					<p class="eyebrow">Case studies</p>
-					<h2>Business-impact examples, structured by context, action, and result.</h2>
-					<p>These selected examples pull the strongest CV achievements into recruiter-friendly stories, showing how I diagnose problems, structure work, and support execution.</p>
+				<div class="section-heading profile-section-title reveal">
+					<h2>Case Studies</h2>
+					<p>Business-impact examples, structured by context, action, and result</p>
 				</div>
 				<div class="experience-timeline">
 					<article class="role-card reveal case-study">
@@ -267,21 +245,13 @@
 			</section>
 
 			<section class="section-wrap" id="experience">
-				<div class="section-heading reveal">
-					<p class="eyebrow">Experience</p>
-					<h2>Career record filtered by the hiring question.</h2>
-					<p>Use the filters to focus the work history around consulting, growth, operations, or transformation evidence.</p>
-				</div>
-				<div class="filter-bar" data-filter-group>
-					<button class="filter-btn active" type="button" data-filter="all">All</button>
-					<button class="filter-btn" id="consulting" type="button" data-filter="consulting">Consulting</button>
-					<button class="filter-btn" id="growth" type="button" data-filter="growth">Growth</button>
-					<button class="filter-btn" id="operations" type="button" data-filter="operations">Operations</button>
-					<button class="filter-btn" id="automation" type="button" data-filter="automation">Transformation</button>
+				<div class="section-heading profile-section-title reveal">
+					<h2>Experience</h2>
+					<p>Career record across consulting, growth, operations, and transformation evidence</p>
 				</div>
 
 				<div class="experience-timeline compact">
-					<article class="role-card reveal filter-card" data-tags="growth operations automation consulting">
+					<article class="role-card reveal">
 						<div class="role-head">
 							<div><h2>HLS Interiors</h2><p>Growth &amp; Strategy Lead</p></div>
 							<span>Mar 2025 &ndash; Feb 2026</span>
@@ -298,7 +268,7 @@
 						</ul>
 					</article>
 
-					<article class="role-card reveal filter-card" data-tags="growth consulting automation">
+					<article class="role-card reveal">
 						<div class="role-head">
 							<div><h2>Lu Strategy Consulting Group</h2><p>Business Development &amp; Marketing Executive, Premier&rsquo;s Tea Singapore</p></div>
 							<span>Jun 2023 &ndash; Sep 2024</span>
@@ -315,7 +285,7 @@
 						</ul>
 					</article>
 
-					<article class="role-card reveal filter-card" data-tags="consulting growth operations">
+					<article class="role-card reveal">
 						<div class="role-head">
 							<div><h2>Lu Strategy Consulting Group</h2><p>Associate Consultant</p></div>
 							<span>Apr 2022 &ndash; Sep 2024</span>
@@ -332,7 +302,7 @@
 						</ul>
 					</article>
 
-					<article class="role-card reveal filter-card" data-tags="operations automation">
+					<article class="role-card reveal">
 						<div class="role-head">
 							<div><h2>Lu Strategy Consulting Group</h2><p>Secretary</p></div>
 							<span>Apr 2021 &ndash; Sep 2024</span>
@@ -348,7 +318,7 @@
 						</ul>
 					</article>
 
-					<article class="role-card reveal filter-card" data-tags="growth consulting">
+					<article class="role-card reveal">
 						<div class="role-head">
 							<div><h2>Lu Strategy Consulting Group</h2><p>Marketing &amp; Copywriting</p></div>
 							<span>Apr 2021 &ndash; Sep 2024</span>
@@ -361,7 +331,7 @@
 						</ul>
 					</article>
 
-					<article class="role-card reveal filter-card" data-tags="growth consulting operations">
+					<article class="role-card reveal">
 						<div class="role-head">
 							<div><h2>Angie&rsquo;s Tempeh</h2><p>Fundraising Intern, Strategy &amp; Investor Readiness</p></div>
 							<span>Jun 2021 &ndash; Jul 2021</span>
@@ -377,7 +347,7 @@
 						</ul>
 					</article>
 
-					<article class="role-card reveal filter-card" data-tags="consulting operations automation">
+					<article class="role-card reveal">
 						<div class="role-head">
 							<div><h2>Vvolve Management Consulting</h2><p>Associate Consultant</p></div>
 							<span>Jul 2018 &ndash; Jul 2019</span>
@@ -392,7 +362,7 @@
 						</ul>
 					</article>
 
-					<article class="role-card reveal filter-card" data-tags="operations">
+					<article class="role-card reveal">
 						<div class="role-head">
 							<div><h2>Bank of China</h2><p>Admin Assistant</p></div>
 							<span>Sep 2017 &ndash; Jun 2018</span>
@@ -409,9 +379,9 @@
 			</section>
 
 			<section class="section-wrap" id="education">
-				<div class="section-heading reveal">
-					<p class="eyebrow">Education</p>
-					<h2>Economics foundation, business coursework, and current self-directed technical learning.</h2>
+				<div class="section-heading profile-section-title reveal">
+					<h2>Education</h2>
+					<p>Economics foundation, business coursework, and current self-directed technical learning</p>
 				</div>
 				<div class="education-stack">
 					<article class="education-card reveal">
@@ -442,29 +412,6 @@
 				</div>
 			</section>
 
-			<section class="section-wrap">
-				<div class="section-heading reveal">
-					<p class="eyebrow">Explore further</p>
-					<h2>Separate pages for skills, projects, and writing.</h2>
-				</div>
-				<div class="route-grid">
-					<a class="route-card reveal" href="capabilities.html">
-						<span>01</span>
-						<h3>Capabilities</h3>
-						<p>Outcome-based skills grouped by strategy, operations, growth, analysis, automation, and AI.</p>
-					</a>
-					<a class="route-card reveal" href="side-projects.html">
-						<span>02</span>
-						<h3>Side Projects</h3>
-						<p>Self-directed AI, automation, and workflow experiments kept separate from formal work experience.</p>
-					</a>
-					<a class="route-card reveal" href="thoughts.html">
-						<span>03</span>
-						<h3>Thoughts</h3>
-						<p>Short professional notes on consulting, operations, AI productivity, and learning in public.</p>
-					</a>
-				</div>
-			</section>
 		</main>
 
 		<footer class="site-footer">

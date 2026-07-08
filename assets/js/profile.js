@@ -70,22 +70,6 @@
 		Array.prototype.slice.call(document.querySelectorAll("[data-count]")).forEach(animateMetric);
 	}
 
-	var filterButtons = Array.prototype.slice.call(document.querySelectorAll(".filter-btn"));
-	var filterCards = Array.prototype.slice.call(document.querySelectorAll(".filter-card"));
-
-	filterButtons.forEach(function (button) {
-		button.addEventListener("click", function () {
-			var filter = button.getAttribute("data-filter");
-			filterButtons.forEach(function (item) {
-				item.classList.toggle("active", item === button);
-			});
-			filterCards.forEach(function (card) {
-				var tags = card.getAttribute("data-tags") || "";
-				card.classList.toggle("is-hidden", filter !== "all" && tags.indexOf(filter) === -1);
-			});
-		});
-	});
-
 	Array.prototype.slice.call(document.querySelectorAll("[data-toggle-details]")).forEach(function (button) {
 		button.addEventListener("click", function () {
 			var details = button.nextElementSibling;
@@ -108,24 +92,6 @@
 			});
 		});
 	});
-
-	function applyProofHash() {
-		var filter = window.location.hash.replace("#", "");
-		if (!filter) return;
-		var matchingFilter = document.querySelector(".filter-btn[data-filter=\"" + filter + "\"]");
-		if (matchingFilter) {
-			matchingFilter.click();
-			var experienceSection = document.getElementById("experience");
-			if (experienceSection) {
-				window.setTimeout(function () {
-					experienceSection.scrollIntoView({ behavior: "smooth", block: "start" });
-				}, 80);
-			}
-		}
-	}
-
-	applyProofHash();
-	window.addEventListener("hashchange", applyProofHash);
 
 	var copiedButton = null;
 	var copiedTimer = null;
