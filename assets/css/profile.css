@@ -573,6 +573,11 @@ body.profile-site {
 	gap: 1rem;
 	min-height: 27rem;
 	padding: 1.3rem;
+	transition: transform 180ms ease;
+}
+
+.capability-feature:hover {
+	transform: translateY(-4px);
 }
 
 .capability-feature.emphasized {
