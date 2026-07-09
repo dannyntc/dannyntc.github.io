@@ -307,48 +307,25 @@ body.profile-site {
 }
 
 .hero-overview {
-	margin-top: clamp(2.6rem, 5vw, 4rem);
+	margin-top: clamp(1.8rem, 4vw, 3rem);
 }
 
-.hero-overview .eyebrow {
-	margin-bottom: 0.7rem;
-}
-
-.hero-overview h2 {
-	color: #ffffff;
-	font-size: clamp(1.65rem, 2.4vw, 2.35rem);
-	font-weight: 800;
-	line-height: 1.12;
-	margin: 0 0 1.55rem 0;
-	max-width: 58rem;
-}
-
-.hero-overview-grid {
-	align-items: start;
-	margin-bottom: 1.4rem;
-}
-
-.hero-copy p {
+.hero-note {
 	color: rgba(255, 255, 255, 0.78);
+	margin-bottom: 1.4rem;
+	max-width: 56rem;
 }
 
-.hero-facts,
 .cover-hero .metric-strip article {
 	background: rgba(15, 23, 42, 0.58);
 	border-color: rgba(147, 197, 253, 0.25);
 	box-shadow: 0 1rem 2.75rem rgba(0, 0, 0, 0.18);
 }
 
-.hero-facts div {
-	border-color: rgba(147, 197, 253, 0.22);
-}
-
-.hero-facts span,
 .cover-hero .metric-context {
 	color: #93c5fd;
 }
 
-.hero-facts strong,
 .cover-hero .metric-strip span {
 	color: rgba(255, 255, 255, 0.82);
 }
