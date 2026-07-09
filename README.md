@@ -5,8 +5,8 @@ Static GitHub Pages site for a recruiter-facing professional profile.
 ## Edit
 
 - Main page: `index.html`
-- Core pages: `experience.html`, `case-studies.html`, `capabilities.html`, `education.html`
-- Legacy forwarding pages: `profile.html`, `projects.html`, `skills.html`, `contact.html`
+- Core pages: `experience.html`, `case-studies.html`, `education.html`
+- Legacy forwarding pages: `profile.html`, `projects.html`, `skills.html`, `capabilities.html`, `contact.html`
 - Base template styling: `assets/css/main.css`
 - Site-specific styling: `assets/css/profile.css`
 - Site interactions: `assets/js/profile.js`
