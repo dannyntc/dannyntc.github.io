@@ -574,7 +574,7 @@ body.profile-site {
 	min-height: 27rem;
 	padding: 1.3rem;
 	transform-origin: center;
-	transition: transform 220ms ease;
+	transform-style: preserve-3d;
 }
 
 .capability-feature.emphasized {
@@ -584,11 +584,21 @@ body.profile-site {
 }
 
 .capability-feature:hover {
-	transform: perspective(56rem) rotateX(1.6deg) rotateY(-2.2deg);
+	animation: roadmap-card-swivel 820ms ease both;
 }
 
-.capability-feature:nth-child(even):hover {
-	transform: perspective(56rem) rotateX(1.6deg) rotateY(2.2deg);
+@keyframes roadmap-card-swivel {
+	0% {
+		transform: perspective(56rem) rotateY(0deg);
+	}
+
+	50% {
+		transform: perspective(56rem) rotateY(180deg);
+	}
+
+	100% {
+		transform: perspective(56rem) rotateY(360deg);
+	}
 }
 
 .capability-feature > span {
