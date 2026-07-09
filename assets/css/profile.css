@@ -60,9 +60,9 @@ body.profile-site {
 	border-radius: 999px;
 	display: block;
 	flex: 0 0 auto;
-	height: 4.35rem;
+	height: 6.53rem;
 	object-fit: cover;
-	width: 4.35rem;
+	width: 6.53rem;
 }
 
 .identity-stack {
@@ -131,8 +131,8 @@ body.profile-site {
 }
 
 .copy-hint {
-	color: #64748b;
-	font-size: 0.72rem;
+	color: #738195;
+	font-size: 0.82rem;
 	font-weight: 800;
 	letter-spacing: 0.04em;
 	line-height: 1;
@@ -162,6 +162,7 @@ body.profile-site {
 	line-height: 1;
 	padding: 0.7rem 0.85rem;
 	text-align: center;
+	transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 	white-space: nowrap;
 }
 
@@ -175,6 +176,12 @@ body.profile-site {
 .nav-toggle:hover {
 	background: #eaf1ff;
 	color: #1d4ed8 !important;
+	transform: translateY(-1px);
+}
+
+.nav-links a:active,
+.nav-toggle:active {
+	transform: translateY(0) scale(0.98);
 }
 
 .nav-toggle {
@@ -192,6 +199,11 @@ body.profile-site {
 
 	.identity-links {
 		flex-wrap: nowrap;
+	}
+
+	.nav-links {
+		align-self: flex-start;
+		margin-top: calc(2.58rem + 0.5rem);
 	}
 }
 
@@ -233,7 +245,6 @@ body.profile-site {
 	color: #ffffff;
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);
-	min-height: calc(100vh - 4.25rem);
 	overflow: hidden;
 	padding: clamp(4rem, 8vw, 8rem) clamp(1.25rem, 7vw, 6rem);
 	position: relative;
@@ -252,7 +263,7 @@ body.profile-site {
 
 .cover-content {
 	align-self: center;
-	max-width: 64rem;
+	max-width: 78rem;
 }
 
 .eyebrow {
@@ -295,69 +306,55 @@ body.profile-site {
 	max-width: 45rem;
 }
 
-.hero-actions {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.75rem;
-	margin-top: 2rem;
+.hero-overview {
+	margin-top: clamp(2.6rem, 5vw, 4rem);
 }
 
-.role-selector {
-	background: #ffffff;
-	border: 1px solid #dbeafe;
-	border-radius: 0.9rem;
-	margin-top: 2.2rem;
-	max-width: 48rem;
-	padding: 1rem;
+.hero-overview .eyebrow {
+	margin-bottom: 0.7rem;
 }
 
-.selector-tabs {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5rem;
-	margin-bottom: 1rem;
-}
-
-.selector-tabs button {
-	background: #f8fafc;
-	border: 1px solid #dbeafe;
-	border-radius: 999px;
-	color: #475569;
-	cursor: pointer;
-	font: inherit;
-	font-size: 0.86rem;
-	font-weight: 800;
-	line-height: 1;
-	padding: 0.75rem 0.9rem;
-}
-
-.selector-tabs button.active,
-.selector-tabs button:hover {
-	background: #2563eb;
-	border-color: #2563eb;
+.hero-overview h2 {
 	color: #ffffff;
-}
-
-.role-panel {
-	display: none;
-}
-
-.role-panel.active {
-	display: block;
-}
-
-.role-panel h2 {
-	color: #0f172a;
-	font-size: 1.25rem;
+	font-size: clamp(1.65rem, 2.4vw, 2.35rem);
 	font-weight: 800;
-	line-height: 1.2;
-	margin: 0 0 0.55rem 0;
+	line-height: 1.12;
+	margin: 0 0 1.55rem 0;
+	max-width: 58rem;
 }
 
-.role-panel p {
-	color: #475569;
-	font-size: 0.95rem;
-	margin-bottom: 0;
+.hero-overview-grid {
+	align-items: start;
+	margin-bottom: 1.4rem;
+}
+
+.hero-copy p {
+	color: rgba(255, 255, 255, 0.78);
+}
+
+.hero-facts,
+.cover-hero .metric-strip article {
+	background: rgba(15, 23, 42, 0.58);
+	border-color: rgba(147, 197, 253, 0.25);
+	box-shadow: 0 1rem 2.75rem rgba(0, 0, 0, 0.18);
+}
+
+.hero-facts div {
+	border-color: rgba(147, 197, 253, 0.22);
+}
+
+.hero-facts span,
+.cover-hero .metric-context {
+	color: #93c5fd;
+}
+
+.hero-facts strong,
+.cover-hero .metric-strip span {
+	color: rgba(255, 255, 255, 0.82);
+}
+
+.cover-hero .metric-strip strong {
+	color: #bfdbfe;
 }
 
 .section-wrap {
@@ -552,38 +549,7 @@ body.profile-site {
 }
 
 .case-study {
-	display: grid;
-	gap: 1.2rem;
-	grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
-}
-
-.case-meta {
-	background: #eff6ff;
-	border: 1px solid #bfdbfe;
-	border-radius: 0.75rem;
-	padding: 1rem;
-}
-
-.case-meta span {
-	color: #1e40af;
 	display: block;
-	font-size: 0.75rem;
-	font-weight: 800;
-	letter-spacing: 0.08em;
-	margin-bottom: 0.25rem;
-	text-transform: uppercase;
-}
-
-.case-meta strong {
-	color: #0f172a;
-	display: block;
-	font-size: 1rem;
-	line-height: 1.35;
-	margin-bottom: 0.85rem;
-}
-
-.case-meta strong:last-child {
-	margin-bottom: 0;
 }
 
 .proof-links {
@@ -1007,8 +973,7 @@ body.profile-site {
 
 @media screen and (max-width: 980px) {
 	.cover-hero,
-	.two-column,
-	.case-study {
+	.two-column {
 		grid-template-columns: 1fr;
 	}
 
@@ -1061,8 +1026,8 @@ body.profile-site {
 	}
 
 	.nav-photo {
-		height: 3.45rem;
-		width: 3.45rem;
+		height: 5.18rem;
+		width: 5.18rem;
 	}
 
 	.brand {

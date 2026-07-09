@@ -79,20 +79,6 @@
 		});
 	});
 
-	var roleButtons = Array.prototype.slice.call(document.querySelectorAll("[data-role-target]"));
-	var rolePanels = Array.prototype.slice.call(document.querySelectorAll("[data-role-panel]"));
-	roleButtons.forEach(function (button) {
-		button.addEventListener("click", function () {
-			var target = button.getAttribute("data-role-target");
-			roleButtons.forEach(function (item) {
-				item.classList.toggle("active", item === button);
-			});
-			rolePanels.forEach(function (panel) {
-				panel.classList.toggle("active", panel.getAttribute("data-role-panel") === target);
-			});
-		});
-	});
-
 	var copiedButton = null;
 	var copiedTimer = null;
 
