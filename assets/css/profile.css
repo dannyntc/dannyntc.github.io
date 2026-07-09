@@ -819,6 +819,49 @@ body.profile-site {
 	text-align: right;
 }
 
+.role-group {
+	display: grid;
+	gap: 1.15rem;
+}
+
+.role-subsection {
+	border-top: 1px solid #e2e8f0;
+	padding-top: 1rem;
+}
+
+.role-subsection:first-child {
+	border-top: 0;
+	padding-top: 0;
+}
+
+.role-subhead {
+	align-items: flex-start;
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+	margin-bottom: 0.65rem;
+}
+
+.role-subhead h3 {
+	font-size: 1.05rem;
+	font-weight: 800;
+	margin: 0 0 0.2rem 0;
+}
+
+.role-subhead p {
+	color: #1f2937;
+	font-weight: 700;
+	margin: 0;
+}
+
+.role-subhead span {
+	color: #64748b;
+	flex: 0 0 auto;
+	font-size: 0.8rem;
+	font-weight: 800;
+	text-align: right;
+}
+
 .text-toggle {
 	margin-top: 1rem;
 }
@@ -1061,11 +1104,13 @@ body.profile-site {
 		grid-template-columns: 1fr;
 	}
 
-	.role-head {
+	.role-head,
+	.role-subhead {
 		display: block;
 	}
 
-	.role-head span {
+	.role-head span,
+	.role-subhead span {
 		display: block;
 		margin-top: 0.45rem;
 		text-align: left;
