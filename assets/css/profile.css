@@ -573,32 +573,12 @@ body.profile-site {
 	gap: 1rem;
 	min-height: 27rem;
 	padding: 1.3rem;
-	transform-origin: center;
-	transform-style: preserve-3d;
 }
 
 .capability-feature.emphasized {
-	background: #1d4ed8;
-	border-color: #1d4ed8;
-	box-shadow: 0 1rem 2.75rem rgba(29, 78, 216, 0.16);
-}
-
-.capability-feature:hover {
-	animation: roadmap-card-swivel 820ms ease both;
-}
-
-@keyframes roadmap-card-swivel {
-	0% {
-		transform: perspective(56rem) rotateY(0deg);
-	}
-
-	50% {
-		transform: perspective(56rem) rotateY(180deg);
-	}
-
-	100% {
-		transform: perspective(56rem) rotateY(360deg);
-	}
+	background: #1e3a8a;
+	border-color: #1e3a8a;
+	box-shadow: 0 1rem 2.75rem rgba(30, 58, 138, 0.18);
 }
 
 .capability-feature > span {
