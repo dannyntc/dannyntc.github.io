@@ -331,7 +331,8 @@ body.profile-site {
 }
 
 .cover-hero .metric-strip strong {
-	color: #bfdbfe;
+	color: #38bdf8;
+	text-shadow: 0 0.45rem 1.5rem rgba(56, 189, 248, 0.26);
 }
 
 .section-wrap {
