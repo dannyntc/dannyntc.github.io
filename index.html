@@ -299,6 +299,155 @@
 				</div>
 			</section>
 
+			<section class="section-wrap" id="academic-projects">
+				<div class="section-heading profile-section-title reveal">
+					<h2>Academic Data Project</h2>
+					<p>Applied economics research translated into visual evidence</p>
+				</div>
+				<article class="research-card reveal">
+					<div class="research-card-head">
+						<div>
+							<span class="date-label">HE3004 Health Economics</span>
+							<h2>Religiosity and Childhood Vaccination Rates in the United States</h2>
+							<p class="role-summary">Analysed whether Christian religiosity was associated with state-level MMR, DTaP, and HepB vaccination rates using CDC vaccination data, Baylor Religion Survey responses, demographic controls, and a first-difference model. The project translated a public-health question into a measurable index, matched state-level datasets, and interpreted why a null finding still matters for vaccine policy.</p>
+						</div>
+						<div class="research-finding">
+							<span>Core finding</span>
+							<strong>No observable association</strong>
+							<p>Across the three vaccine models, religiosity was not statistically significant at conventional 1%, 5%, or 10% levels.</p>
+						</div>
+					</div>
+
+					<div class="research-context-grid">
+						<div class="context-chip">
+							<span>Research scope</span>
+							<strong>U.S. state-level comparison</strong>
+							<p>Focused on school-going child vaccination coverage and Christian religiosity across matched state observations.</p>
+						</div>
+						<div class="context-chip">
+							<span>Time frame</span>
+							<strong>2014 to 2017</strong>
+							<p>Compared two survey waves and vaccination reporting periods through first-differenced changes.</p>
+						</div>
+						<div class="context-chip">
+							<span>Outcome variables</span>
+							<strong>MMR, DTaP, HepB</strong>
+							<p>Used vaccination coverage percentages for measles-mumps-rubella, diphtheria-tetanus-pertussis, and hepatitis B.</p>
+						</div>
+						<div class="context-chip">
+							<span>Controls</span>
+							<strong>Demographics and education</strong>
+							<p>Included age, income, college education, and percentage White population to reduce omitted-variable bias.</p>
+						</div>
+					</div>
+
+					<div class="research-viz-grid">
+						<div class="viz-panel">
+							<h3>Mean Vaccination Coverage</h3>
+							<p>Average state coverage remained high from 2014 to 2017, with all three vaccines near the 95% public-health benchmark.</p>
+							<div class="chart-meta"><span>Unit: percentage of school-going children covered</span><span>Benchmark: 95%</span></div>
+							<div class="bar-group" aria-label="Mean vaccination coverage in 2014 and 2017">
+								<div class="paired-bar">
+									<div class="bar-label"><span>MMR</span><strong>2014 n=37 | 2017 n=34</strong></div>
+									<div class="bar-track benchmark-95"><span class="bar-fill muted" style="width: 93.59%"></span><em>2014: 93.59%</em></div>
+									<div class="bar-track benchmark-95"><span class="bar-fill" style="width: 94.35%"></span><em>2017: 94.35%</em></div>
+								</div>
+								<div class="paired-bar">
+									<div class="bar-label"><span>DTaP</span><strong>2014 n=36 | 2017 n=34</strong></div>
+									<div class="bar-track benchmark-95"><span class="bar-fill muted" style="width: 94%"></span><em>2014: 94.00%</em></div>
+									<div class="bar-track benchmark-95"><span class="bar-fill" style="width: 94.75%"></span><em>2017: 94.75%</em></div>
+								</div>
+								<div class="paired-bar">
+									<div class="bar-label"><span>HepB</span><strong>2014 n=34 | 2017 n=32</strong></div>
+									<div class="bar-track benchmark-95"><span class="bar-fill muted" style="width: 95.04%"></span><em>2014: 95.04%</em></div>
+									<div class="bar-track benchmark-95"><span class="bar-fill" style="width: 95.58%"></span><em>2017: 95.58%</em></div>
+								</div>
+							</div>
+							<div class="axis-labels"><span>0%</span><span>95% target</span><span>100%</span></div>
+							<div class="chart-legend"><span><i class="legend-muted"></i>2014</span><span><i></i>2017</span></div>
+						</div>
+
+						<div class="viz-panel">
+							<h3>Religiosity Index</h3>
+							<p>The constructed religiosity score averaged five CRS-aligned survey measures and was scaled out of 10.</p>
+							<div class="chart-meta"><span>Unit: index score from 0 to 10</span><span>Source: Baylor Religion Survey</span></div>
+							<div class="index-chart" aria-label="Mean religiosity index out of 10">
+								<div class="index-row">
+									<div class="bar-label"><span>2014 mean</span><strong>n=39 | SD=0.78</strong></div>
+									<div class="bar-track scale-ten"><span class="bar-fill muted" style="width: 66.6%"></span><em>6.66 / 10</em></div>
+								</div>
+								<div class="index-row">
+									<div class="bar-label"><span>2017 mean</span><strong>n=34 | SD=0.67</strong></div>
+									<div class="bar-track scale-ten"><span class="bar-fill" style="width: 71%"></span><em>7.10 / 10</em></div>
+								</div>
+							</div>
+							<div class="axis-labels"><span>0 low</span><span>5 midpoint</span><span>10 high</span></div>
+							<div class="stat-callout">
+								<strong>+0.36</strong>
+								<span>Average first-differenced religiosity change in the matched state sample.</span>
+							</div>
+							<p class="chart-note">Index inputs: self-rated religiosity, service attendance, private prayer, sacred text reading, and belief in God.</p>
+						</div>
+
+						<div class="viz-panel">
+							<h3>Religiosity Coefficients</h3>
+							<p>Final first-difference models showed mixed coefficient directions, but t-statistics were small across all vaccines.</p>
+							<div class="chart-meta"><span>Unit: coefficient on change in religiosity</span><span>Model: final FD specification</span></div>
+							<div class="coef-chart" aria-label="Religiosity coefficients from final first-difference models">
+								<div class="coef-row">
+									<div class="bar-label"><span>MMR</span><strong>coef=-0.02 | t=-0.03 | n=32</strong></div>
+									<div class="coef-track"><span class="coef-bar is-negative" style="width: 2%"></span></div>
+									<span class="label-note">Direction: slightly negative; not statistically significant.</span>
+								</div>
+								<div class="coef-row">
+									<div class="bar-label"><span>DTaP</span><strong>coef=0.34 | t=0.66 | n=31</strong></div>
+									<div class="coef-track"><span class="coef-bar is-positive" style="width: 34%"></span></div>
+									<span class="label-note">Direction: positive; not statistically significant.</span>
+								</div>
+								<div class="coef-row">
+									<div class="bar-label"><span>HepB</span><strong>coef=0.18 | t=0.38 | n=30</strong></div>
+									<div class="coef-track"><span class="coef-bar is-positive" style="width: 18%"></span></div>
+									<span class="label-note">Direction: positive; not statistically significant.</span>
+								</div>
+							</div>
+							<div class="axis-labels coef-axis"><span>negative</span><span>0 no effect</span><span>positive</span></div>
+							<div class="chart-legend"><span><i class="legend-negative"></i>Negative</span><span><i></i>Positive</span></div>
+							<p class="chart-note">No coefficient reached p&lt;0.10, so the direction is descriptive rather than evidence of an effect.</p>
+						</div>
+					</div>
+
+					<button class="text-toggle" type="button" data-toggle-details>Show details</button>
+					<div class="research-detail-panel is-collapsed">
+						<div class="research-detail-grid">
+							<div>
+								<h3>Research question</h3>
+								<p>Does higher Christian religiosity correlate with lower childhood vaccination rates for MMR, DTaP, and HepB across U.S. states? The report started from vaccine hesitancy literature and tested whether religious commitment explained coverage differences once demographics were controlled for.</p>
+							</div>
+							<div>
+								<h3>Data and tools</h3>
+								<p>Used CDC vaccination coverage, Baylor Religion Survey Waves IV and V, U.S. Census demographic controls, Annie E. Casey education data, and Stata 16. The dependent variables were state vaccination rates; the independent variable was a constructed religiosity index.</p>
+							</div>
+							<div>
+								<h3>Model design</h3>
+								<p>Built a state-level first-difference model comparing 2014 and 2017 to reduce time-invariant state differences such as culture, local norms, and baseline public-health systems. Controls included age, income, college education, and percentage White population.</p>
+							</div>
+							<div>
+								<h3>Interpretation</h3>
+								<p>The null result suggests vaccine hesitancy cannot be explained by religiosity alone in this sample. The report argues that vaccine-specific concerns, family stability, information access, and targeted public-health messaging may matter more than broad religious commitment.</p>
+							</div>
+							<div>
+								<h3>Limitations</h3>
+								<p>The matched first-difference sample was small, with roughly 30 to 32 observations in the final vaccine models. The Baylor survey responses may also contain social desirability bias, especially because respondents were reporting religious activity and belief.</p>
+							</div>
+							<div>
+								<h3>What it demonstrates</h3>
+								<p>This project shows data cleaning, index construction, applied regression thinking, null-result interpretation, and the ability to turn a policy question into a concise evidence story.</p>
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+
 		</main>
 
 		<footer class="site-footer">
