@@ -288,7 +288,11 @@ body.profile-site {
 	line-height: 1.08;
 	margin: 0 0 1.3rem 0;
 	max-width: 45rem;
-	white-space: nowrap;
+	white-space: normal;
+}
+
+.cover-content h1 span {
+	display: block;
 }
 
 .hero-role {
