@@ -987,6 +987,10 @@ body.profile-site {
 	transform: translateY(0);
 }
 
+.capability-feature.reveal.is-visible:hover {
+	transform: translateY(-4px);
+}
+
 @media screen and (max-width: 980px) {
 	.cover-hero,
 	.two-column {
