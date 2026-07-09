@@ -573,19 +573,22 @@ body.profile-site {
 	gap: 1rem;
 	min-height: 27rem;
 	padding: 1.3rem;
-	transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+	transform-origin: center;
+	transition: transform 220ms ease;
 }
 
 .capability-feature.emphasized {
-	background: linear-gradient(180deg, #dbeafe 0%, #bfdbfe 100%);
-	border-color: #93c5fd;
-	box-shadow: 0 1rem 2.75rem rgba(37, 99, 235, 0.14);
+	background: #1d4ed8;
+	border-color: #1d4ed8;
+	box-shadow: 0 1rem 2.75rem rgba(29, 78, 216, 0.16);
 }
 
 .capability-feature:hover {
-	border-color: #60a5fa;
-	box-shadow: 0 1.35rem 3.4rem rgba(37, 99, 235, 0.16);
-	transform: translateY(-4px);
+	transform: perspective(56rem) rotateX(1.6deg) rotateY(-2.2deg);
+}
+
+.capability-feature:nth-child(even):hover {
+	transform: perspective(56rem) rotateX(1.6deg) rotateY(2.2deg);
 }
 
 .capability-feature > span {
@@ -597,7 +600,7 @@ body.profile-site {
 }
 
 .capability-feature.emphasized > span {
-	color: #2563eb;
+	color: #bfdbfe;
 }
 
 .capability-feature h3,
@@ -617,11 +620,11 @@ body.profile-site {
 }
 
 .capability-feature.emphasized h3 {
-	color: #0f172a;
+	color: #ffffff;
 }
 
 .capability-feature.emphasized p {
-	color: #475569;
+	color: #dbeafe;
 }
 
 .capability-feature .proof-link {
