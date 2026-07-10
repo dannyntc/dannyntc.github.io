@@ -70,6 +70,50 @@
 		Array.prototype.slice.call(document.querySelectorAll("[data-count]")).forEach(animateMetric);
 	}
 
+	Array.prototype.slice.call(document.querySelectorAll("[data-storyboard]")).forEach(function (storyboard) {
+		var tabs = Array.prototype.slice.call(storyboard.querySelectorAll("[data-story-tab]"));
+		var panels = Array.prototype.slice.call(storyboard.querySelectorAll("[data-story-panel]"));
+
+		function activateStoryTab(name) {
+			tabs.forEach(function (tab) {
+				var active = tab.getAttribute("data-story-tab") === name;
+				tab.classList.toggle("is-active", active);
+				tab.setAttribute("aria-selected", String(active));
+			});
+
+			panels.forEach(function (panel) {
+				var active = panel.getAttribute("data-story-panel") === name;
+				panel.classList.toggle("is-active", active);
+				panel.hidden = !active;
+			});
+		}
+
+		tabs.forEach(function (tab) {
+			tab.addEventListener("click", function () {
+				activateStoryTab(tab.getAttribute("data-story-tab"));
+			});
+
+			tab.addEventListener("keydown", function (event) {
+				if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+				event.preventDefault();
+
+				var index = tabs.indexOf(tab);
+				var offset = event.key === "ArrowRight" ? 1 : -1;
+				var next = tabs[(index + offset + tabs.length) % tabs.length];
+				next.focus();
+				activateStoryTab(next.getAttribute("data-story-tab"));
+			});
+		});
+
+		var activeTab = tabs.filter(function (tab) {
+			return tab.classList.contains("is-active");
+		})[0] || tabs[0];
+
+		if (activeTab) {
+			activateStoryTab(activeTab.getAttribute("data-story-tab"));
+		}
+	});
+
 	Array.prototype.slice.call(document.querySelectorAll("[data-toggle-details]")).forEach(function (button) {
 		button.addEventListener("click", function () {
 			var details = button.nextElementSibling;
