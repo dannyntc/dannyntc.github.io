@@ -827,57 +827,86 @@ body.profile-site {
 	gap: 1rem;
 }
 
-.education-columns {
-	display: grid;
-	gap: clamp(1.25rem, 3vw, 2.25rem);
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.education-column {
-	min-width: 0;
-}
-
 .education-column-title {
 	color: #0f172a;
 	font-size: 1.05rem;
 	font-weight: 800;
 	letter-spacing: 0.04em;
-	margin: 0 0 0.9rem 0;
+	margin: 0;
 	text-transform: uppercase;
 }
 
 .education-timeline {
 	display: grid;
-	gap: 1rem;
-	padding-left: 1.35rem;
+	column-gap: clamp(0.75rem, 2vw, 1.5rem);
+	grid-template-columns: minmax(0, 1fr) clamp(2rem, 5vw, 3rem) minmax(0, 1fr);
+	row-gap: 1rem;
+	padding: 0;
 	position: relative;
 }
 
 .education-timeline::before {
 	background: #bfdbfe;
-	bottom: 0.85rem;
+	bottom: 1rem;
 	content: '';
-	left: 0.45rem;
+	left: 50%;
 	position: absolute;
-	top: 0.85rem;
+	top: 3.2rem;
+	transform: translateX(-50%);
 	width: 2px;
 }
 
 .education-timeline-item {
+	grid-column: 1;
+	min-width: 0;
 	position: relative;
 }
 
-.education-timeline-item::before {
+.education-timeline-item[data-timeline-side="right"] {
+	grid-column: 3;
+}
+
+.education-timeline-marker {
+	align-self: center;
 	background: #2563eb;
 	border: 4px solid #dbeafe;
 	border-radius: 50%;
-	content: '';
 	height: 0.9rem;
-	left: -1.35rem;
-	position: absolute;
-	top: 1.35rem;
+	grid-column: 2;
+	justify-self: center;
+	position: relative;
 	width: 0.9rem;
 	z-index: 1;
+}
+
+.education-column-title-left {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.education-column-title-right {
+	grid-column: 3;
+	grid-row: 1;
+}
+
+.education-timeline-item[data-timeline-order="1"],
+.education-timeline-marker[data-timeline-order="1"] {
+	grid-row: 2;
+}
+
+.education-timeline-item[data-timeline-order="2"],
+.education-timeline-marker[data-timeline-order="2"] {
+	grid-row: 3;
+}
+
+.education-timeline-item[data-timeline-order="3"],
+.education-timeline-marker[data-timeline-order="3"] {
+	grid-row: 4;
+}
+
+.education-timeline-item[data-timeline-order="4"],
+.education-timeline-marker[data-timeline-order="4"] {
+	grid-row: 5;
 }
 
 .education-category {
@@ -1617,58 +1646,51 @@ body.profile-site {
 }
 
 @media screen and (max-width: 736px) {
-	.education-columns {
-		display: flex;
-		flex-direction: column;
-		gap: 0;
-		position: relative;
-	}
-
-	.education-columns::before {
-		background: #bfdbfe;
-		bottom: 0.85rem;
-		content: '';
-		left: 0.45rem;
-		position: absolute;
-		top: 0.35rem;
-		width: 2px;
-	}
-
-	.education-column {
-		display: contents;
-	}
-
-	.education-column-title {
-		display: none;
-	}
-
 	.education-timeline {
-		display: contents;
+		column-gap: 0.55rem;
+		grid-template-columns: minmax(0, 1fr) 1.35rem minmax(0, 1fr);
+		row-gap: 0.75rem;
 	}
 
 	.education-timeline::before {
-		display: none;
+		bottom: 0.75rem;
+		top: 2.8rem;
 	}
 
 	.education-timeline-item {
-		margin: 0 0 1rem 1.35rem;
-		order: var(--education-mobile-order);
+		padding: 0.9rem 0.8rem;
 	}
 
-	.education-timeline-item[data-mobile-order="1"] {
-		--education-mobile-order: 1;
+	.education-column-title {
+		font-size: 0.78rem;
+		line-height: 1.25;
 	}
 
-	.education-timeline-item[data-mobile-order="2"] {
-		--education-mobile-order: 2;
+	.education-card h2 {
+		font-size: 1rem;
+		line-height: 1.2;
+		margin-bottom: 0.55rem;
 	}
 
-	.education-timeline-item[data-mobile-order="3"] {
-		--education-mobile-order: 3;
+	.education-card h3 {
+		font-size: 0.82rem;
+		line-height: 1.35;
+		margin-bottom: 0.65rem;
 	}
 
-	.education-timeline-item[data-mobile-order="4"] {
-		--education-mobile-order: 4;
+	.education-card p {
+		font-size: 0.8rem;
+		line-height: 1.5;
+	}
+
+	.education-card p + p {
+		margin-top: 0.65rem;
+	}
+
+	.education-card .date-label {
+		font-size: 0.64rem;
+		line-height: 1.35;
+		margin-bottom: 0.65rem;
 	}
 
 	.education-category {
@@ -1679,6 +1701,12 @@ body.profile-site {
 		letter-spacing: 0.08em;
 		margin-bottom: 0.45rem;
 		text-transform: uppercase;
+	}
+
+	.education-timeline-item h2,
+	.education-timeline-item h3,
+	.education-timeline-item p {
+		overflow-wrap: anywhere;
 	}
 
 	.site-nav {
