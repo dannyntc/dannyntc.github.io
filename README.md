@@ -1,22 +1,35 @@
-# Danny Ng Professional Profile
+# Danny Ng — Professional Profile
 
-Static GitHub Pages site for a recruiter-facing professional profile.
+This repository contains my static GitHub Pages personal profile site. It presents how I approach strategy, operations, transformation, and AI-enabled execution, alongside my experience, education, side projects, and writing.
 
-## Edit
+## Site content
 
-- Main page: `index.html`
-- Core pages: `experience.html`, `case-studies.html`, `education.html`
-- Legacy forwarding pages: `profile.html`, `projects.html`, `skills.html`, `capabilities.html`, `contact.html`
-- Base template styling: `assets/css/main.css`
-- Site-specific styling: `assets/css/profile.css`
-- Site interactions: `assets/js/profile.js`
-- Profile photo: `images/avatar.jpg`
-- Background image: `images/bg.jpg`
-- Source CV content: `/Users/danny/Desktop/cv.md`
+- `index.html` is the main profile page, with an execution roadmap, experience, education, and an interactive academic data project.
+- `side-projects.html` covers self-directed AI, automation, and workflow experiments.
+- `thoughts.html` outlines my approach to consulting, operations, AI, and learning.
+- `musings.html` contains reflective notes on AI, work, learning, and professional judgment.
+- Several root-level pages preserve older links by forwarding readers to the relevant current page or section.
 
-## Suggested next updates
+For the complete page and asset map, see [docs/site-map.md](docs/site-map.md).
 
-- Add a PDF resume link near the header contact chips or hero actions.
-- Replace the placeholder avatar/background images with professional recruiter-facing imagery.
-- Keep `index.html` aligned with future CV updates.
-- Keep subpage navigation links in sync when adding or removing pages.
+## Technology
+
+The site is built with hand-authored HTML, CSS, and JavaScript. Local assets include stylesheets, JavaScript, images, webfonts, and Sass source files under `assets/` and `images/`. There is no tracked build configuration in this repository.
+
+## Preview locally
+
+From the repository root, start a simple static server:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open `http://localhost:8000` in a browser. Stop the server with `Ctrl+C` when finished.
+
+## Deployment
+
+This repository is intended for GitHub Pages deployment. GitHub Pages serves the publishing source selected in the repository settings, so keep root-level pages and their relative asset paths intact. The repository does not include a tracked GitHub Pages configuration or deployment workflow; confirm the active Pages source in GitHub before relying on a change being published.
+
+## Maintenance
+
+When updating the site, keep navigation, internal links, and forwarding pages aligned with the current content. Preview the site locally before publishing and review the resulting diff to ensure only intended content and asset changes are included.
