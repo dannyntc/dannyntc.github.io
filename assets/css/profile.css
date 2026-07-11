@@ -839,8 +839,9 @@ body.profile-site {
 .education-timeline {
 	display: grid;
 	column-gap: clamp(0.75rem, 2vw, 1.5rem);
+	grid-auto-rows: minmax(min-content, auto);
 	grid-template-columns: minmax(0, 1fr) clamp(2rem, 5vw, 3rem) minmax(0, 1fr);
-	row-gap: 1rem;
+	row-gap: clamp(1.25rem, 2.5vw, 1.75rem);
 	padding: 0;
 	position: relative;
 }
@@ -857,6 +858,7 @@ body.profile-site {
 }
 
 .education-timeline-item {
+	align-self: stretch;
 	grid-column: 1;
 	min-width: 0;
 	position: relative;
@@ -910,14 +912,13 @@ body.profile-site {
 	grid-row: 5;
 }
 
-.education-timeline-item[data-timeline-order="5"],
-.education-timeline-marker[data-timeline-order="5"] {
-	grid-row: 6;
+.education-timeline-item[data-timeline-order="5"] {
+	grid-row: 4 / 6;
 }
 
 .education-timeline-item[data-timeline-order="6"],
 .education-timeline-marker[data-timeline-order="6"] {
-	grid-row: 7;
+	grid-row: 6;
 }
 
 .education-category {
@@ -1660,7 +1661,7 @@ body.profile-site {
 	.education-timeline {
 		column-gap: 0.55rem;
 		grid-template-columns: minmax(0, 1fr) 1.35rem minmax(0, 1fr);
-		row-gap: 0.75rem;
+		row-gap: 1.15rem;
 	}
 
 	.education-timeline::before {
