@@ -904,9 +904,20 @@ body.profile-site {
 	grid-row: 4;
 }
 
+
 .education-timeline-item[data-timeline-order="4"],
 .education-timeline-marker[data-timeline-order="4"] {
 	grid-row: 5;
+}
+
+.education-timeline-item[data-timeline-order="5"],
+.education-timeline-marker[data-timeline-order="5"] {
+	grid-row: 6;
+}
+
+.education-timeline-item[data-timeline-order="6"],
+.education-timeline-marker[data-timeline-order="6"] {
+	grid-row: 7;
 }
 
 .education-category {
