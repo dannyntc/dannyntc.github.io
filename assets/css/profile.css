@@ -827,6 +827,63 @@ body.profile-site {
 	gap: 1rem;
 }
 
+.education-columns {
+	display: grid;
+	gap: clamp(1.25rem, 3vw, 2.25rem);
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.education-column {
+	min-width: 0;
+}
+
+.education-column-title {
+	color: #0f172a;
+	font-size: 1.05rem;
+	font-weight: 800;
+	letter-spacing: 0.04em;
+	margin: 0 0 0.9rem 0;
+	text-transform: uppercase;
+}
+
+.education-timeline {
+	display: grid;
+	gap: 1rem;
+	padding-left: 1.35rem;
+	position: relative;
+}
+
+.education-timeline::before {
+	background: #bfdbfe;
+	bottom: 0.85rem;
+	content: '';
+	left: 0.45rem;
+	position: absolute;
+	top: 0.85rem;
+	width: 2px;
+}
+
+.education-timeline-item {
+	position: relative;
+}
+
+.education-timeline-item::before {
+	background: #2563eb;
+	border: 4px solid #dbeafe;
+	border-radius: 50%;
+	content: '';
+	height: 0.9rem;
+	left: -1.35rem;
+	position: absolute;
+	top: 1.35rem;
+	width: 0.9rem;
+	z-index: 1;
+}
+
+.education-category {
+	display: none;
+}
+
 .role-card {
 	border-left: 4px solid #bfdbfe;
 	transition: opacity 180ms ease, transform 180ms ease;
@@ -1560,6 +1617,70 @@ body.profile-site {
 }
 
 @media screen and (max-width: 736px) {
+	.education-columns {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		position: relative;
+	}
+
+	.education-columns::before {
+		background: #bfdbfe;
+		bottom: 0.85rem;
+		content: '';
+		left: 0.45rem;
+		position: absolute;
+		top: 0.35rem;
+		width: 2px;
+	}
+
+	.education-column {
+		display: contents;
+	}
+
+	.education-column-title {
+		display: none;
+	}
+
+	.education-timeline {
+		display: contents;
+	}
+
+	.education-timeline::before {
+		display: none;
+	}
+
+	.education-timeline-item {
+		margin: 0 0 1rem 1.35rem;
+		order: var(--education-mobile-order);
+	}
+
+	.education-timeline-item[data-mobile-order="1"] {
+		--education-mobile-order: 1;
+	}
+
+	.education-timeline-item[data-mobile-order="2"] {
+		--education-mobile-order: 2;
+	}
+
+	.education-timeline-item[data-mobile-order="3"] {
+		--education-mobile-order: 3;
+	}
+
+	.education-timeline-item[data-mobile-order="4"] {
+		--education-mobile-order: 4;
+	}
+
+	.education-category {
+		color: #64748b;
+		display: block;
+		font-size: 0.72rem;
+		font-weight: 800;
+		letter-spacing: 0.08em;
+		margin-bottom: 0.45rem;
+		text-transform: uppercase;
+	}
+
 	.site-nav {
 		align-items: stretch;
 		flex-wrap: wrap;
