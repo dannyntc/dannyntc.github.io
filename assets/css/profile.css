@@ -699,6 +699,100 @@ body.profile-site {
 	margin-top: 1.1rem;
 }
 
+.project-overlap {
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 0.85rem;
+	box-shadow: 0 1rem 2.75rem rgba(15, 23, 42, 0.055);
+	overflow: hidden;
+}
+
+.project-overlap-scroll {
+	overflow-x: auto;
+}
+
+.project-overlap-table {
+	border-collapse: collapse;
+	min-width: 62rem;
+	width: 100%;
+}
+
+.project-overlap-table caption {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.project-overlap-table th,
+.project-overlap-table td {
+	border-bottom: 1px solid #e2e8f0;
+	padding: 1.25rem;
+	text-align: left;
+	vertical-align: top;
+}
+
+.project-overlap-table thead th {
+	background: #f8fafc;
+	color: #0f172a;
+	font-size: 1.05rem;
+	font-weight: 800;
+	line-height: 1.25;
+}
+
+.project-overlap-table thead th:first-child,
+.project-overlap-table tbody th {
+	width: 11rem;
+}
+
+.project-overlap-table thead .date-label {
+	font-size: 0.7rem;
+	margin-bottom: 0.5rem;
+}
+
+.project-overlap-table tbody th {
+	background: #f8fafc;
+	color: #334155;
+	font-size: 0.82rem;
+	font-weight: 800;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.project-overlap-table td {
+	color: #64748b;
+	font-size: 0.94rem;
+	line-height: 1.6;
+}
+
+.project-overlap-table td .skill-pill {
+	margin: 0 0.45rem 0.45rem 0;
+}
+
+.shared-tooling-row th,
+.shared-tooling-row td {
+	background: #eff6ff !important;
+	border-bottom: 0;
+}
+
+.shared-tooling-row td strong {
+	color: #1e3a8a;
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 0.35rem;
+}
+
+.shared-tooling-row td p {
+	margin: 0 0 0.9rem 0;
+}
+
+.shared-tooling-row .skill-pills {
+	margin-top: 0;
+}
+
 .tool-cluster {
 	padding: 1.35rem;
 }
