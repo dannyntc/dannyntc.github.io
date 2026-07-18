@@ -760,6 +760,17 @@ body.profile-site {
 	margin-bottom: 0.3rem;
 }
 
+.project-matrix-head a {
+	color: #2563eb;
+}
+
+.project-matrix-head a:hover,
+.project-matrix-head a:focus-visible {
+	color: #1d4ed8;
+	text-decoration: underline;
+	text-underline-offset: 0.15em;
+}
+
 .project-matrix-check {
 	color: #2563eb;
 	font-size: 1.1rem;
