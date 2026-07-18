@@ -97,6 +97,8 @@ body.profile-site {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.45rem;
+	margin-left: -0.55rem;
+	margin-top: 5px;
 }
 
 .identity-copy {
