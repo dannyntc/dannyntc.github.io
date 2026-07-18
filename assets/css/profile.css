@@ -394,6 +394,10 @@ body.profile-site {
 	padding: clamp(3.5rem, 7vw, 6rem) clamp(1.25rem, 4vw, 3.5rem);
 }
 
+#academic-projects[hidden] {
+	display: none !important;
+}
+
 .section-heading {
 	margin-bottom: 2rem;
 	max-width: 44rem;
