@@ -1145,10 +1145,6 @@ body.profile-site {
 	text-decoration: underline;
 }
 
-#academic-archive > .research-card[hidden] {
-	display: none !important;
-}
-
 .research-card {
 	border-left: 4px solid #2563eb;
 	padding: clamp(1.35rem, 3vw, 2.2rem);
