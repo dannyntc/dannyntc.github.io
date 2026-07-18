@@ -394,10 +394,6 @@ body.profile-site {
 	padding: clamp(3.5rem, 7vw, 6rem) clamp(1.25rem, 4vw, 3.5rem);
 }
 
-#academic-projects[hidden] {
-	display: none !important;
-}
-
 .section-heading {
 	margin-bottom: 2rem;
 	max-width: 44rem;
@@ -1130,8 +1126,25 @@ body.profile-site {
 	margin: 0 0 0.85rem 0;
 }
 
-#academic-projects {
+#academic-archive {
 	padding-top: clamp(4.5rem, 8vw, 7rem);
+}
+
+.academic-archive-link {
+	color: #1d4ed8;
+	display: inline-block;
+	font-weight: 800;
+	margin-top: 0.9rem;
+	text-decoration: none;
+}
+
+.academic-archive-link:hover {
+	color: #1e40af;
+	text-decoration: underline;
+}
+
+#academic-archive > .research-card[hidden] {
+	display: none !important;
 }
 
 .research-card {
