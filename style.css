@@ -36,7 +36,7 @@ a { color: inherit; text-underline-offset: 0.18em; }
 .identity-stack { align-items: flex-start; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .identity { display: inline-flex; font-size: 1.25rem; font-weight: 600; text-decoration: none; }
 .identity-links { align-items: center; display: flex; flex-wrap: wrap; gap: 4px; margin-left: -6px; }
-.identity-copy { align-items: center; border: 1px solid transparent; border-radius: 999px; color: var(--olive); display: inline-flex; font-size: 0.82rem; font-weight: 800; gap: 5px; line-height: 1; padding: 5px 6px; text-decoration: none; transition: background 160ms ease, border-color 160ms ease, color 160ms ease; white-space: nowrap; }
+.identity-copy { align-items: center; border: 1px solid transparent; border-radius: 999px; color: var(--olive); display: inline-flex; font-size: 0.82rem; font-weight: 600; gap: 5px; line-height: 1; padding: 5px 6px; text-decoration: none; transition: background 160ms ease, border-color 160ms ease, color 160ms ease; white-space: nowrap; }
 .contact-icon { color: var(--rust); font-size: 0.72rem; line-height: 1; }
 .identity-copy:hover { background: var(--card); border-color: var(--line); color: var(--rust); }
 .identity-copy:hover .contact-icon { color: var(--rust); }
@@ -48,40 +48,40 @@ nav .is-current { border-bottom: 1px solid var(--olive); padding-bottom: 3px; }
 .site-header > nav { align-self: flex-start; margin-top: 15px; }
 
 .intro { max-width: 1120px; padding: 94px 0 86px; }
-.kicker { color: var(--rust); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; margin: 0 0 12px; text-transform: uppercase; }
+.kicker { color: var(--rust); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; margin: 0 0 12px; text-transform: uppercase; }
 h1, h2, h3, p { margin-top: 0; }
 h1 { font-size: clamp(3rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -0.045em; line-height: 0.98; margin-bottom: 28px; max-width: 950px; }
-.intro h1 { font-family: "Source Sans Pro", Helvetica, sans-serif; font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 800; letter-spacing: 0; line-height: 1.06; margin: 0 0 1rem; max-width: 68rem; }
-.hero-summary { background: linear-gradient(105deg, #77756f 0%, #77756f 42%, #272722 48%, #272722 52%, #77756f 58%, #77756f 100%); background-position: 200% center; background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; font-family: "Source Sans Pro", Helvetica, sans-serif; font-size: clamp(0.82rem, 1.15vw, 1rem); font-weight: 800; letter-spacing: 0.04em; margin-bottom: 1.25rem; max-width: none; text-transform: uppercase; white-space: nowrap; animation: hero-silver-shimmer 2.5s linear infinite; }
+.intro h1 { font-family: "Source Sans Pro", Helvetica, sans-serif; font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 700; letter-spacing: 0; line-height: 1.06; margin: 0 0 1rem; max-width: 68rem; }
+.hero-summary { background: linear-gradient(105deg, #77756f 0%, #77756f 42%, #272722 48%, #272722 52%, #77756f 58%, #77756f 100%); background-position: 200% center; background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; font-family: "Source Sans Pro", Helvetica, sans-serif; font-size: clamp(0.82rem, 1.15vw, 1rem); font-weight: 700; letter-spacing: 0.04em; margin-bottom: 1.25rem; max-width: none; text-transform: uppercase; white-space: nowrap; animation: hero-silver-shimmer 2.5s linear infinite; }
 @keyframes hero-silver-shimmer { to { background-position: -50% center; } }
 @media (min-width: 1280px) { .intro h1 { font-size: 1.2rem; white-space: nowrap; } }
 @media (prefers-reduced-motion: reduce) { .hero-summary { animation: none; background-position: center; } }
-h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 800; letter-spacing: 0; line-height: 1.12; margin-bottom: 0.45rem; }
+h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 700; letter-spacing: 0; line-height: 1.12; margin-bottom: 0.45rem; }
 .lede { color: var(--muted); font-size: clamp(1.15rem, 2vw, 1.45rem); max-width: 690px; }
 .impact-list { display: grid; gap: 10px 18px; grid-template-columns: repeat(4, 1fr); list-style: none; margin: 42px 0 0; max-width: 1050px; padding: 0; }
 .impact-list li { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; padding-top: 11px; }
-.impact-list strong { color: var(--rust); display: block; font-size: 1.55rem; font-weight: 800; line-height: 1; margin-bottom: 6px; }
+.impact-list strong { color: var(--rust); display: block; font-size: 1.55rem; font-weight: 700; line-height: 1; margin-bottom: 6px; }
 .impact-list span { display: block; }
-.impact-list .impact-context { color: var(--olive); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; margin-bottom: 9px; text-transform: uppercase; }
+.impact-list .impact-context { color: var(--olive); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; margin-bottom: 9px; text-transform: uppercase; }
 
 .approach { border-top: 1px solid var(--line); padding-block: 54px 88px; }
 .section-intro { color: var(--muted); max-width: 720px; }
 .approach-grid { display: grid; gap: 18px; grid-template-columns: repeat(4, 1fr); }
 .approach-grid article { border-top: 1px solid var(--line); padding-top: 16px; }
 .approach-grid .project-number { margin-bottom: 28px; }
-.approach-grid h3 { font-size: 1.35rem; font-weight: 800; line-height: 1.1; margin-bottom: 14px; }
+.approach-grid h3 { font-size: 1.35rem; font-weight: 700; line-height: 1.1; margin-bottom: 14px; }
 .approach-grid p:not(.project-number) { color: var(--muted); font-size: 0.95rem; }
-.approach-grid .tags, .project-meta { color: var(--olive) !important; font-size: 0.78rem !important; font-weight: 700; letter-spacing: 0.02em; line-height: 1.55; margin-top: 20px; }
+.approach-grid .tags, .project-meta { color: var(--olive) !important; font-size: 0.78rem !important; font-weight: 600; letter-spacing: 0.02em; line-height: 1.55; margin-top: 20px; }
 
 .projects { border-top: 1px solid var(--line); padding-block: 64px 88px; }
 .section-heading { margin-bottom: 30px; }
 .projects > .section-heading > p:not(.kicker), .project-map-heading p:not(.kicker) { color: var(--muted); max-width: 720px; }
 .project-map-heading { border-top: 1px solid var(--line); margin-top: 42px; padding-top: 26px; }
-.project-map-heading h3, .musings-ideas-heading h3 { font-size: 1.35rem; font-weight: 800; letter-spacing: 0; line-height: 1.1; margin-bottom: 12px; }
+.project-map-heading h3, .musings-ideas-heading h3 { font-size: 1.35rem; font-weight: 700; letter-spacing: 0; line-height: 1.1; margin-bottom: 12px; }
 .project-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
 .project-card { background: var(--card); border: 1px solid var(--line); display: flex; flex-direction: column; min-height: 295px; padding: 25px; }
-.project-number { color: var(--rust); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; margin-bottom: 46px; }
-.project-card h3 { font-size: 1.25rem; font-weight: 800; line-height: 1.2; margin-bottom: 15px; }
+.project-number { color: var(--rust); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; margin-bottom: 46px; }
+.project-card h3 { font-size: 1.25rem; font-weight: 700; line-height: 1.2; margin-bottom: 15px; }
 .project-card p:not(.project-number) { color: var(--muted); font-size: 1rem; }
 .project-card a { color: var(--olive); margin-top: auto; }
 .project-card a:hover, .text-link:hover { color: var(--rust); }
@@ -96,7 +96,7 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 800; letter-spacing:
 .project-matrix-head { color: var(--ink); display: block; font-size: 0.92rem; margin-bottom: 7px; }
 .project-matrix-head a { color: var(--olive); }
 .project-matrix-check { color: var(--rust); }
-.project-matrix-partial { color: var(--olive); font-size: 0.76rem; font-weight: 800; text-transform: uppercase; }
+.project-matrix-partial { color: var(--olive); font-size: 0.76rem; font-weight: 600; text-transform: uppercase; }
 
 .musings, .experience { border-top: 1px solid var(--line); padding-block: 54px; }
 .musings p, .experience .section-heading > p:not(.kicker) { color: var(--muted); max-width: 660px; }
@@ -106,10 +106,10 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 800; letter-spacing:
 .experience-card { background: var(--card); border: 1px solid var(--line); padding: 26px; }
 .experience-card--full { grid-column: 1 / -1; width: 100%; }
 .experience-card-header { align-items: flex-start; display: flex; gap: 24px; justify-content: space-between; margin-bottom: 18px; }
-.experience-card h3 { font-size: 1.25rem; font-weight: 800; line-height: 1.2; margin-bottom: 4px; }
+.experience-card h3 { font-size: 1.25rem; font-weight: 700; line-height: 1.2; margin-bottom: 4px; }
 .experience-card p { color: var(--muted); font-size: 1rem; }
-.experience-card .role { color: var(--ink); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em; margin-bottom: 0; text-transform: uppercase; }
-.experience-card .date { color: var(--rust); flex: 0 0 auto; font-size: 0.78rem; font-weight: 700; margin: 4px 0 0; text-align: right; }
+.experience-card .role { color: var(--ink); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; margin-bottom: 0; text-transform: uppercase; }
+.experience-card .date { color: var(--rust); flex: 0 0 auto; font-size: 0.78rem; font-weight: 600; margin: 4px 0 0; text-align: right; }
 .experience-card details { border-top: 1px solid var(--line); margin-top: 19px; padding-top: 13px; }
 .experience-card summary { color: var(--olive); cursor: pointer; font-size: 0.95rem; }
 .experience-card summary::marker { color: var(--rust); }
@@ -121,17 +121,17 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 800; letter-spacing:
 .experience-roles details:first-child { border-top: 0; padding-top: 0; }
 .experience-roles details:last-child { padding-bottom: 0; }
 .experience-roles summary span { color: var(--muted); font-size: 0.85em; }
-.experience-roles summary .subrole-date { color: var(--rust); float: right; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.02em; margin-left: 18px; }
+.experience-roles summary .subrole-date { color: var(--rust); float: right; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.02em; margin-left: 18px; }
 
 .education { border-top: 1px solid var(--line); padding-block: 54px 84px; }
 .education-columns { align-items: start; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .education-column { min-width: 0; }
 .education-column + .education-column { border-left: 1px solid var(--line); padding-left: 36px; }
-.education-column-title { border-top: 2px solid var(--olive); color: var(--olive); font-size: 1.05rem; font-weight: 800; letter-spacing: 0.04em; margin: 0 0 18px; padding-top: 12px; text-transform: uppercase; }
+.education-column-title { border-top: 2px solid var(--olive); color: var(--olive); font-size: 1.05rem; font-weight: 700; letter-spacing: 0.04em; margin: 0 0 18px; padding-top: 12px; text-transform: uppercase; }
 .education-list { display: grid; gap: 18px; }
 .education-card { background: var(--card); border: 1px solid var(--line); padding: 25px; }
-.education-date { color: var(--rust) !important; font-size: 0.78rem !important; font-weight: 700; letter-spacing: 0.04em; margin: 0 0 12px; text-transform: uppercase; }
-.education-card h3 { font-size: 1.25rem; font-weight: 800; line-height: 1.2; margin-bottom: 2px; }
+.education-date { color: var(--rust) !important; font-size: 0.78rem !important; font-weight: 600; letter-spacing: 0.04em; margin: 0 0 12px; text-transform: uppercase; }
+.education-card h3 { font-size: 1.25rem; font-weight: 700; line-height: 1.2; margin-bottom: 2px; }
 .education-card p { color: var(--muted); font-size: 0.95rem; }
 .education-program { color: var(--ink) !important; margin-bottom: 10px; }
 .education-card p:last-child { margin-bottom: 0; }
@@ -143,8 +143,8 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 800; letter-spacing:
 .musing-list { display: grid; gap: 18px; max-width: 880px; }
 .musings-ideas-heading { border-top: 1px solid var(--line); margin-top: 42px; padding-top: 26px; }
 .musing-card { background: var(--card); border: 1px solid var(--line); padding: 26px; }
-.musing-label { color: var(--rust) !important; font-size: 0.78rem !important; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
-.musing-card h3 { font-size: 1.25rem; font-weight: 800; line-height: 1.2; margin-bottom: 18px; max-width: 720px; }
+.musing-label { color: var(--rust) !important; font-size: 0.78rem !important; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.musing-card h3 { font-size: 1.25rem; font-weight: 700; line-height: 1.2; margin-bottom: 18px; max-width: 720px; }
 .musing-card p { color: var(--muted); font-size: 1rem; max-width: 760px; }
 .musing-card p:last-child { margin-bottom: 0; }
 
