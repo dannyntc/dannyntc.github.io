@@ -51,6 +51,11 @@ nav .is-current { border-bottom: 1px solid var(--olive); padding-bottom: 3px; }
 .kicker { color: var(--rust); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.72rem; letter-spacing: 0.09em; margin: 0 0 12px; text-transform: uppercase; }
 h1, h2, h3, p { margin-top: 0; }
 h1 { font-size: clamp(3rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -0.045em; line-height: 0.98; margin-bottom: 28px; max-width: 950px; }
+.intro h1 { font-family: "Source Sans Pro", Helvetica, sans-serif; font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 800; letter-spacing: 0; line-height: 1.06; margin: 0 0 1rem; max-width: 68rem; }
+.hero-summary { background: linear-gradient(105deg, #77756f 0%, #77756f 42%, #272722 48%, #272722 52%, #77756f 58%, #77756f 100%); background-position: 200% center; background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; font-family: "Source Sans Pro", Helvetica, sans-serif; font-size: clamp(0.82rem, 1.15vw, 1rem); font-weight: 800; letter-spacing: 0.04em; margin-bottom: 1.25rem; max-width: none; text-transform: uppercase; white-space: nowrap; animation: hero-silver-shimmer 2.5s linear infinite; }
+@keyframes hero-silver-shimmer { to { background-position: -50% center; } }
+@media (min-width: 1280px) { .intro h1 { font-size: 1.2rem; white-space: nowrap; } }
+@media (prefers-reduced-motion: reduce) { .hero-summary { animation: none; background-position: center; } }
 h2 { font-size: clamp(2rem, 3.2vw, 3rem); font-weight: 400; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 12px; }
 .lede { color: var(--muted); font-size: clamp(1.15rem, 2vw, 1.45rem); max-width: 690px; }
 .impact-list { display: grid; gap: 10px 18px; grid-template-columns: repeat(4, 1fr); list-style: none; margin: 42px 0 0; max-width: 1050px; padding: 0; }
