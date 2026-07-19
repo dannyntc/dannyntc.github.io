@@ -119,13 +119,15 @@ h2 { font-size: clamp(2rem, 3.2vw, 3rem); font-weight: 400; letter-spacing: -0.0
 .experience-roles summary .subrole-date { color: var(--rust); float: right; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.72rem; letter-spacing: 0.02em; margin-left: 18px; }
 
 .education { border-top: 1px solid var(--line); padding-block: 54px 84px; }
-.education-grid { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.education-columns { display: grid; gap: 36px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.education-column { min-width: 0; }
+.education-column-title { border-top: 2px solid var(--olive); color: var(--olive); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.82rem; font-weight: 400; letter-spacing: 0.08em; margin: 0 0 18px; padding-top: 12px; text-transform: uppercase; }
+.education-list { display: grid; gap: 18px; }
 .education-card { background: var(--card); border: 1px solid var(--line); padding: 25px; }
-.education-card--wide { grid-column: span 1; }
-.education-type { color: var(--rust); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.7rem !important; letter-spacing: 0.04em; text-transform: uppercase; }
+.education-date { color: var(--rust) !important; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.7rem !important; letter-spacing: 0.04em; text-transform: uppercase; }
 .education-card h3 { font-size: 1.35rem; font-weight: 400; line-height: 1.1; margin-bottom: 12px; }
 .education-card p { color: var(--muted); font-size: 0.95rem; }
-.education-card p:nth-of-type(2) { color: var(--ink); margin-bottom: 10px; }
+.education-program { color: var(--ink) !important; margin-bottom: 10px; }
 .education-card p:last-child { margin-bottom: 0; }
 .archive-link { align-items: baseline; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 34px 0 0; padding-top: 16px; }
 .archive-link a { color: var(--olive); }
@@ -163,7 +165,7 @@ h2 { font-size: clamp(2rem, 3.2vw, 3rem); font-weight: 400; letter-spacing: -0.0
   .experience-card .date { margin-top: 0; text-align: left; }
   .experience-roles summary .subrole-date { display: block; float: none; margin: 5px 0 0; }
   .musing-card { padding: 22px; }
-  .education-grid { grid-template-columns: 1fr; }
+  .education-columns { gap: 34px; grid-template-columns: 1fr; }
   .site-footer { align-items: flex-start; flex-direction: column; gap: 14px; }
   .site-footer div { flex-wrap: wrap; }
 }
