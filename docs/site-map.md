@@ -6,12 +6,11 @@ This document describes the site structure represented by the files currently tr
 
 | Path | Purpose | Main content |
 | --- | --- | --- |
-| `index.html` | Main personal profile | Execution roadmap; experience; education; and a link to the [NTU Economics Archives](https://dannyntc.github.io/NTU-Economics-archives/) for interactive economics analyses and research materials. |
+| `index.html` | Main personal profile | My Thought Process; experience; education; and a link to the [NTU Economics Archives](https://dannyntc.github.io/NTU-Economics-archives/) for interactive economics analyses and research materials. |
 | `side-projects.html` | Self-directed work | AI agentic workflow development, the professional profile website, and AI productivity tooling. |
-| `thoughts.html` | Work approach | Notes on advising, operations improvement, AI use, and technical learning. |
 | `musings.html` | Reflective writing | Notes on AI model selection and the trade-offs of using AI too early in the thinking process. |
 
-The primary navigation connects these four pages. The profile page also includes email, LinkedIn, and WhatsApp links.
+The primary navigation connects the three current pages. The profile page also includes email, LinkedIn, and WhatsApp links.
 
 ## Forwarding and supporting pages
 
