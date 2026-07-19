@@ -4,9 +4,8 @@ This repository contains my static GitHub Pages personal profile site. It presen
 
 ## Site content
 
-- `index.html` is the main profile page, with My Thought Process, experience, education, and a link to the [NTU Economics Archives](https://dannyntc.github.io/NTU-Economics-archives/) for interactive economics analyses and research materials.
-- `side-projects.html` covers self-directed AI, automation, and workflow experiments.
-- `musings.html` contains reflective notes on AI, work, learning, and professional judgment.
+- `index.html` is the complete one-page profile: approach, experience, side projects, education, musings, and a link to the [NTU Economics Archives](https://dannyntc.github.io/NTU-Economics-archives/) for interactive economics analyses and research materials.
+- `side-projects.html` and `musings.html` preserve older links by forwarding readers to the relevant `index.html` section.
 - Several root-level pages preserve older links by forwarding readers to the relevant current page or section.
 
 For the complete page and asset map, see [docs/site-map.md](docs/site-map.md).
