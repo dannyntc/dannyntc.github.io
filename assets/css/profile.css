@@ -761,7 +761,7 @@ body.profile-site {
 }
 
 .project-matrix-head a {
-	color: #2563eb;
+	color: inherit;
 }
 
 .project-matrix-head a:hover,
