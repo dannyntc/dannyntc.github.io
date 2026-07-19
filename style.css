@@ -26,9 +26,13 @@ a { color: inherit; text-underline-offset: 0.18em; }
 
 .site-header {
   align-items: flex-start;
+  background: var(--paper);
   display: flex;
   justify-content: space-between;
   padding-block: 28px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .header-identity { align-items: center; display: flex; flex: 1 1 auto; gap: 12px; min-width: 0; }
@@ -45,7 +49,9 @@ nav { display: flex; gap: 30px; }
 nav a { color: var(--muted); text-decoration: none; }
 nav a:hover, nav .is-current { color: var(--olive); }
 nav .is-current { border-bottom: 1px solid var(--olive); padding-bottom: 3px; }
-.site-header > nav { align-self: flex-start; margin-top: 15px; }
+.site-header > nav { align-self: flex-start; margin-top: 31px; transform: translateX(10px); }
+
+section[id] { scroll-margin-top: 128px; }
 
 .intro { max-width: 1120px; padding: 94px 0 86px; }
 .kicker { color: var(--rust); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; margin: 0 0 12px; text-transform: uppercase; }
@@ -160,6 +166,7 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 700; letter-spacing:
   .identity-links { gap: 2px; }
   .identity-copy { font-size: 0.70rem; padding-inline: 4px; }
   .contact-icon { font-size: 0.79rem; }
+  section[id] { scroll-margin-top: 168px; }
   .intro { padding: 72px 0 64px; }
   .impact-list, .approach-grid { grid-template-columns: repeat(2, 1fr); }
   .project-grid { grid-template-columns: 1fr; }
