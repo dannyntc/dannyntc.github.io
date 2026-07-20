@@ -53,15 +53,15 @@ nav .is-current { border-bottom: 1px solid var(--olive); padding-bottom: 3px; }
 
 section[id] { scroll-margin-top: 128px; }
 
-.intro { max-width: 1120px; padding: 94px 0 86px; }
+.intro { max-width: 1120px; padding: 76px 0 78px; }
 .kicker { color: var(--rust); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; margin: 0 0 12px; text-transform: uppercase; }
 h1, h2, h3, p { margin-top: 0; }
 h1 { font-size: clamp(3rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -0.045em; line-height: 0.98; margin-bottom: 28px; max-width: 950px; }
-.intro h1 { font-family: "Source Sans Pro", Helvetica, sans-serif; font-size: clamp(2rem, 3.4vw, 3.15rem); font-weight: 600; letter-spacing: -0.015em; line-height: 1.08; margin: 0 0 1.15rem; max-width: 23ch; }
-.hero-summary { color: var(--olive); font-family: "Source Sans Pro", Helvetica, sans-serif; font-size: clamp(0.76rem, 1vw, 0.88rem); font-weight: 600; letter-spacing: 0.08em; line-height: 1.35; margin-bottom: 0.85rem; text-transform: uppercase; }
+.intro h1 { font-family: "Source Sans Pro", Helvetica, sans-serif; font-size: clamp(2.35rem, 3.8vw, 3.65rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.04; margin: 0 0 1rem; max-width: 26ch; }
+.hero-summary { color: var(--olive); font-family: "Source Sans Pro", Helvetica, sans-serif; font-size: clamp(0.78rem, 1vw, 0.9rem); font-weight: 600; letter-spacing: 0.1em; line-height: 1.35; margin-bottom: 1rem; text-transform: uppercase; }
 h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 600; letter-spacing: 0; line-height: 1.12; margin-bottom: 0.45rem; }
-.lede { color: var(--muted); font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.5; margin-bottom: 0; max-width: 720px; }
-.impact-list { display: grid; gap: 10px 18px; grid-template-columns: repeat(4, 1fr); list-style: none; margin: 42px 0 0; max-width: 1050px; padding: 0; }
+.lede { color: var(--muted); font-size: clamp(1.05rem, 1.45vw, 1.22rem); line-height: 1.48; margin-bottom: 0; max-width: 680px; }
+.impact-list { display: grid; gap: 10px 18px; grid-template-columns: repeat(4, 1fr); list-style: none; margin: 36px 0 0; max-width: 1050px; padding: 0; }
 .impact-list li { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; padding-top: 11px; }
 .impact-list strong { color: var(--rust); display: block; font-size: 1.55rem; font-weight: 700; line-height: 1; margin-bottom: 6px; }
 .impact-list span { display: block; }
@@ -164,7 +164,7 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 600; letter-spacing:
   .identity-copy { font-size: 0.70rem; padding-inline: 4px; }
   .contact-icon { font-size: 0.79rem; }
   section[id] { scroll-margin-top: 168px; }
-  .intro { padding: 72px 0 64px; }
+  .intro { padding: 56px 0 58px; }
   .impact-list, .approach-grid { grid-template-columns: repeat(2, 1fr); }
   .project-grid { grid-template-columns: 1fr; }
   .project-card { min-height: 245px; }
