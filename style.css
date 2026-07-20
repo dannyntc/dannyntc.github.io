@@ -159,14 +159,15 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 600; letter-spacing:
 .site-footer div { display: flex; gap: 22px; }
 
 @media (max-width: 1024px) {
-  .shell { width: min(100% - 32px, 1120px); }
+  .shell { width: min(calc(100% - 32px), 1120px); }
   .site-header { align-items: stretch; flex-direction: column; gap: 12px; padding-block: 16px 12px; position: static; }
+  .header-identity { align-items: flex-start; display: grid; grid-template-columns: 48px minmax(0, 1fr); }
   .header-photo { height: 48px; width: 48px; }
-  .identity-links { gap: 2px 4px; margin-left: -60px; width: calc(100% + 60px); }
+  .identity-links { gap: 2px 4px; margin-left: 0; width: auto; }
   .identity-copy { font-size: 0.8rem; line-height: 1.2; min-height: 36px; padding-inline: 4px; }
   nav { font-size: 0.92rem; flex-wrap: wrap; gap: 2px 16px; justify-content: flex-start; }
   nav a { align-items: center; display: inline-flex; min-height: 44px; }
-  .site-header > nav { margin-top: 0; transform: none; }
+  .site-header > nav { margin-top: 0; transform: none; width: 100%; }
   .identity { font-size: 1.05rem; }
   .contact-icon { font-size: 0.79rem; }
   section[id] { scroll-margin-top: 24px; }
