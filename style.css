@@ -86,6 +86,7 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 600; letter-spacing:
 .project-number { color: var(--rust); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; margin-bottom: 46px; }
 .project-card h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.2; margin-bottom: 15px; }
 .project-card p:not(.project-number) { color: var(--muted); font-size: 1rem; }
+.project-card .project-context { font-size: 0.92rem; line-height: 1.5; margin-top: 14px; }
 .project-card a { color: var(--olive); margin-top: auto; }
 .project-card a:hover, .text-link:hover { color: var(--rust); }
 .project-matrix-shell { border: 1px solid var(--line); margin-top: 34px; overflow-x: auto; }
