@@ -159,27 +159,40 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 600; letter-spacing:
 .site-footer div { display: flex; gap: 22px; }
 
 @media (max-width: 720px) {
-  .shell { width: min(100% - 40px, 1120px); }
-  .site-header { align-items: flex-start; gap: 22px; padding-block: 20px; }
-  nav { font-size: 0.92rem; flex-wrap: wrap; gap: 10px 18px; justify-content: flex-end; }
+  .shell { width: min(100% - 32px, 1120px); }
+  .site-header { align-items: stretch; flex-direction: column; gap: 12px; padding-block: 16px 12px; position: static; }
+  .header-photo { height: 48px; width: 48px; }
+  .identity-links { gap: 2px 4px; margin-left: -60px; width: calc(100% + 60px); }
+  .identity-copy { font-size: 0.8rem; line-height: 1.2; min-height: 36px; padding-inline: 4px; }
+  nav { font-size: 0.92rem; flex-wrap: wrap; gap: 2px 16px; justify-content: flex-start; }
+  nav a { align-items: center; display: inline-flex; min-height: 44px; }
+  .site-header > nav { margin-top: 0; transform: none; }
   .identity { font-size: 1.05rem; }
-  .identity-links { gap: 2px; }
-  .identity-copy { font-size: 0.70rem; padding-inline: 4px; }
   .contact-icon { font-size: 0.79rem; }
-  section[id] { scroll-margin-top: 168px; }
+  section[id] { scroll-margin-top: 24px; }
   .intro { padding: 56px 0 58px; }
   .impact-list, .approach-grid { grid-template-columns: repeat(2, 1fr); }
   .project-grid { grid-template-columns: 1fr; }
   .project-card { min-height: 245px; }
+  .project-card a { align-items: center; display: inline-flex; min-height: 44px; }
+  .archive-link a, .site-footer a { align-items: center; display: inline-flex; min-height: 44px; }
   .project-number { margin-bottom: 30px; }
-  .project-matrix-shell { margin-right: -20px; }
+  .project-matrix-shell { -webkit-overflow-scrolling: touch; margin-right: -16px; overscroll-behavior-inline: contain; }
   .experience-card { padding: 22px; }
   .experience-card-header { flex-direction: column; gap: 10px; }
   .experience-card .date { margin-top: 0; text-align: left; }
+  .experience-card summary { min-height: 44px; padding-block: 8px; }
+  .experience-card details p, .experience-card ul { padding-inline: 4px; }
   .experience-roles summary .subrole-date { display: block; float: none; margin: 5px 0 0; }
   .musing-card { padding: 22px; }
   .education-columns { gap: 34px; grid-template-columns: 1fr; }
   .education-column + .education-column { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; padding-top: 34px; }
   .site-footer { align-items: flex-start; flex-direction: column; gap: 14px; }
   .site-footer div { flex-wrap: wrap; }
+}
+
+@media (max-width: 390px) {
+  .identity-copy { font-size: 0.76rem; }
+  .impact-list, .approach-grid { grid-template-columns: 1fr; }
+  .impact-list { gap: 18px; }
 }
