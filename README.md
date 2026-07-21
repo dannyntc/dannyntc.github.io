@@ -1,6 +1,6 @@
 # Danny Ng — Professional Profile
 
-This repository contains my static GitHub Pages personal profile site. It presents how I approach strategy, operations, transformation, and AI-enabled execution, alongside my experience, education, side projects, and writing.
+This repository contains the static GitHub Pages profile site for Danny Ng. The site presents work in strategy, operations, transformation, and AI-enabled execution, alongside experience, education, side projects, and writing.
 
 ## Site content
 

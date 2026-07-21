@@ -19,7 +19,6 @@ The primary navigation connects the homepage sections. The header includes GitHu
 | `education.html` | Points readers to `index.html#education`. |
 | `projects.html` and `side-projects.html` | Point readers to `index.html#projects`. |
 | `musings.html` | Points readers to `index.html#musings`. |
-| `thoughts.html`, `skills.html`, and `capabilities.html` | Point readers to `index.html#approach`. |
 
 `case-studies.html` and `roadmap-hover-demo.html` were intentionally removed during the one-page redesign.
 
