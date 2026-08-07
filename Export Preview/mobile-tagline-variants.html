@@ -27,7 +27,7 @@
     body[data-variant="1"] .v1, body[data-variant="2"] .v2, body[data-variant="3"] .v3, body[data-variant="4"] .v4, body[data-variant="5"] .v5 { display: block; }
     .v1 span::before { content: '|'; color: var(--olive); margin-right: 10px; font-weight: 500; }
     .v2 span::before { content: '—'; color: var(--olive); margin-right: 10px; font-weight: 500; }
-    .v3 > span { align-items: center; column-gap: 10px; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); }
+    .v3 > span { align-items: center; column-gap: 6px; display: grid; grid-template-columns: max-content minmax(0, 1fr); }
     .v3 > span > .number { color: var(--olive); font-size: 15px; font-style: normal; font-variant-numeric: tabular-nums; line-height: 1; }
     .v4 span { padding-left: 0; }
     .v4 span::before { color: var(--blue); display: block; font-size: 10px; font-weight: 600; letter-spacing: .12em; margin-bottom: 2px; text-transform: uppercase; }
@@ -47,13 +47,13 @@
       <nav aria-label="Primary navigation"><span>Experience</span><span>Projects</span><span>Education</span><span>Musings</span></nav>
     </header>
     <main class="intro">
-      <div class="label">Capabilities</div>
+      <div class="label">Specializations</div>
       <div class="title variant v1"><span>Strategy &amp; Planning</span><span>Process Optimizations</span><span>AI-Tooling &amp; Implementations</span></div>
       <div class="title variant v2"><span>Strategy &amp; Planning</span><span>Process Optimizations</span><span>AI-Tooling &amp; Implementations</span></div>
       <div class="title variant v3"><span><i class="number" aria-hidden="true">01</i><span>Strategy &amp; Planning</span></span><span><i class="number" aria-hidden="true">02</i><span>Process Optimizations</span></span><span><i class="number" aria-hidden="true">03</i><span>AI-Tooling &amp; Implementations</span></span></div>
       <div class="title variant v4"><span>Strategy &amp; Planning</span><span>Process Optimizations</span><span>AI-Tooling &amp; Implementations</span></div>
       <div class="title variant v5"><span>Strategy &amp; Planning <i class="rule"></i></span><span>Process Optimizations <i class="rule"></i></span><span>AI-Tooling &amp; Implementations <i class="rule"></i></span></div>
-      <p class="note">Mobile presentation preview · three-line capability stack</p>
+      <p class="note">Mobile presentation preview · three-line specialization stack</p>
     </main>
   </div>
   <script>
