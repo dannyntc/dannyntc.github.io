@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mobile tagline variants</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap');
+    :root { --paper: #F7F5F0; --ink: #272722; --muted: #5d5d54; --olive: #69725c; --blue: #174a8b; --line: #d7d0c1; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Source Sans 3', 'Source Sans Pro', Helvetica, sans-serif; }
+    .mobile-shell { width: 390px; min-height: 844px; padding: 16px; margin: 0 auto; }
+    .header { border-bottom: 1px solid var(--olive); padding-bottom: 14px; }
+    .identity { display: flex; align-items: center; gap: 14px; }
+    .avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+    .name { font-size: 21px; font-weight: 600; }
+    .links { display: flex; gap: 15px; margin: 6px 0 0 74px; color: var(--blue); font-size: 18px; }
+    nav { display: flex; gap: 12px; margin-top: 13px; font-size: 14px; color: var(--muted); }
+    nav span:first-child { color: var(--olive); border-bottom: 1px solid var(--olive); padding-bottom: 3px; }
+    .intro { padding: 34px 0 0; }
+    .label { color: var(--blue); font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 13px; }
+    .title { font-size: 24px; font-weight: 600; letter-spacing: -.025em; line-height: 1.09; }
+    .title span { display: block; }
+    .title span + span { margin-top: 13px; }
+    .rule { display: inline-block; height: 2px; background: var(--olive); vertical-align: .19em; }
+    .variant { display: none; }
+    body[data-variant="1"] .v1, body[data-variant="2"] .v2, body[data-variant="3"] .v3, body[data-variant="4"] .v4, body[data-variant="5"] .v5 { display: block; }
+    .v1 span::before { content: '|'; color: var(--olive); margin-right: 10px; font-weight: 500; }
+    .v2 span::before { content: '—'; color: var(--olive); margin-right: 10px; font-weight: 500; }
+    .v3 span::before { color: var(--olive); display: inline-block; font-size: 15px; margin-right: 10px; vertical-align: .05em; }
+    .v3 span:nth-child(1)::before { content: '01'; }
+    .v3 span:nth-child(2)::before { content: '02'; }
+    .v3 span:nth-child(3)::before { content: '03'; }
+    .v4 span { padding-left: 0; }
+    .v4 span::before { color: var(--blue); display: block; font-size: 10px; font-weight: 600; letter-spacing: .12em; margin-bottom: 2px; text-transform: uppercase; }
+    .v4 span:nth-child(1)::before { content: '01 / STRATEGY'; }
+    .v4 span:nth-child(2)::before { content: '02 / SYSTEMS'; }
+    .v4 span:nth-child(3)::before { content: '03 / TECHNOLOGY'; }
+    .v5 span { display: grid; grid-template-columns: minmax(0, 1fr) 28px; gap: 12px; align-items: center; }
+    .v5 .rule { width: 28px; }
+    .note { border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; line-height: 1.45; margin-top: 38px; padding-top: 14px; }
+  </style>
+</head>
+<body data-variant="1">
+  <div class="mobile-shell">
+    <header class="header">
+      <div class="identity"><img class="avatar" src="../images/avatar.jpg" alt=""><span class="name">Danny Ng</span></div>
+      <div class="links" aria-label="Contact links">●　✉　in　⌕</div>
+      <nav aria-label="Primary navigation"><span>Experience</span><span>Projects</span><span>Education</span><span>Musings</span></nav>
+    </header>
+    <main class="intro">
+      <div class="label">Capabilities</div>
+      <div class="title variant v1"><span>Strategy &amp; Planning</span><span>Process Optimizations</span><span>AI-Tooling &amp; Implementations</span></div>
+      <div class="title variant v2"><span>Strategy &amp; Planning</span><span>Process Optimizations</span><span>AI-Tooling &amp; Implementations</span></div>
+      <div class="title variant v3"><span>Strategy &amp; Planning</span><span>Process Optimizations</span><span>AI-Tooling &amp; Implementations</span></div>
+      <div class="title variant v4"><span>Strategy &amp; Planning</span><span>Process Optimizations</span><span>AI-Tooling &amp; Implementations</span></div>
+      <div class="title variant v5"><span>Strategy &amp; Planning <i class="rule"></i></span><span>Process Optimizations <i class="rule"></i></span><span>AI-Tooling &amp; Implementations <i class="rule"></i></span></div>
+      <p class="note">Mobile presentation preview · three-line capability stack</p>
+    </main>
+  </div>
+  <script>
+    const n = new URLSearchParams(location.search).get('variant') || '1';
+    document.body.dataset.variant = n;
+  </script>
+</body>
+</html>
