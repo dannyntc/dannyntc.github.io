@@ -154,7 +154,7 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 600; letter-spacing:
 
 @media (max-width: 1024px) {
   .shell { width: min(calc(100% - 32px), 1120px); }
-  .site-header { align-items: stretch; border-bottom: 0; flex-direction: column; gap: 6px; height: auto; padding: 8px 16px 18px; position: sticky; width: 100%; }
+  .site-header { align-items: stretch; border-bottom: 0; flex-direction: column; gap: 6px; height: auto; padding: 8px 16px 0; position: sticky; width: 100%; }
   .site-header::after { background: transparent; box-shadow: 0 6px 12px rgba(39, 39, 34, 0.12); content: ""; height: 13px; left: 0; pointer-events: none; position: absolute; right: 0; bottom: -13px; }
   .navigate-top { display: none; }
   .header-identity { align-items: flex-start; display: grid; grid-template-columns: 60px minmax(0, 1fr); }
