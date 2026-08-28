@@ -101,7 +101,7 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 600; letter-spacing:
 .project-card a:hover, .text-link:hover { color: var(--rust); }
 
 .musings, .experience { border-top: 1px solid var(--line); padding-block: 54px; }
-.musings p, .experience .section-heading > p:not(.kicker) { color: var(--muted); max-width: 660px; }
+.experience .section-heading > p:not(.kicker) { color: var(--muted); max-width: 660px; }
 
 .experience { padding-bottom: 84px; }
 .experience-list { display: grid; gap: 18px; }
@@ -142,12 +142,14 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 600; letter-spacing:
 .archive-link a:hover { color: var(--rust); }
 .archive-link span { color: var(--muted); font-size: 0.93rem; }
 
-.musing-list { display: grid; gap: 0; max-width: 760px; }
+.musing-list { display: grid; gap: 0; width: 100%; }
 .musing-card { border-top: 1px solid var(--line); padding: 24px 0; }
+.musing-meta { align-items: baseline; display: flex; gap: 18px; justify-content: space-between; }
 .musing-label { color: var(--rust) !important; font-size: 1rem !important; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-.musing-date { color: var(--olive); display: block; font-size: 1rem; margin: -4px 0 12px; }
-.musing-card h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.2; margin-bottom: 18px; max-width: 720px; }
-.musing-card p { color: var(--muted); font-size: 1rem; max-width: 760px; }
+.musing-meta .musing-label, .musing-date { margin: 0; }
+.musing-date { color: var(--olive); flex: 0 0 auto; font-size: 1rem; }
+.musing-card h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.2; margin-bottom: 18px; }
+.musing-card p { color: var(--muted); font-size: 1rem; }
 .musing-card > p:not(.musing-label) { text-align: justify; }
 .musing-card p:last-child { margin-bottom: 0; }
 
