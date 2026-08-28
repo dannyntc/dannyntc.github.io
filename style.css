@@ -207,3 +207,4 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 600; letter-spacing:
   .impact-list { grid-template-columns: 1fr; }
   .impact-list { gap: 18px; }
 }
+main p:not(.kicker):not(.date):not(.role):not(.musing-label):not(.musing-date):not(.education-date):not(.education-program) { text-align: justify; }
