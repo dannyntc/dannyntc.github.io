@@ -81,7 +81,7 @@ h1 { font-size: clamp(3rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -0.0
 .intro-copy { min-width: 0; }
 h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 600; letter-spacing: 0; line-height: 1.12; margin-bottom: 0.45rem; }
 .lede { color: var(--muted); font-size: clamp(1.05rem, 1.45vw, 1.22rem); line-height: 1.48; margin-bottom: 0; max-width: 680px; }
-.impact-list { display: grid; gap: 10px 18px; grid-template-columns: repeat(4, 1fr); list-style: none; margin: 36px 0 0; max-width: 1050px; padding: 0; }
+.impact-list { display: grid; gap: 10px 18px; grid-template-columns: repeat(4, 1fr); list-style: none; margin: 36px 0 0; padding: 0; width: 100%; }
 .impact-list li { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; padding-top: 11px; }
 .impact-list strong { color: var(--rust); display: block; font-size: 1.55rem; font-weight: 700; line-height: 1; margin-bottom: 6px; }
 .impact-list span { display: block; }
