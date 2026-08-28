@@ -73,7 +73,7 @@ main p:not(.kicker):not(.date):not(.role):not(.musing-label):not(.musing-date):n
 h1 { font-size: clamp(3rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -0.045em; line-height: 0.98; margin-bottom: 28px; max-width: 950px; }
 .intro h1 { font-family: "Source Sans Pro", Helvetica, sans-serif; font-size: clamp(1.25rem, 1.8vw, 1.65rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.04; margin: 0 0 1rem; max-width: none; }
 .intro-label { display: none; }
-.intro-title-desktop { align-items: baseline; display: flex; font-size: clamp(1.45rem, 2.2vw, 2rem); gap: 1rem; justify-content: space-between; width: 100%; }
+.intro-title-desktop { align-items: baseline; display: flex; font-size: clamp(1.35rem, 2vw, 1.8rem); gap: 1rem; justify-content: space-between; width: 100%; }
 .intro-title-point { white-space: nowrap; }
 .intro-title-separator { margin-left: 0.75rem; }
 .intro-title-mobile { display: none; }
