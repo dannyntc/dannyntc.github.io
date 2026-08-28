@@ -44,7 +44,7 @@ a { color: inherit; text-underline-offset: 0.18em; }
 .header-identity { align-items: flex-start; display: flex; flex-direction: column; flex: 0 0 auto; gap: 14px; min-width: 0; width: 100%; }
 .header-photo { border-radius: 50%; flex: 0 0 auto; height: 150px; object-fit: cover; width: 150px; }
 .identity-stack { align-items: flex-start; display: flex; flex-direction: column; gap: 20px; min-width: 0; width: 100%; }
-.identity { display: inline-flex; font-size: 29.8px; font-weight: 600; text-decoration: none; width: 156px; }
+.identity { display: inline-flex; font-size: 2.4rem; font-weight: 600; text-decoration: none; }
 .identity-links { align-items: center; display: flex; flex-wrap: wrap; gap: 6px; margin-left: -6px; margin-top: 16px; }
 .identity-copy { align-items: center; border: 1px solid transparent; border-radius: 50%; color: var(--olive); display: inline-flex; font-size: 0.98rem; font-weight: 500; justify-content: center; line-height: 1; min-height: 44px; min-width: 36px; padding: 8px 4px; text-decoration: none; transition: background 160ms ease, border-color 160ms ease, color 160ms ease; }
 .contact-icon { color: var(--rust); font-size: 1.38rem; line-height: 1; }
