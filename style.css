@@ -22,7 +22,7 @@ body {
 
 a { color: inherit; text-underline-offset: 0.18em; }
 
-.shell { width: min(1120px, calc(100% - 96px)); margin-inline: auto; }
+.shell { width: min(1120px, calc(100% - 192px)); margin-inline: auto; }
 
 .site-header {
   align-items: flex-start;
@@ -62,7 +62,7 @@ nav .is-current, nav a[aria-current="location"] { border-bottom: 1px solid var(-
 .navigate-top:focus-visible { color: var(--olive); outline: 2px solid var(--olive); outline-offset: 3px; }
 
 main { margin-left: 246px; }
-.site-footer { margin-left: calc(246px + 48px); margin-right: 48px; width: min(1120px, calc(100% - 246px - 96px)); }
+.site-footer { margin-left: calc(246px + 96px); margin-right: 96px; width: min(1120px, calc(100% - 246px - 192px)); }
 
 section[id] { scroll-margin-top: 32px; }
 
