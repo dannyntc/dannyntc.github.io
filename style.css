@@ -108,7 +108,7 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 600; letter-spacing:
 .experience-card h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.2; margin-bottom: 4px; }
 .experience-card p { color: var(--muted); font-size: 1rem; }
 .experience-card .role { color: var(--ink); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; margin-bottom: 0; text-transform: uppercase; }
-.experience-card .date { color: var(--rust); flex: 0 0 auto; font-size: 0.78rem; font-weight: 600; margin: 4px 0 0; text-align: right; }
+.experience-card .date { color: var(--rust); flex: 0 0 auto; font-size: 1rem; font-weight: 600; margin: 4px 0 0; text-align: right; }
 .experience-card details { border-top: 1px solid var(--line); margin-top: 19px; padding-top: 13px; }
 .experience-card summary { color: var(--olive); cursor: pointer; font-size: 0.95rem; }
 .experience-card summary::marker { color: var(--rust); }
@@ -120,7 +120,7 @@ h2 { font-size: clamp(1.8rem, 2.4vw, 2.35rem); font-weight: 600; letter-spacing:
 .experience-roles details:first-child { border-top: 0; padding-top: 0; }
 .experience-roles details:last-child { padding-bottom: 0; }
 .experience-roles summary span:not(.subrole-date) { color: var(--muted); font-size: inherit; }
-.experience-roles summary .subrole-date { color: var(--rust); float: right; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.02em; margin-left: 18px; }
+.experience-roles summary .subrole-date { color: var(--rust); float: right; font-size: 1rem; font-weight: 600; letter-spacing: 0.02em; margin-left: 18px; }
 
 .education { border-top: 1px solid var(--line); padding-block: 54px 84px; }
 .education-columns { align-items: start; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
