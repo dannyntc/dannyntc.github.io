@@ -42,7 +42,7 @@ a { color: inherit; text-underline-offset: 0.18em; }
 }
 
 .header-identity { align-items: flex-start; display: flex; flex-direction: column; flex: 0 0 auto; gap: 14px; min-width: 0; width: 100%; }
-.header-photo { border-radius: 50%; flex: 0 0 auto; height: 156px; object-fit: cover; width: 156px; }
+.header-photo { border-radius: 50%; flex: 0 0 auto; height: 150px; object-fit: cover; width: 150px; }
 .identity-stack { align-items: flex-start; display: flex; flex-direction: column; gap: 20px; min-width: 0; width: 100%; }
 .identity { display: inline-flex; font-size: 29.8px; font-weight: 600; text-decoration: none; width: 156px; }
 .identity-links { align-items: center; display: flex; flex-wrap: wrap; gap: 6px; margin-left: -6px; margin-top: 16px; }
