@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mobile navigation divider — annotated preview</title>
+    <style>
+      :root {
+        --paper: #f7f5f0;
+        --ink: #272722;
+        --muted: #5d5d54;
+        --olive: #69725c;
+        --rust: #174a8b;
+        --line: #d7d0c1;
+        --panel: #ebe7de;
+        --annotation: #b44d2b;
+        --annotation-soft: #fff0e9;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        background: var(--panel);
+        color: var(--ink);
+        font-family: "Source Sans Pro", "Segoe UI", Helvetica, sans-serif;
+        line-height: 1.5;
+      }
+
+      a { color: inherit; }
+
+      .document {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 56px 0 80px;
+      }
+
+      .document-header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 24px;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--rust);
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      h1, h2, h3, p { margin-top: 0; }
+
+      h1 {
+        max-width: 720px;
+        margin-bottom: 10px;
+        font-size: clamp(2rem, 5vw, 4.4rem);
+        font-weight: 400;
+        letter-spacing: -0.04em;
+        line-height: 0.98;
+      }
+
+      .lede {
+        max-width: 680px;
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .source-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        margin: 0;
+        color: var(--olive);
+        font-size: 0.92rem;
+        white-space: nowrap;
+      }
+
+      .source-links a { text-underline-offset: 0.2em; }
+
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+        gap: 24px;
+        margin-top: 28px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        background: var(--paper);
+        padding: 24px;
+      }
+
+      .card h2 {
+        margin-bottom: 6px;
+        font-size: 1.45rem;
+        font-weight: 600;
+        line-height: 1.1;
+      }
+
+      .card-intro {
+        margin-bottom: 20px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .device {
+        width: min(100%, 430px);
+        margin: 0 auto;
+        border: 1px solid #c4bdaf;
+        border-radius: 22px;
+        background: #d9d3c8;
+        box-shadow: 0 14px 30px rgba(39, 39, 34, 0.13);
+        padding: 12px;
+      }
+
+      .device-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 4px 10px;
+        color: var(--muted);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .device-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--annotation);
+        box-shadow: 0 0 0 3px var(--annotation-soft);
+      }
+
+      .scroll-frame {
+        position: relative;
+        height: 590px;
+        overflow-y: auto;
+        border: 1px solid #c8c1b4;
+        border-radius: 12px;
+        background: var(--paper);
+        scrollbar-color: var(--olive) transparent;
+        scrollbar-width: thin;
+      }
+
+      .demo-page {
+        min-height: 1350px;
+        background: var(--paper);
+      }
+
+      .demo-header {
+        position: sticky;
+        z-index: 10;
+        top: 0;
+        padding: 16px 16px 10px;
+        border-bottom: 0;
+        background: var(--paper);
+      }
+
+      .demo-header::after {
+        position: absolute;
+        right: 0;
+        bottom: -13px;
+        left: 0;
+        height: 13px;
+        content: "";
+        pointer-events: none;
+        background: transparent;
+        box-shadow: 0 6px 12px rgba(39, 39, 34, 0.12);
+      }
+
+      .demo-identity {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .demo-avatar {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #d7d0c1;
+      }
+
+      .demo-name {
+        display: block;
+        font-size: 1.35rem;
+        font-weight: 600;
+        line-height: 1;
+        text-decoration: none;
+      }
+
+      .demo-role {
+        margin: 4px 0 0;
+        color: var(--muted);
+        font-size: 0.75rem;
+      }
+
+      .demo-contacts {
+        display: flex;
+        gap: 5px;
+        margin-left: auto;
+      }
+
+      .demo-contact {
+        display: grid;
+        width: 28px;
+        height: 28px;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        color: var(--rust);
+        font-size: 0.7rem;
+        font-weight: 700;
+      }
+
+      .demo-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 12px;
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      .demo-nav a {
+        min-height: 34px;
+        text-decoration: none;
+      }
+
+      .annotation-tag,
+      .buffer-guide,
+      .shadow-guide {
+        position: absolute;
+        z-index: 2;
+        pointer-events: none;
+        color: var(--annotation);
+        font-family: "Segoe UI", Helvetica, sans-serif;
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .annotation-tag {
+        top: 10px;
+        right: 10px;
+        border: 1px solid var(--annotation);
+        background: var(--annotation-soft);
+        padding: 4px 6px;
+      }
+
+      .shadow-guide {
+        right: 10px;
+        bottom: -7px;
+        padding: 3px 5px;
+        background: var(--annotation-soft);
+      }
+
+      .buffer-guide {
+        right: 10px;
+        bottom: 2px;
+        padding: 3px 5px;
+        border-top: 1px dashed var(--annotation);
+        background: rgba(247, 245, 240, 0.86);
+      }
+
+      .demo-intro {
+        position: relative;
+        padding: 72px 24px 52px;
+      }
+
+      .demo-intro .annotation-tag {
+        top: 54px;
+        right: 24px;
+      }
+
+      .demo-kicker {
+        max-width: max-content;
+        margin: 0 0 12px;
+        color: var(--rust);
+        font-size: 1.08rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .demo-title {
+        max-width: 330px;
+        margin: 0 0 22px;
+        font-size: clamp(1.2rem, 4vw, 1.55rem);
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        line-height: 1.05;
+      }
+
+      .demo-copy {
+        max-width: 330px;
+        color: var(--muted);
+        font-size: 0.96rem;
+      }
+
+      .demo-copy + .demo-copy { margin-top: 24px; }
+
+      .demo-rule {
+        margin: 18px 0 0;
+        border: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .demo-section {
+        min-height: 260px;
+        border-top: 1px solid var(--line);
+        padding: 34px 24px;
+      }
+
+      .demo-section h3 {
+        margin-bottom: 8px;
+        color: var(--olive);
+        font-size: 1.15rem;
+        font-weight: 600;
+      }
+
+      .demo-section p {
+        max-width: 520px;
+        color: var(--muted);
+      }
+
+      .scroll-status {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 14px;
+        margin-top: 14px;
+        border-top: 1px solid var(--line);
+        padding-top: 12px;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .status-value {
+        color: var(--rust);
+        font-weight: 700;
+        text-align: right;
+      }
+
+      .component-map {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .component-map li {
+        display: grid;
+        grid-template-columns: 30px minmax(0, 1fr);
+        gap: 12px;
+        border-top: 1px solid var(--line);
+        padding-top: 12px;
+      }
+
+      .component-number {
+        display: grid;
+        width: 25px;
+        height: 25px;
+        place-items: center;
+        border: 1px solid var(--annotation);
+        border-radius: 50%;
+        color: var(--annotation);
+        font-size: 0.76rem;
+        font-weight: 700;
+      }
+
+      .component-name {
+        margin: 0 0 3px;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .component-description {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      code {
+        color: var(--rust);
+        font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+        font-size: 0.82em;
+      }
+
+      .transition-card {
+        grid-column: 1 / -1;
+      }
+
+      .transition-steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .transition-steps li {
+        border-top: 2px solid var(--rust);
+        padding-top: 12px;
+      }
+
+      .transition-steps strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 1rem;
+      }
+
+      .transition-steps span {
+        display: block;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      .implementation-note {
+        margin: 22px 0 0;
+        border-left: 2px solid var(--olive);
+        padding-left: 14px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 820px) {
+        .document { width: min(100% - 28px, 680px); padding-top: 32px; }
+        .document-header { align-items: flex-start; flex-direction: column; }
+        .source-links { white-space: normal; }
+        .layout { grid-template-columns: 1fr; }
+        .transition-card { grid-column: auto; }
+      }
+
+      @media (max-width: 520px) {
+        .card { padding: 16px; }
+        .device { padding: 8px; }
+        .scroll-frame { height: 570px; }
+        .transition-steps { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="document">
+      <header class="document-header">
+        <div>
+          <p class="eyebrow">Export preview · mobile behavior</p>
+          <h1>Sticky navigation anatomy</h1>
+          <p class="lede">Scroll inside the phone frame to see when “Specializations” moves beneath the sticky navigation, shadow separator, and 10px mobile buffer.</p>
+        </div>
+        <p class="source-links">
+          <a href="../index.html">Open live page</a>
+          <a href="../style.css">Open stylesheet</a>
+        </p>
+      </header>
+
+      <main class="layout">
+        <section class="card" aria-labelledby="demo-heading">
+          <h2 id="demo-heading">Live transition preview</h2>
+          <p class="card-intro">Use the inner scrollbar or wheel over the phone. The status below updates as the intro label approaches and passes the header boundary.</p>
+
+          <div class="device">
+            <div class="device-top">
+              <span>390px mobile viewport</span>
+              <span class="device-dot" aria-label="Interactive preview"></span>
+            </div>
+
+            <div class="scroll-frame" id="scroll-frame">
+              <div class="demo-page">
+                <header class="demo-header" aria-label="Annotated sticky site header">
+                  <span class="annotation-tag">01 · .site-header</span>
+                  <div class="demo-identity">
+                    <img class="demo-avatar" src="../images/avatar.jpg" alt="">
+                    <div>
+                      <a class="demo-name" href="#demo-heading">Danny Ng</a>
+                      <p class="demo-role">Portfolio identity</p>
+                    </div>
+                    <div class="demo-contacts" aria-label="Contact links">
+                      <span class="demo-contact">GH</span>
+                      <span class="demo-contact">in</span>
+                      <span class="demo-contact">✆</span>
+                      <span class="demo-contact">@</span>
+                    </div>
+                  </div>
+
+                  <nav class="demo-nav" aria-label="Primary navigation">
+                    <a href="#demo-experience">Experience</a>
+                    <a href="#demo-projects">Projects</a>
+                    <a href="#demo-education">Education</a>
+                    <a href="#demo-musings">Musings</a>
+                  </nav>
+
+                  <span class="shadow-guide">04 · ::after shadow / separator</span>
+                  <span class="buffer-guide">05 · 10px bottom buffer</span>
+                </header>
+
+                <section class="demo-intro" aria-labelledby="demo-intro-title">
+                  <span class="annotation-tag">08 · .intro content layer</span>
+                  <p class="demo-kicker" id="demo-label">Specializations</p>
+                  <h2 class="demo-title" id="demo-intro-title">Strategy &amp; Planning · Process Optimizations · AI-Tooling &amp; Implementations</h2>
+                  <p class="demo-copy">This is the normal document content. It scrolls beneath the sticky header, while the header remains at the top of the mobile viewport.</p>
+                  <hr class="demo-rule">
+                  <p class="demo-copy">The label disappears at the header’s painted bottom boundary. The shadow is a CSS pseudo-element; the 10px buffer is header spacing rather than a separate HTML component.</p>
+                </section>
+
+                <section class="demo-section" id="demo-experience">
+                  <h3>Experience content</h3>
+                  <p>Additional page content makes the scroll interaction observable. Continue scrolling to see the intro move completely behind the sticky layer.</p>
+                </section>
+
+                <section class="demo-section" id="demo-projects">
+                  <h3>Projects content</h3>
+                  <p>The sticky header maintains its stacking position while the document content continues moving below it.</p>
+                </section>
+
+                <section class="demo-section" id="demo-education">
+                  <h3>Education content</h3>
+                  <p>These sections are included only to provide realistic scroll depth for the annotated demonstration.</p>
+                </section>
+
+                <section class="demo-section" id="demo-musings">
+                  <h3>Musings content</h3>
+                  <p>The preview ends after the transition has been demonstrated.</p>
+                </section>
+              </div>
+            </div>
+
+            <div class="scroll-status" aria-live="polite">
+              <span>Transition state</span>
+              <span class="status-value" id="status-value">At page start</span>
+            </div>
+          </div>
+        </section>
+
+        <aside class="card" aria-labelledby="map-heading">
+          <h2 id="map-heading">Component map</h2>
+          <p class="card-intro">These are the actual page concepts and their source selectors. Items marked “CSS only” have no standalone DOM element.</p>
+
+          <ol class="component-map">
+            <li>
+              <span class="component-number">01</span>
+              <div>
+                <p class="component-name"><code>.site-header</code></p>
+                <p class="component-description">Sticky navigation container. Its opaque page background and <code>z-index: 10</code> form the occlusion layer above the scrolling content.</p>
+              </div>
+            </li>
+            <li>
+              <span class="component-number">02</span>
+              <div>
+                <p class="component-name"><code>.header-photo</code> / identity</p>
+                <p class="component-description">The profile image and identity block inside the header.</p>
+              </div>
+            </li>
+            <li>
+              <span class="component-number">03</span>
+              <div>
+                <p class="component-name"><code>.identity-links</code></p>
+                <p class="component-description">Contact-link controls grouped with the mobile header identity.</p>
+              </div>
+            </li>
+            <li>
+              <span class="component-number">04</span>
+              <div>
+                <p class="component-name"><code>.site-header::after</code> <small>(CSS only)</small></p>
+                <p class="component-description">Transparent 13px pseudo-element carrying the soft separator shadow below the navigation.</p>
+              </div>
+            </li>
+            <li>
+              <span class="component-number">05</span>
+              <div>
+                <p class="component-name">10px mobile buffer <small>(CSS only)</small></p>
+                <p class="component-description">The mobile <code>padding-bottom: 10px</code> on <code>.site-header</code>. It extends the protected header boundary without adding an opaque 33px guard pseudo-element.</p>
+              </div>
+            </li>
+            <li>
+              <span class="component-number">06</span>
+              <div>
+                <p class="component-name"><code>nav[aria-label="Primary navigation"]</code></p>
+                <p class="component-description">The four navigation links that make up the top navigation pane.</p>
+              </div>
+            </li>
+            <li>
+              <span class="component-number">07</span>
+              <div>
+                <p class="component-name"><code>main#top</code> <small>(scrolling layer)</small></p>
+                <p class="component-description">The page content remains in normal document flow and moves upward beneath the sticky header.</p>
+              </div>
+            </li>
+            <li>
+              <span class="component-number">08</span>
+              <div>
+                <p class="component-name"><code>.intro-label</code></p>
+                <p class="component-description">The “Specializations” text. It is not sticky; it is the content that becomes occluded at the header boundary.</p>
+              </div>
+            </li>
+          </ol>
+        </aside>
+
+        <section class="card transition-card" aria-labelledby="transition-heading">
+          <h2 id="transition-heading">What happens during the scroll</h2>
+          <p class="card-intro">The transition is a stacking and geometry behavior, not a JavaScript animation.</p>
+
+          <ol class="transition-steps">
+            <li>
+              <strong>1 · Before the boundary</strong>
+              <span><code>.intro-label</code> is fully visible below the normal header flow.</span>
+            </li>
+            <li>
+              <strong>2 · Crossing the boundary</strong>
+              <span>The label’s box moves upward into the sticky header’s bottom area and becomes partially occluded.</span>
+            </li>
+            <li>
+              <strong>3 · Covered state</strong>
+              <span>The header background and stacking order cover the label; only the header shadow remains visible at the separator.</span>
+            </li>
+          </ol>
+
+          <p class="implementation-note">In the live page, the transition is controlled by <code>position: sticky</code>, <code>top: 0</code>, the mobile <code>padding-bottom: 10px</code>, the <code>::after</code> shadow, and <code>z-index: 10</code> on <code>.site-header</code>.</p>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      (() => {
+        const frame = document.querySelector("#scroll-frame");
+        const header = document.querySelector(".demo-header");
+        const label = document.querySelector("#demo-label");
+        const status = document.querySelector("#status-value");
+
+        function updateTransitionState() {
+          const headerBottom = header.getBoundingClientRect().bottom;
+          const labelBox = label.getBoundingClientRect();
+
+          if (labelBox.top >= headerBottom) {
+            status.textContent = "At page start";
+          } else if (labelBox.bottom > headerBottom) {
+            status.textContent = "Crossing header boundary";
+          } else {
+            status.textContent = "Covered by sticky header";
+          }
+        }
+
+        frame.addEventListener("scroll", updateTransitionState, { passive: true });
+        window.addEventListener("resize", updateTransitionState);
+        updateTransitionState();
+      })();
+    </script>
+  </body>
+</html>
