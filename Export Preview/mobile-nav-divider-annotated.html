@@ -316,7 +316,7 @@
         display: inline-flex;
         align-items: center;
         gap: 5px;
-        max-width: 190px;
+        max-width: 210px;
         border: 1px solid currentColor;
         background: rgba(247, 245, 240, 0.94);
         color: var(--paint);
@@ -357,19 +357,19 @@
 
       .callout-buffer {
         right: 12px;
-        bottom: 2px;
+        bottom: 8px;
         color: var(--buffer);
       }
 
       .callout-buffer::after {
         right: 100%;
         top: 50%;
-        width: 70px;
+        width: 46px;
         height: 1px;
       }
 
       .paper-guide {
-        bottom: -1px;
+        bottom: 34px;
         left: 10px;
         color: var(--dom);
       }
@@ -378,12 +378,12 @@
         left: 16px;
         top: 100%;
         width: 1px;
-        height: 13px;
+        height: 39px;
       }
 
       .pseudo-guide {
-        right: 12px;
-        bottom: -39px;
+        right: 112px;
+        bottom: -88px;
         color: var(--css);
       }
 
@@ -391,12 +391,12 @@
         right: 18px;
         bottom: 100%;
         width: 1px;
-        height: 24px;
+        height: 71px;
       }
 
       .shadow-guide {
         left: 12px;
-        bottom: -25px;
+        bottom: -38px;
         color: var(--paint);
       }
 
@@ -404,7 +404,7 @@
         left: 18px;
         bottom: 100%;
         width: 1px;
-        height: 10px;
+        height: 24px;
       }
 
       .layer-marker {
@@ -429,6 +429,11 @@
 
       .edge-marker { bottom: 0; }
 
+      .edge-marker span {
+        left: 46px;
+        top: -12px;
+      }
+
       .pseudo-box {
         bottom: -13px;
         height: 13px;
@@ -437,7 +442,11 @@
         color: var(--css);
       }
 
-      .pseudo-box span { left: 50%; transform: translateX(-50%); }
+      .pseudo-box span {
+        left: 50%;
+        top: 21px;
+        transform: translateX(-50%);
+      }
 
       .buffer-band {
         right: 0;
@@ -456,7 +465,11 @@
         color: var(--buffer);
       }
 
-      .buffer-band span { left: auto; right: 12px; }
+      .buffer-band span {
+        left: auto;
+        right: 12px;
+        top: -15px;
+      }
 
       .measurement {
         color: var(--geometry);
@@ -492,7 +505,7 @@
       .measure-10::after { bottom: 0; }
 
       .measure-10 {
-        right: 88px;
+        right: 148px;
         bottom: 0;
         height: 10px;
         border-right: 1px solid currentColor;
@@ -500,8 +513,8 @@
       }
 
       .measure-offset {
-        right: 54px;
-        bottom: -21px;
+        right: 18px;
+        bottom: -118px;
         color: var(--css);
       }
 
@@ -531,11 +544,11 @@
 
       .demo-intro {
         position: relative;
-        padding: 86px 24px 52px;
+        padding: 216px 24px 52px;
       }
 
       .demo-intro .callout {
-        top: 62px;
+        top: 164px;
         right: 24px;
         color: var(--paint);
       }
@@ -543,7 +556,7 @@
       .demo-intro .callout::after {
         right: 100%;
         top: 50%;
-        width: 50px;
+        width: 88px;
         height: 1px;
       }
 
@@ -881,16 +894,28 @@
         .scroll-frame { height: 760px; }
         .demo-contacts { display: none; }
         .callout {
-          max-width: 138px;
-          font-size: 0.56rem;
+          max-width: 152px;
+          font-size: 0.54rem;
           padding: 3px 5px;
         }
         .callout-dom::after,
         .callout-buffer::after,
-        .demo-intro .callout::after { width: 22px; }
-        .pseudo-guide { bottom: -43px; }
-        .measure-offset { display: none; }
-        .measure-10 { right: 72px; }
+        .demo-intro .callout::after { width: 28px; }
+        .callout-buffer { bottom: 7px; right: 8px; }
+        .paper-guide { bottom: 38px; left: 8px; }
+        .shadow-guide { bottom: -44px; left: 8px; }
+        .pseudo-guide { bottom: -96px; right: 86px; }
+        .measure-offset { bottom: -128px; right: 8px; }
+        .measure-10 { right: 132px; }
+        .edge-marker span { left: 38px; top: -11px; }
+        .pseudo-box span {
+          left: 12px;
+          top: 25px;
+          transform: none;
+        }
+        .buffer-band span { top: -15px; }
+        .demo-intro { padding-top: 240px; }
+        .demo-intro .callout { top: 184px; right: 16px; }
         .legend,
         .transition-steps,
         .truth-table { grid-template-columns: 1fr; }
