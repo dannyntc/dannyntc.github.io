@@ -222,10 +222,13 @@
       }
 
       .demo-header {
+        --buffer-height: 10px;
+        --separator-height: 13px;
+        --separator-midpoint: 6.5px;
         position: sticky;
         z-index: 10;
         top: 0;
-        padding: 16px 16px 10px;
+        padding: 16px 16px var(--buffer-height);
         border-bottom: 0;
         background: var(--paper);
       }
@@ -233,9 +236,9 @@
       .demo-header::after {
         position: absolute;
         right: 0;
-        bottom: -13px;
+        bottom: calc(-1 * var(--separator-height));
         left: 0;
-        height: 13px;
+        height: var(--separator-height);
         content: "";
         pointer-events: none;
         background: transparent;
@@ -316,7 +319,8 @@
         display: inline-flex;
         align-items: center;
         gap: 5px;
-        max-width: 210px;
+        height: 20px;
+        max-width: none;
         border: 1px solid currentColor;
         background: rgba(247, 245, 240, 0.94);
         color: var(--paint);
@@ -325,6 +329,7 @@
         letter-spacing: 0.04em;
         padding: 4px 6px;
         text-transform: uppercase;
+        white-space: nowrap;
       }
 
       .callout::before {
@@ -355,47 +360,35 @@
         height: 1px;
       }
 
-      .callout-buffer {
-        right: 12px;
-        bottom: 8px;
-        color: var(--buffer);
-      }
-
-      .callout-buffer::after {
-        right: 100%;
-        top: 50%;
-        width: 46px;
-        height: 1px;
-      }
-
       .paper-guide {
-        bottom: 34px;
-        left: 10px;
+        bottom: -124px;
+        left: 8px;
         color: var(--dom);
       }
 
       .paper-guide::after {
         left: 16px;
-        top: 100%;
+        bottom: 100%;
         width: 1px;
-        height: 39px;
+        height: 104px;
       }
 
       .pseudo-guide {
-        right: 112px;
-        bottom: -88px;
+        bottom: -98px;
+        left: 50%;
         color: var(--css);
+        transform: translateX(-50%);
       }
 
       .pseudo-guide::after {
-        right: 18px;
+        left: 50%;
         bottom: 100%;
         width: 1px;
-        height: 71px;
+        height: 71.5px;
       }
 
       .shadow-guide {
-        left: 12px;
+        left: 8px;
         bottom: -38px;
         color: var(--paint);
       }
@@ -404,7 +397,73 @@
         left: 18px;
         bottom: 100%;
         width: 1px;
-        height: 24px;
+        height: 11.5px;
+      }
+
+      .transparent-guide {
+        bottom: -158px;
+        left: 50%;
+        color: var(--css);
+        transform: translateX(-50%);
+      }
+
+      .transparent-guide::after {
+        bottom: 100%;
+        left: 50%;
+        width: 1px;
+        height: 131.5px;
+      }
+
+      .offset-guide {
+        bottom: -68px;
+        left: 8px;
+        color: var(--geometry);
+      }
+
+      .offset-guide::after {
+        bottom: 100%;
+        left: 18px;
+        width: 1px;
+        height: 35px;
+      }
+
+      .buffer-start-guide {
+        right: 8px;
+        bottom: -36px;
+        color: var(--buffer);
+      }
+
+      .buffer-start-guide::after {
+        right: 18px;
+        bottom: 100%;
+        width: 1px;
+        height: 26px;
+      }
+
+      .buffer-guide {
+        right: 8px;
+        bottom: -66px;
+        color: var(--buffer);
+      }
+
+      .buffer-guide::after {
+        right: 18px;
+        bottom: 100%;
+        width: 1px;
+        height: 51px;
+      }
+
+      .boundary-guide {
+        right: 8px;
+        bottom: -124px;
+        color: var(--geometry);
+      }
+
+      .boundary-guide::after {
+        right: 18px;
+        bottom: 100%;
+        width: 1px;
+        height: 104px;
       }
 
       .layer-marker {
@@ -435,24 +494,18 @@
       }
 
       .pseudo-box {
-        bottom: -13px;
-        height: 13px;
+        bottom: calc(-1 * var(--separator-height));
+        height: var(--separator-height);
         border-top: 1px dashed var(--css);
         border-bottom: 1px dashed var(--css);
         color: var(--css);
-      }
-
-      .pseudo-box span {
-        left: 50%;
-        top: 21px;
-        transform: translateX(-50%);
       }
 
       .buffer-band {
         right: 0;
         bottom: 0;
         left: 0;
-        height: 10px;
+        height: var(--buffer-height);
         border-top: 1px dotted var(--buffer);
         background:
           repeating-linear-gradient(
@@ -465,12 +518,6 @@
         color: var(--buffer);
       }
 
-      .buffer-band span {
-        left: auto;
-        right: 12px;
-        top: -15px;
-      }
-
       .measurement {
         color: var(--geometry);
         font-size: 0.6rem;
@@ -481,8 +528,8 @@
 
       .measure-13 {
         right: 6px;
-        bottom: -13px;
-        height: 13px;
+        bottom: calc(-1 * var(--separator-height));
+        height: var(--separator-height);
         border-right: 1px solid currentColor;
         padding-right: 5px;
       }
@@ -507,26 +554,9 @@
       .measure-10 {
         right: 148px;
         bottom: 0;
-        height: 10px;
+        height: var(--buffer-height);
         border-right: 1px solid currentColor;
         padding-right: 5px;
-      }
-
-      .measure-offset {
-        right: 18px;
-        bottom: -118px;
-        color: var(--css);
-      }
-
-      .measure-offset::before {
-        display: inline-block;
-        width: 38px;
-        height: 13px;
-        margin-right: 5px;
-        border-top: 1px solid currentColor;
-        border-right: 1px solid currentColor;
-        content: "";
-        vertical-align: -5px;
       }
 
       .focus-mode .demo-identity,
@@ -543,20 +573,22 @@
       }
 
       .demo-intro {
+        --intro-label-offset: 216px;
         position: relative;
-        padding: 216px 24px 52px;
+        padding: var(--intro-label-offset) 24px 52px;
       }
 
       .demo-intro .callout {
-        top: 164px;
-        right: 24px;
+        top: calc(var(--intro-label-offset) - 1px);
+        left: 174px;
+        right: auto;
         color: var(--paint);
       }
 
       .demo-intro .callout::after {
         right: 100%;
         top: 50%;
-        width: 88px;
+        width: 32px;
         height: 1px;
       }
 
@@ -894,28 +926,14 @@
         .scroll-frame { height: 760px; }
         .demo-contacts { display: none; }
         .callout {
-          max-width: 152px;
+          height: 20px;
           font-size: 0.54rem;
           padding: 3px 5px;
         }
-        .callout-dom::after,
-        .callout-buffer::after,
-        .demo-intro .callout::after { width: 28px; }
-        .callout-buffer { bottom: 7px; right: 8px; }
-        .paper-guide { bottom: 38px; left: 8px; }
-        .shadow-guide { bottom: -44px; left: 8px; }
-        .pseudo-guide { bottom: -96px; right: 86px; }
-        .measure-offset { bottom: -128px; right: 8px; }
+        .callout-dom::after { width: 28px; }
         .measure-10 { right: 132px; }
-        .edge-marker span { left: 38px; top: -11px; }
-        .pseudo-box span {
-          left: 12px;
-          top: 25px;
-          transform: none;
-        }
-        .buffer-band span { top: -15px; }
-        .demo-intro { padding-top: 240px; }
-        .demo-intro .callout { top: 184px; right: 16px; }
+        .demo-intro { --intro-label-offset: 240px; }
+        .demo-intro .callout { left: 160px; }
         .legend,
         .transition-steps,
         .truth-table { grid-template-columns: 1fr; }
@@ -977,16 +995,19 @@
                     <a href="#demo-musings">Musings</a>
                   </nav>
 
-                  <span class="layer-marker edge-marker" aria-hidden="true"><span>04E header paper edge</span></span>
-                  <span class="layer-marker pseudo-box" aria-hidden="true"><span>04A-04C transparent ::after box</span></span>
-                  <span class="layer-marker buffer-band" aria-hidden="true"><span>05A-05C buffer zone</span></span>
-                  <span class="callout callout-buffer" aria-hidden="true">05B 10px padding</span>
-                  <span class="callout paper-guide" aria-hidden="true">04E opaque surface</span>
-                  <span class="callout shadow-guide" aria-hidden="true">04D shadow strip</span>
-                  <span class="callout pseudo-guide" aria-hidden="true">04A-04C generated layer</span>
+                  <span class="layer-marker edge-marker" aria-hidden="true"></span>
+                  <span class="layer-marker pseudo-box" aria-hidden="true"></span>
+                  <span class="layer-marker buffer-band" aria-hidden="true"></span>
+                  <span class="callout paper-guide" aria-hidden="true">04E paper edge</span>
+                  <span class="callout shadow-guide" aria-hidden="true">04D shadow paint</span>
+                  <span class="callout offset-guide" aria-hidden="true">04C bottom: -13px</span>
+                  <span class="callout pseudo-guide" aria-hidden="true">04A ::after box</span>
+                  <span class="callout transparent-guide" aria-hidden="true">04B transparent surface</span>
+                  <span class="callout buffer-start-guide" aria-hidden="true">05A buffer starts</span>
+                  <span class="callout buffer-guide" aria-hidden="true">05B 10px padding</span>
+                  <span class="callout boundary-guide" aria-hidden="true">05C protected edge</span>
                   <span class="measurement measure-13" aria-hidden="true">13px</span>
                   <span class="measurement measure-10" aria-hidden="true">10px</span>
-                  <span class="measurement measure-offset" aria-hidden="true">bottom: -13px</span>
                 </header>
 
                 <section class="demo-intro" aria-labelledby="demo-intro-title">
