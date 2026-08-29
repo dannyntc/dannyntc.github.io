@@ -111,6 +111,54 @@
         font-size: 0.95rem;
       }
 
+      .map-subheading {
+        margin: 22px 0 10px;
+        color: var(--olive);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .layer-stack {
+        display: grid;
+        margin-bottom: 22px;
+        border: 1px solid var(--line);
+        background: #f0ede6;
+      }
+
+      .layer-item {
+        display: grid;
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 10px;
+        align-items: center;
+        min-height: 48px;
+        padding: 8px 10px;
+      }
+
+      .layer-item + .layer-item { border-top: 1px solid var(--line); }
+
+      .layer-item:nth-child(2) { background: rgba(255, 240, 233, 0.55); }
+
+      .layer-code {
+        color: var(--annotation);
+        font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+        font-size: 0.72rem;
+        font-weight: 700;
+      }
+
+      .layer-item strong {
+        display: block;
+        margin-bottom: 1px;
+        font-size: 0.88rem;
+      }
+
+      .layer-item span:last-child {
+        display: block;
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+
       .device {
         width: min(100%, 430px);
         margin: 0 auto;
@@ -240,7 +288,9 @@
 
       .annotation-tag,
       .buffer-guide,
-      .shadow-guide {
+      .shadow-guide,
+      .pseudo-guide,
+      .paper-guide {
         position: absolute;
         z-index: 2;
         pointer-events: none;
@@ -266,6 +316,21 @@
         bottom: -7px;
         padding: 3px 5px;
         background: var(--annotation-soft);
+      }
+
+      .pseudo-guide {
+        right: 10px;
+        bottom: -25px;
+        padding: 3px 5px;
+        border-top: 1px dotted var(--annotation);
+        background: var(--annotation-soft);
+      }
+
+      .paper-guide {
+        bottom: 2px;
+        left: 10px;
+        padding: 3px 5px;
+        background: rgba(247, 245, 240, 0.86);
       }
 
       .buffer-guide {
@@ -506,7 +571,9 @@
                     <a href="#demo-musings">Musings</a>
                   </nav>
 
-                  <span class="shadow-guide">04 · ::after shadow / separator</span>
+                  <span class="paper-guide">04E · paper edge</span>
+                  <span class="shadow-guide">04D · shadow paint</span>
+                  <span class="pseudo-guide">04A–C · ::after box / transparent / -13px</span>
                   <span class="buffer-guide">05 · 10px bottom buffer</span>
                 </header>
 
@@ -552,6 +619,45 @@
           <h2 id="map-heading">Component map</h2>
           <p class="card-intro">These are the actual page concepts and their source selectors. Items marked “CSS only” have no standalone DOM element.</p>
 
+          <p class="map-subheading">Layers between 04 and 05</p>
+          <div class="layer-stack" aria-label="Layers between the shadow separator and the mobile buffer">
+            <div class="layer-item">
+              <span class="layer-code">04A</span>
+              <div>
+                <strong>Generated pseudo-element box</strong>
+                <span><code>content: ""</code> and <code>height: 13px</code>; this is the box that carries the separator treatment.</span>
+              </div>
+            </div>
+            <div class="layer-item">
+              <span class="layer-code">04B</span>
+              <div>
+                <strong>Transparent pass-through surface</strong>
+                <span><code>background: transparent</code>; the box itself does not paint an opaque paper band.</span>
+              </div>
+            </div>
+            <div class="layer-item">
+              <span class="layer-code">04C</span>
+              <div>
+                <strong>Negative placement offset</strong>
+                <span><code>bottom: -13px</code>; positions the generated box immediately below the header boundary.</span>
+              </div>
+            </div>
+            <div class="layer-item">
+              <span class="layer-code">04D</span>
+              <div>
+                <strong>Shadow paint / visual separator</strong>
+                <span><code>box-shadow: 0 6px 12px rgba(...)</code>; the offset and blur create the visible soft strip.</span>
+              </div>
+            </div>
+            <div class="layer-item">
+              <span class="layer-code">04E</span>
+              <div>
+                <strong>Header paper surface and box edge</strong>
+                <span><code>.site-header</code> supplies <code>background: var(--paper)</code>; its border-box edge is the protected stacking boundary.</span>
+              </div>
+            </div>
+          </div>
+
           <ol class="component-map">
             <li>
               <span class="component-number">01</span>
@@ -578,7 +684,7 @@
               <span class="component-number">04</span>
               <div>
                 <p class="component-name"><code>.site-header::after</code> <small>(CSS only)</small></p>
-                <p class="component-description">Transparent 13px pseudo-element carrying the soft separator shadow below the navigation.</p>
+                <p class="component-description">The generated separator layer; its internal box, placement, transparency, and shadow paint are broken out above as 04A–04E.</p>
               </div>
             </li>
             <li>
