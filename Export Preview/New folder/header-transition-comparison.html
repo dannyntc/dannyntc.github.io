@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mobile Header Transition Mockups</title>
+  <style>
+    :root {
+      --paper: #f7f5f0;
+      --ink: #272722;
+      --muted: #5d5d54;
+      --rust: #174a8b;
+      --olive: #69725c;
+      --line: #d7d0c1;
+      --shadow: rgba(39, 39, 34, .14);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px;
+      background: #eae7df;
+      color: var(--ink);
+      font: 16px/1.45 "Source Sans Pro", Helvetica, Arial, sans-serif;
+    }
+    h1 { margin: 0 0 8px; font-size: 28px; font-weight: 600; }
+    .intro { margin: 0 0 28px; color: var(--muted); max-width: 760px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(240px, 390px));
+      gap: 24px;
+      align-items: start;
+    }
+    .option h2 { margin: 0 0 8px; font-size: 18px; font-weight: 600; }
+    .option p { min-height: 46px; margin: 0 0 12px; color: var(--muted); font-size: 14px; }
+    .phone {
+      position: relative;
+      height: 740px;
+      overflow: hidden;
+      border: 1px solid #c7c0b4;
+      border-radius: 14px;
+      background: var(--paper);
+      box-shadow: 0 10px 22px rgba(39, 39, 34, .09);
+    }
+    .nav {
+      position: absolute;
+      z-index: 3;
+      inset: 0 0 auto;
+      height: 120px;
+      padding: 26px 18px 0;
+      background: var(--paper);
+    }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 0 14px; color: var(--muted); font-size: 13px; }
+    .nav-links span:first-child { color: var(--olive); }
+    .nav-rule { position: absolute; right: 0; bottom: 0; left: 0; border-bottom: 1px solid var(--line); }
+    .content {
+      position: absolute;
+      inset: 0;
+      padding: 130px 18px 24px;
+      background: linear-gradient(180deg, #fbfaf7 0%, var(--paper) 24%);
+    }
+    .content-label { margin: 0 0 8px; color: var(--rust); font-size: 24px; font-weight: 600; letter-spacing: .08em; line-height: 1; text-transform: uppercase; }
+    .content h3 { margin: 0 0 26px; color: var(--ink); font-size: 24px; font-weight: 400; line-height: 1.05; }
+    .content-line { height: 1px; margin: 0 0 16px; background: var(--line); }
+    .content-copy { max-width: 285px; margin: 0; color: var(--muted); font-size: 14px; }
+    .clearance { position: absolute; z-index: 4; top: 120px; right: 0; left: 0; height: 33px; pointer-events: none; }
+    .gradient-veil .clearance { background: linear-gradient(180deg, rgba(247,245,240,0) 0%, rgba(247,245,240,.34) 38%, rgba(247,245,240,.82) 73%, var(--paper) 100%); box-shadow: 0 6px 12px var(--shadow); }
+    .layered-shadows .clearance { box-shadow: 0 6px 12px var(--shadow), 0 17px 19px rgba(247,245,240,.62); }
+    .backdrop-blur .clearance { background: linear-gradient(180deg, rgba(247,245,240,.08), rgba(247,245,240,.72) 78%, var(--paper)); backdrop-filter: blur(4px); box-shadow: 0 6px 12px var(--shadow); }
+    .content-mask .content-label { opacity: .22; filter: blur(1.1px); }
+    .content-mask .content h3 { opacity: .94; }
+    .content-mask .clearance { background: linear-gradient(180deg, rgba(247,245,240,.14), var(--paper) 100%); box-shadow: 0 6px 12px var(--shadow); }
+    .measure { position: absolute; z-index: 5; top: 134px; right: 10px; display: flex; align-items: center; gap: 5px; color: var(--olive); font-size: 10px; writing-mode: vertical-rl; }
+    .measure::before { content: ""; display: block; width: 1px; height: 18px; background: var(--olive); }
+    .key { display: flex; gap: 10px; margin-top: 22px; color: var(--muted); font-size: 13px; }
+    .swatch { width: 20px; height: 12px; border: 1px solid #c7c0b4; background: linear-gradient(180deg, rgba(247,245,240,0), var(--paper)); }
+    @media (max-width: 1100px) { .grid { grid-template-columns: repeat(2, minmax(240px, 390px)); } }
+    @media (max-width: 650px) { body { padding: 20px; } .grid { grid-template-columns: minmax(240px, 390px); } }
+  </style>
+</head>
+<body>
+  <h1>Mobile header transition mockups</h1>
+  <p class="intro">The same 390px mobile viewport is shown in four treatments. The blue label is scrolling content approaching the sticky navigation; the 33px transition area is intentionally a soft color progression, not a hard-edged block.</p>
+  <main class="grid">
+    <section class="option">
+      <h2>01 · Gradient veil</h2>
+      <p>Strongest protection. The shadow fades into the matching paper color.</p>
+      <div class="phone gradient-veil"><div class="nav"><div class="nav-links"><span>Experience</span><span>Projects</span><span>Education</span><span>Musings</span></div><div class="nav-rule"></div></div><div class="content"><p class="content-label">Specializations</p><h3>Strategy &amp; Planning</h3><div class="content-line"></div><p class="content-copy">The transition covers the approaching content progressively before it reaches the navigation pane.</p></div><div class="clearance"></div><div class="measure">20px clearance</div></div>
+    </section>
+    <section class="option">
+      <h2>02 · Layered shadows</h2>
+      <p>Lightest code change. A second soft paper-colored shadow extends the existing divider.</p>
+      <div class="phone layered-shadows"><div class="nav"><div class="nav-links"><span>Experience</span><span>Projects</span><span>Education</span><span>Musings</span></div><div class="nav-rule"></div></div><div class="content"><p class="content-label">Specializations</p><h3>Strategy &amp; Planning</h3><div class="content-line"></div><p class="content-copy">The transition covers the approaching content progressively before it reaches the navigation pane.</p></div><div class="clearance"></div><div class="measure">20px clearance</div></div>
+    </section>
+    <section class="option">
+      <h2>03 · Blur + gradient</h2>
+      <p>Softly blurs content beneath the color transition for a glass-like effect.</p>
+      <div class="phone backdrop-blur"><div class="nav"><div class="nav-links"><span>Experience</span><span>Projects</span><span>Education</span><span>Musings</span></div><div class="nav-rule"></div></div><div class="content"><p class="content-label">Specializations</p><h3>Strategy &amp; Planning</h3><div class="content-line"></div><p class="content-copy">The transition covers the approaching content progressively before it reaches the navigation pane.</p></div><div class="clearance"></div><div class="measure">20px clearance</div></div>
+    </section>
+    <section class="option">
+      <h2>04 · Content mask</h2>
+      <p>Fades the content itself as it enters the protected header boundary.</p>
+      <div class="phone content-mask"><div class="nav"><div class="nav-links"><span>Experience</span><span>Projects</span><span>Education</span><span>Musings</span></div><div class="nav-rule"></div></div><div class="content"><p class="content-label">Specializations</p><h3>Strategy &amp; Planning</h3><div class="content-line"></div><p class="content-copy">The transition covers the approaching content progressively before it reaches the navigation pane.</p></div><div class="clearance"></div><div class="measure">20px clearance</div></div>
+    </section>
+  </main>
+  <div class="key"><span class="swatch"></span> Paper-colored fade protects the navigation boundary</div>
+</body>
+</html>
