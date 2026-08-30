@@ -139,6 +139,17 @@
         font-size: 0.84rem;
       }
 
+      .preview-card {
+        grid-column: 1 / -1;
+      }
+
+      .preview-pair {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(320px, 1fr));
+        gap: 24px;
+        align-items: start;
+      }
+
       .focus-toggle {
         display: inline-flex;
         align-items: center;
@@ -203,6 +214,11 @@
         border-radius: 50%;
         background: var(--paint);
         box-shadow: 0 0 0 3px var(--soft-paint);
+      }
+
+      .device-plain .device-dot {
+        background: var(--olive);
+        box-shadow: 0 0 0 3px var(--soft-geometry);
       }
 
       .scroll-frame {
@@ -915,6 +931,7 @@
 
       @media (max-width: 980px) {
         .layout { grid-template-columns: 1fr; }
+        .preview-pair { grid-template-columns: 1fr; }
         .transition-card { grid-column: auto; }
       }
 
@@ -962,19 +979,20 @@
       </header>
 
       <main class="layout">
-        <section class="card" aria-labelledby="demo-heading">
+        <section class="card preview-card" aria-labelledby="demo-heading">
           <h2 id="demo-heading">Live transition preview</h2>
-          <p class="card-intro">Use the inner scrollbar or wheel over the phone. The status below reports the header boundary and the label's position as the text moves under the sticky layer.</p>
+          <p class="card-intro">Use either inner scrollbar or wheel over a phone. The annotated preview explains the layers, while the plain preview shows the same mobile behavior without overlays.</p>
 
           <div class="control-row">
             <p class="control-copy">The in-frame labels now include the internal 04 and 05 subcomponents.</p>
             <button class="focus-toggle" type="button" aria-pressed="false" id="focus-toggle">Focus 04/05 layers</button>
           </div>
 
+          <div class="preview-pair">
           <div class="device">
             <div class="device-top">
-              <span>Enlarged mobile preview - 560px max / 980px tall</span>
-              <span class="device-dot" aria-label="Interactive preview"></span>
+              <span>Annotated preview - 560px max / 980px tall</span>
+              <span class="device-dot" aria-label="Interactive annotated preview"></span>
             </div>
 
             <div class="scroll-frame" id="scroll-frame">
@@ -1053,6 +1071,69 @@
               <span class="status-value" id="status-value">At page start</span>
               <p class="status-detail" id="status-detail">Boundary and label geometry will update while you scroll.</p>
             </div>
+          </div>
+
+          <div class="device device-plain">
+            <div class="device-top">
+              <span>Plain mobile preview - same behavior</span>
+              <span class="device-dot" aria-label="Interactive plain preview"></span>
+            </div>
+
+            <div class="scroll-frame">
+              <div class="demo-page">
+                <header class="demo-header" aria-label="Plain sticky site header">
+                  <div class="demo-identity">
+                    <img class="demo-avatar" src="../images/avatar.jpg" alt="">
+                    <div>
+                      <a class="demo-name" href="#demo-heading">Danny Ng</a>
+                      <p class="demo-role">Portfolio identity</p>
+                    </div>
+                    <div class="demo-contacts" aria-label="Contact links">
+                      <span class="demo-contact">GH</span>
+                      <span class="demo-contact">in</span>
+                      <span class="demo-contact">+</span>
+                      <span class="demo-contact">@</span>
+                    </div>
+                  </div>
+
+                  <nav class="demo-nav" aria-label="Primary navigation">
+                    <a href="#plain-experience">Experience</a>
+                    <a href="#plain-projects">Projects</a>
+                    <a href="#plain-education">Education</a>
+                    <a href="#plain-musings">Musings</a>
+                  </nav>
+                </header>
+
+                <section class="demo-intro" aria-labelledby="plain-intro-title">
+                  <p class="demo-kicker">Specializations</p>
+                  <h2 class="demo-title" id="plain-intro-title">Strategy &amp; Planning - Process Optimizations - AI-Tooling &amp; Implementations</h2>
+                  <p class="demo-copy">This is the normal document content. It scrolls beneath the sticky header, while the header remains at the top of the mobile viewport.</p>
+                  <hr class="demo-rule">
+                  <p class="demo-copy">The label disappears at the header's painted bottom boundary. The shadow is a CSS pseudo-element; the 10px buffer is header spacing rather than a separate HTML component.</p>
+                </section>
+
+                <section class="demo-section" id="plain-experience">
+                  <h3>Experience content</h3>
+                  <p>Additional page content makes the scroll interaction observable. Continue scrolling to see the intro move completely behind the sticky layer.</p>
+                </section>
+
+                <section class="demo-section" id="plain-projects">
+                  <h3>Projects content</h3>
+                  <p>The sticky header maintains its stacking position while the document content continues moving below it.</p>
+                </section>
+
+                <section class="demo-section" id="plain-education">
+                  <h3>Education content</h3>
+                  <p>These sections are included only to provide realistic scroll depth for the plain comparison preview.</p>
+                </section>
+
+                <section class="demo-section" id="plain-musings">
+                  <h3>Musings content</h3>
+                  <p>The preview ends after the transition has been demonstrated.</p>
+                </section>
+              </div>
+            </div>
+          </div>
           </div>
 
           <div class="legend" aria-label="Annotation key">
@@ -1261,8 +1342,8 @@
       (() => {
         const frame = document.querySelector("#scroll-frame");
         const page = document.querySelector("#demo-page");
-        const header = document.querySelector(".demo-header");
-        const label = document.querySelector("#demo-label");
+        const header = frame.querySelector(".demo-header");
+        const label = frame.querySelector("#demo-label");
         const status = document.querySelector("#status-value");
         const detail = document.querySelector("#status-detail");
         const toggle = document.querySelector("#focus-toggle");
