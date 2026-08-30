@@ -226,14 +226,14 @@
         --separator-height: 13px;
         --separator-midpoint: 6.5px;
         --annotation-callout-height: 20px;
-        --annotation-row-shadow: 20px;
-        --annotation-row-buffer-start: 20px;
-        --annotation-row-buffer: 66px;
-        --annotation-row-offset: 70px;
-        --annotation-row-pseudo: 112px;
-        --annotation-row-boundary: 136px;
-        --annotation-row-paper: 150px;
-        --annotation-row-transparent: 194px;
+        --annotation-row-shadow: 24px;
+        --annotation-row-buffer-start: 54px;
+        --annotation-row-offset: 96px;
+        --annotation-row-buffer: 138px;
+        --annotation-row-pseudo: 182px;
+        --annotation-row-boundary: 226px;
+        --annotation-row-paper: 272px;
+        --annotation-row-transparent: 318px;
         position: sticky;
         z-index: 10;
         top: 0;
@@ -376,7 +376,7 @@
       }
 
       .paper-guide::after {
-        left: 16px;
+        left: 128px;
         bottom: 100%;
         width: 1px;
         height: var(--annotation-row-paper);
@@ -384,13 +384,12 @@
 
       .pseudo-guide {
         bottom: calc(-1 * var(--annotation-row-pseudo) - var(--annotation-callout-height));
-        left: 50%;
+        left: 156px;
         color: var(--css);
-        transform: translateX(-50%);
       }
 
       .pseudo-guide::after {
-        left: 50%;
+        left: 24px;
         bottom: 100%;
         width: 1px;
         height: calc(var(--annotation-row-pseudo) - var(--separator-midpoint));
@@ -411,52 +410,51 @@
 
       .transparent-guide {
         bottom: calc(-1 * var(--annotation-row-transparent) - var(--annotation-callout-height));
-        left: 50%;
+        left: 220px;
         color: var(--css);
-        transform: translateX(-50%);
       }
 
       .transparent-guide::after {
         bottom: 100%;
-        left: 50%;
+        left: 34px;
         width: 1px;
         height: calc(var(--annotation-row-transparent) - var(--separator-midpoint));
       }
 
       .offset-guide {
         bottom: calc(-1 * var(--annotation-row-offset) - var(--annotation-callout-height));
-        left: 8px;
+        left: 70px;
         color: var(--geometry);
       }
 
       .offset-guide::after {
         bottom: 100%;
-        left: 18px;
+        left: 22px;
         width: 1px;
         height: calc(var(--annotation-row-offset) - var(--separator-height));
       }
 
       .buffer-start-guide {
-        right: 8px;
+        right: 54px;
         bottom: calc(-1 * var(--annotation-row-buffer-start) - var(--annotation-callout-height));
         color: var(--buffer);
       }
 
       .buffer-start-guide::after {
-        right: 18px;
+        right: 20px;
         bottom: 100%;
         width: 1px;
         height: calc(var(--annotation-row-buffer-start) + var(--buffer-height));
       }
 
       .buffer-guide {
-        right: 8px;
+        right: 92px;
         bottom: calc(-1 * var(--annotation-row-buffer) - var(--annotation-callout-height));
         color: var(--buffer);
       }
 
       .buffer-guide::after {
-        right: 18px;
+        right: 20px;
         bottom: 100%;
         width: 1px;
         height: calc(var(--annotation-row-buffer) + 5px);
@@ -469,7 +467,7 @@
       }
 
       .boundary-guide::after {
-        right: 18px;
+        right: 132px;
         bottom: 100%;
         width: 1px;
         height: var(--annotation-row-boundary);
@@ -582,7 +580,7 @@
       }
 
       .demo-intro {
-        --intro-label-offset: 290px;
+        --intro-label-offset: 410px;
         position: relative;
         padding: var(--intro-label-offset) 24px 52px;
       }
@@ -932,7 +930,7 @@
         .control-row { align-items: flex-start; flex-direction: column; }
         .device { padding: 8px; }
         .device-top { align-items: flex-start; flex-direction: column; gap: 6px; }
-        .scroll-frame { height: 880px; }
+        .scroll-frame { height: 1020px; }
         .demo-contacts { display: none; }
         .callout {
           height: 20px;
@@ -941,7 +939,7 @@
         }
         .callout-dom::after { width: 28px; }
         .measure-10 { right: 132px; }
-        .demo-intro { --intro-label-offset: 320px; }
+        .demo-intro { --intro-label-offset: 440px; }
         .demo-intro .callout { left: 160px; }
         .legend,
         .transition-steps,
