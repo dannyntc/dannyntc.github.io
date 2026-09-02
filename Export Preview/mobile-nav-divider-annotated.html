@@ -281,6 +281,7 @@
 
       .demo-header-paper-strip::after {
         background: var(--paper);
+        height: calc(var(--separator-height) + 1px);
       }
 
       .demo-identity {
@@ -1237,7 +1238,7 @@
                   <h2 class="demo-title" id="no-after-intro-title">Strategy &amp; Planning - Process Optimizations - AI-Tooling &amp; Implementations</h2>
                   <p class="demo-copy">This comparison keeps the sticky header, opaque header paper, stacking order, 10px mobile buffer, and generated shadow strip.</p>
                   <hr class="demo-rule">
-                  <p class="demo-copy">The generated <code>.site-header::after</code> area uses the same paper color as the header, so the strip aligns while the soft shadow remains visible.</p>
+                  <p class="demo-copy">The generated <code>.site-header::after</code> area overlaps the header edge by 1px and uses the same paper color, so the surface reads as seamless while the soft shadow remains visible.</p>
                 </section>
 
                 <section class="demo-section" id="no-after-experience">
