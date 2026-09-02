@@ -250,6 +250,7 @@
         --annotation-row-boundary: 226px;
         --annotation-row-paper: 272px;
         --annotation-row-transparent: 318px;
+        --annotation-row-after-strip: 364px;
         position: sticky;
         z-index: 10;
         top: 0;
@@ -437,6 +438,19 @@
         height: calc(var(--annotation-row-transparent) - var(--separator-midpoint));
       }
 
+      .after-strip-guide {
+        right: 8px;
+        bottom: calc(-1 * var(--annotation-row-after-strip) - var(--annotation-callout-height));
+        color: var(--css);
+      }
+
+      .after-strip-guide::after {
+        right: 226px;
+        bottom: 100%;
+        width: 1px;
+        height: calc(var(--annotation-row-after-strip) - var(--separator-midpoint));
+      }
+
       .offset-guide {
         bottom: calc(-1 * var(--annotation-row-offset) - var(--annotation-callout-height));
         left: 70px;
@@ -521,6 +535,13 @@
         height: var(--separator-height);
         border-top: 1px dashed var(--css);
         border-bottom: 1px dashed var(--css);
+        background:
+          linear-gradient(
+            90deg,
+            rgba(134, 89, 166, 0.08),
+            rgba(134, 89, 166, 0.02) 45%,
+            rgba(134, 89, 166, 0.08)
+          );
         color: var(--css);
       }
 
@@ -596,7 +617,7 @@
       }
 
       .demo-intro {
-        --intro-label-offset: 410px;
+        --intro-label-offset: 462px;
         position: relative;
         padding: var(--intro-label-offset) 24px 52px;
       }
@@ -955,8 +976,9 @@
           padding: 3px 5px;
         }
         .callout-dom::after { width: 28px; }
+        .after-strip-guide::after { right: 180px; }
         .measure-10 { right: 132px; }
-        .demo-intro { --intro-label-offset: 440px; }
+        .demo-intro { --intro-label-offset: 492px; }
         .demo-intro .callout { left: 160px; }
         .legend,
         .transition-steps,
@@ -1028,6 +1050,7 @@
                   <span class="callout offset-guide" aria-hidden="true">04C bottom: -13px</span>
                   <span class="callout pseudo-guide" aria-hidden="true">04A ::after box</span>
                   <span class="callout transparent-guide" aria-hidden="true">04B transparent surface</span>
+                  <span class="callout after-strip-guide" aria-hidden="true">04 .site-header::after strip</span>
                   <span class="callout buffer-start-guide" aria-hidden="true">05A buffer starts</span>
                   <span class="callout buffer-guide" aria-hidden="true">05B 10px padding</span>
                   <span class="callout boundary-guide" aria-hidden="true">05C protected edge</span>
