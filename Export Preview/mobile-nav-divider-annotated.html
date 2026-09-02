@@ -241,6 +241,8 @@
         --buffer-height: 10px;
         --separator-height: 13px;
         --separator-midpoint: 6.5px;
+        --shadow-paint-height: 18px;
+        --shadow-paint-midpoint: 22px;
         --annotation-callout-height: 20px;
         --annotation-row-shadow: 24px;
         --annotation-row-buffer-start: 54px;
@@ -251,6 +253,7 @@
         --annotation-row-paper: 272px;
         --annotation-row-transparent: 318px;
         --annotation-row-after-strip: 364px;
+        --annotation-row-visible-shadow: 410px;
         position: sticky;
         z-index: 10;
         top: 0;
@@ -451,6 +454,19 @@
         height: calc(var(--annotation-row-after-strip) - var(--separator-midpoint));
       }
 
+      .visible-shadow-guide {
+        left: 70px;
+        bottom: calc(-1 * var(--annotation-row-visible-shadow) - var(--annotation-callout-height));
+        color: var(--paint);
+      }
+
+      .visible-shadow-guide::after {
+        left: 178px;
+        bottom: 100%;
+        width: 1px;
+        height: calc(var(--annotation-row-visible-shadow) - var(--shadow-paint-midpoint));
+      }
+
       .offset-guide {
         bottom: calc(-1 * var(--annotation-row-offset) - var(--annotation-callout-height));
         left: 70px;
@@ -545,6 +561,21 @@
         color: var(--css);
       }
 
+      .shadow-paint-band {
+        bottom: calc(-1 * (var(--separator-height) + var(--shadow-paint-height)));
+        height: var(--shadow-paint-height);
+        border-top: 1px dashed rgba(180, 77, 43, 0.7);
+        border-bottom: 1px dashed rgba(180, 77, 43, 0.28);
+        background:
+          linear-gradient(
+            180deg,
+            rgba(180, 77, 43, 0.16),
+            rgba(180, 77, 43, 0.04) 72%,
+            rgba(180, 77, 43, 0)
+          );
+        color: var(--paint);
+      }
+
       .buffer-band {
         right: 0;
         bottom: 0;
@@ -617,7 +648,7 @@
       }
 
       .demo-intro {
-        --intro-label-offset: 462px;
+        --intro-label-offset: 512px;
         position: relative;
         padding: var(--intro-label-offset) 24px 52px;
       }
@@ -977,8 +1008,9 @@
         }
         .callout-dom::after { width: 28px; }
         .after-strip-guide::after { right: 180px; }
+        .visible-shadow-guide::after { left: 150px; }
         .measure-10 { right: 132px; }
-        .demo-intro { --intro-label-offset: 492px; }
+        .demo-intro { --intro-label-offset: 542px; }
         .demo-intro .callout { left: 160px; }
         .legend,
         .transition-steps,
@@ -1044,6 +1076,7 @@
 
                   <span class="layer-marker edge-marker" aria-hidden="true"></span>
                   <span class="layer-marker pseudo-box" aria-hidden="true"></span>
+                  <span class="layer-marker shadow-paint-band" aria-hidden="true"></span>
                   <span class="layer-marker buffer-band" aria-hidden="true"></span>
                   <span class="callout paper-guide" aria-hidden="true">04E paper edge</span>
                   <span class="callout shadow-guide" aria-hidden="true">04D shadow paint</span>
@@ -1051,6 +1084,7 @@
                   <span class="callout pseudo-guide" aria-hidden="true">04A ::after box</span>
                   <span class="callout transparent-guide" aria-hidden="true">04B transparent surface</span>
                   <span class="callout after-strip-guide" aria-hidden="true">04 .site-header::after strip</span>
+                  <span class="callout visible-shadow-guide" aria-hidden="true">04D visible shadow strip</span>
                   <span class="callout buffer-start-guide" aria-hidden="true">05A buffer starts</span>
                   <span class="callout buffer-guide" aria-hidden="true">05B 10px padding</span>
                   <span class="callout boundary-guide" aria-hidden="true">05C protected edge</span>
