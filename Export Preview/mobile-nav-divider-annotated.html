@@ -279,10 +279,24 @@
         box-shadow: 0 6px 12px rgba(39, 39, 34, 0.12);
       }
 
+      .demo-header-paper-strip::before {
+        position: absolute;
+        z-index: 0;
+        right: 0;
+        bottom: calc(-1 * (var(--separator-height) + 1px));
+        left: 0;
+        height: 1px;
+        content: "";
+        pointer-events: none;
+        background: transparent;
+        box-shadow: 0 7px 12px rgba(39, 39, 34, 0.14);
+      }
+
       .demo-header-paper-strip::after {
         background: var(--paper);
-        box-shadow: 0 14px 14px -12px rgba(39, 39, 34, 0.18);
+        box-shadow: none;
         height: calc(var(--separator-height) + 1px);
+        z-index: 1;
       }
 
       .demo-identity {
@@ -1239,7 +1253,7 @@
                   <h2 class="demo-title" id="no-after-intro-title">Strategy &amp; Planning - Process Optimizations - AI-Tooling &amp; Implementations</h2>
                   <p class="demo-copy">This comparison keeps the sticky header, opaque header paper, stacking order, 10px mobile buffer, and generated shadow strip.</p>
                   <hr class="demo-rule">
-                  <p class="demo-copy">The generated <code>.site-header::after</code> area extends the header paper seamlessly, while the shadow is pushed below the joined surface.</p>
+                  <p class="demo-copy">The generated <code>.site-header::after</code> area is clean paper only; a separate shadow layer sits below it so the circled strip does not darken.</p>
                 </section>
 
                 <section class="demo-section" id="no-after-experience">
