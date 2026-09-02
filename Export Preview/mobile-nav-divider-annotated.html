@@ -279,10 +279,6 @@
         box-shadow: 0 6px 12px rgba(39, 39, 34, 0.12);
       }
 
-      .demo-header-no-after::after {
-        content: none;
-      }
-
       .demo-identity {
         display: flex;
         align-items: center;
@@ -1044,7 +1040,7 @@
       <main class="layout">
         <section class="card preview-card" aria-labelledby="demo-heading">
           <h2 id="demo-heading">Live transition preview</h2>
-          <p class="card-intro">Use any inner scrollbar or wheel over a phone. The annotated preview explains the layers, the plain preview shows the current behavior, and the rightmost preview removes only the generated <code>::after</code> separator.</p>
+          <p class="card-intro">Use any inner scrollbar or wheel over a phone. The annotated preview explains the layers, while both comparison previews keep the generated <code>::after</code> shadow strip active.</p>
 
           <div class="control-row">
             <p class="control-copy">The in-frame labels now include the internal 04 and 05 subcomponents.</p>
@@ -1203,13 +1199,13 @@
 
           <div class="device device-no-after">
             <div class="device-top">
-              <span>No ::after preview - separator removed</span>
-              <span class="device-dot" aria-label="No pseudo-element comparison preview"></span>
+              <span>Shadow strip preview - reinstated</span>
+              <span class="device-dot" aria-label="Reinstated shadow-strip comparison preview"></span>
             </div>
 
             <div class="scroll-frame">
               <div class="demo-page">
-                <header class="demo-header demo-header-no-after" aria-label="Sticky site header without generated separator">
+                <header class="demo-header" aria-label="Sticky site header with reinstated generated separator">
                   <div class="demo-identity">
                     <img class="demo-avatar" src="../images/avatar.jpg" alt="">
                     <div>
@@ -1235,24 +1231,24 @@
                 <section class="demo-intro" aria-labelledby="no-after-intro-title">
                   <p class="demo-kicker">Specializations</p>
                   <h2 class="demo-title" id="no-after-intro-title">Strategy &amp; Planning - Process Optimizations - AI-Tooling &amp; Implementations</h2>
-                  <p class="demo-copy">This comparison keeps the sticky header, opaque header paper, stacking order, and 10px mobile buffer.</p>
+                  <p class="demo-copy">This comparison keeps the sticky header, opaque header paper, stacking order, 10px mobile buffer, and generated shadow strip.</p>
                   <hr class="demo-rule">
-                  <p class="demo-copy">Only the generated <code>.site-header::after</code> shadow/separator strip has been removed, so the edge appears flatter during the same scroll transition.</p>
+                  <p class="demo-copy">The transparent <code>.site-header::after</code> area is active again, so the soft separator remains visible during the same scroll transition.</p>
                 </section>
 
                 <section class="demo-section" id="no-after-experience">
                   <h3>Experience content</h3>
-                  <p>Additional page content makes the scroll interaction observable without the generated separator layer.</p>
+                  <p>Additional page content makes the scroll interaction observable with the generated separator layer active.</p>
                 </section>
 
                 <section class="demo-section" id="no-after-projects">
                   <h3>Projects content</h3>
-                  <p>The sticky header still covers the scrolling document content, but there is no pseudo-element shadow below it.</p>
+                  <p>The sticky header covers the scrolling document content while the pseudo-element shadow remains visible below it.</p>
                 </section>
 
                 <section class="demo-section" id="no-after-education">
                   <h3>Education content</h3>
-                  <p>These sections are included only to provide realistic scroll depth for the no-<code>::after</code> comparison preview.</p>
+                  <p>These sections are included only to provide realistic scroll depth for the reinstated-shadow comparison preview.</p>
                 </section>
 
                 <section class="demo-section" id="no-after-musings">
