@@ -279,6 +279,10 @@
         box-shadow: 0 6px 12px rgba(39, 39, 34, 0.12);
       }
 
+      .demo-header-paper-strip::after {
+        background: var(--paper);
+      }
+
       .demo-identity {
         display: flex;
         align-items: center;
@@ -1205,7 +1209,7 @@
 
             <div class="scroll-frame">
               <div class="demo-page">
-                <header class="demo-header" aria-label="Sticky site header with reinstated generated separator">
+                <header class="demo-header demo-header-paper-strip" aria-label="Sticky site header with header-colored generated separator">
                   <div class="demo-identity">
                     <img class="demo-avatar" src="../images/avatar.jpg" alt="">
                     <div>
@@ -1233,7 +1237,7 @@
                   <h2 class="demo-title" id="no-after-intro-title">Strategy &amp; Planning - Process Optimizations - AI-Tooling &amp; Implementations</h2>
                   <p class="demo-copy">This comparison keeps the sticky header, opaque header paper, stacking order, 10px mobile buffer, and generated shadow strip.</p>
                   <hr class="demo-rule">
-                  <p class="demo-copy">The transparent <code>.site-header::after</code> area is active again, so the soft separator remains visible during the same scroll transition.</p>
+                  <p class="demo-copy">The generated <code>.site-header::after</code> area uses the same paper color as the header, so the strip aligns while the soft shadow remains visible.</p>
                 </section>
 
                 <section class="demo-section" id="no-after-experience">
