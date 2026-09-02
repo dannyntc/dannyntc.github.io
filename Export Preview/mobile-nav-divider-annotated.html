@@ -145,7 +145,7 @@
 
       .preview-pair {
         display: grid;
-        grid-template-columns: repeat(2, minmax(320px, 1fr));
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
         gap: 24px;
         align-items: start;
       }
@@ -221,6 +221,11 @@
         box-shadow: 0 0 0 3px var(--soft-geometry);
       }
 
+      .device-no-after .device-dot {
+        background: var(--css);
+        box-shadow: 0 0 0 3px var(--soft-css);
+      }
+
       .scroll-frame {
         position: relative;
         height: 980px;
@@ -272,6 +277,10 @@
         pointer-events: none;
         background: transparent;
         box-shadow: 0 6px 12px rgba(39, 39, 34, 0.12);
+      }
+
+      .demo-header-no-after::after {
+        content: none;
       }
 
       .demo-identity {
@@ -1035,7 +1044,7 @@
       <main class="layout">
         <section class="card preview-card" aria-labelledby="demo-heading">
           <h2 id="demo-heading">Live transition preview</h2>
-          <p class="card-intro">Use either inner scrollbar or wheel over a phone. The annotated preview explains the layers, while the plain preview shows the same mobile behavior without overlays.</p>
+          <p class="card-intro">Use any inner scrollbar or wheel over a phone. The annotated preview explains the layers, the plain preview shows the current behavior, and the rightmost preview removes only the generated <code>::after</code> separator.</p>
 
           <div class="control-row">
             <p class="control-copy">The in-frame labels now include the internal 04 and 05 subcomponents.</p>
@@ -1185,6 +1194,68 @@
                 </section>
 
                 <section class="demo-section" id="plain-musings">
+                  <h3>Musings content</h3>
+                  <p>The preview ends after the transition has been demonstrated.</p>
+                </section>
+              </div>
+            </div>
+          </div>
+
+          <div class="device device-no-after">
+            <div class="device-top">
+              <span>No ::after preview - separator removed</span>
+              <span class="device-dot" aria-label="No pseudo-element comparison preview"></span>
+            </div>
+
+            <div class="scroll-frame">
+              <div class="demo-page">
+                <header class="demo-header demo-header-no-after" aria-label="Sticky site header without generated separator">
+                  <div class="demo-identity">
+                    <img class="demo-avatar" src="../images/avatar.jpg" alt="">
+                    <div>
+                      <a class="demo-name" href="#demo-heading">Danny Ng</a>
+                      <p class="demo-role">Portfolio identity</p>
+                    </div>
+                    <div class="demo-contacts" aria-label="Contact links">
+                      <span class="demo-contact">GH</span>
+                      <span class="demo-contact">in</span>
+                      <span class="demo-contact">+</span>
+                      <span class="demo-contact">@</span>
+                    </div>
+                  </div>
+
+                  <nav class="demo-nav" aria-label="Primary navigation">
+                    <a href="#no-after-experience">Experience</a>
+                    <a href="#no-after-projects">Projects</a>
+                    <a href="#no-after-education">Education</a>
+                    <a href="#no-after-musings">Musings</a>
+                  </nav>
+                </header>
+
+                <section class="demo-intro" aria-labelledby="no-after-intro-title">
+                  <p class="demo-kicker">Specializations</p>
+                  <h2 class="demo-title" id="no-after-intro-title">Strategy &amp; Planning - Process Optimizations - AI-Tooling &amp; Implementations</h2>
+                  <p class="demo-copy">This comparison keeps the sticky header, opaque header paper, stacking order, and 10px mobile buffer.</p>
+                  <hr class="demo-rule">
+                  <p class="demo-copy">Only the generated <code>.site-header::after</code> shadow/separator strip has been removed, so the edge appears flatter during the same scroll transition.</p>
+                </section>
+
+                <section class="demo-section" id="no-after-experience">
+                  <h3>Experience content</h3>
+                  <p>Additional page content makes the scroll interaction observable without the generated separator layer.</p>
+                </section>
+
+                <section class="demo-section" id="no-after-projects">
+                  <h3>Projects content</h3>
+                  <p>The sticky header still covers the scrolling document content, but there is no pseudo-element shadow below it.</p>
+                </section>
+
+                <section class="demo-section" id="no-after-education">
+                  <h3>Education content</h3>
+                  <p>These sections are included only to provide realistic scroll depth for the no-<code>::after</code> comparison preview.</p>
+                </section>
+
+                <section class="demo-section" id="no-after-musings">
                   <h3>Musings content</h3>
                   <p>The preview ends after the transition has been demonstrated.</p>
                 </section>
