@@ -75,7 +75,7 @@ h1 { font-size: clamp(3rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -0.0
 .intro-label { display: none; }
 .intro-title-desktop { align-items: baseline; display: flex; font-size: clamp(1.35rem, 2vw, 1.8rem); gap: 1rem; justify-content: space-between; width: 100%; }
 .intro-title-point { white-space: nowrap; }
-.intro-title-separator { margin-left: 0.75rem; }
+.intro-title-separator { margin: 0; }
 .intro-title-mobile { display: none; }
 .intro-point { align-items: center; column-gap: 0.35rem; display: grid; grid-template-columns: max-content minmax(0, 1fr); }
 .intro-index { color: var(--olive); font-size: 0.78em; font-variant-numeric: tabular-nums; line-height: 1; }
