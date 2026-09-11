@@ -62,7 +62,7 @@ nav .is-current, nav a[aria-current="location"] { border-bottom: 1px solid var(-
 .navigate-top:focus-visible { color: var(--olive); outline: 2px solid var(--olive); outline-offset: 3px; }
 
 main { margin-left: 246px; }
-.site-footer { margin-left: calc(246px + 96px); margin-right: 96px; width: min(1120px, calc(100% - 246px - 192px)); }
+.site-footer { margin-left: calc(246px + max(96px, calc((100vw - 246px - 1120px) / 2))); margin-right: max(96px, calc((100vw - 246px - 1120px) / 2)); width: auto; }
 
 section[id] { scroll-margin-top: 32px; }
 
