@@ -244,17 +244,17 @@
         --shadow-paint-height: 18px;
         --shadow-paint-midpoint: 22px;
         --annotation-callout-height: 20px;
-        --annotation-row-shadow: 24px;
-        --annotation-row-buffer-start: 54px;
-        --annotation-row-offset: 96px;
-        --annotation-row-buffer: 138px;
-        --annotation-row-pseudo: 182px;
-        --annotation-row-boundary: 226px;
-        --annotation-row-paper: 272px;
-        --annotation-row-transparent: 318px;
-        --annotation-row-section-4: 364px;
-        --annotation-row-under-scroll: 410px;
-        --annotation-row-visible-shadow: 456px;
+        --annotation-row-shadow: 26px;
+        --annotation-row-buffer-start: 58px;
+        --annotation-row-offset: 94px;
+        --annotation-row-buffer: 132px;
+        --annotation-row-pseudo: 172px;
+        --annotation-row-boundary: 214px;
+        --annotation-row-paper: 256px;
+        --annotation-row-transparent: 300px;
+        --annotation-row-section-4: 344px;
+        --annotation-row-under-scroll: 388px;
+        --annotation-row-visible-shadow: 432px;
         position: sticky;
         z-index: 10;
         top: 0;
@@ -397,6 +397,23 @@
         content: "";
       }
 
+      .paper-guide::after,
+      .pseudo-guide::after,
+      .shadow-guide::after,
+      .transparent-guide::after,
+      .section-4-guide::after,
+      .under-scroll-guide::after,
+      .visible-shadow-guide::after,
+      .offset-guide::after,
+      .buffer-start-guide::after,
+      .buffer-guide::after,
+      .boundary-guide::after {
+        width: 7px;
+        background:
+          radial-gradient(circle at 50% 0, currentColor 0 3px, transparent 3.5px),
+          linear-gradient(currentColor, currentColor) 50% 0 / 1px 100% no-repeat;
+      }
+
       .callout-dom {
         top: 10px;
         right: 10px;
@@ -417,22 +434,20 @@
       }
 
       .paper-guide::after {
-        left: 128px;
+        left: 125px;
         bottom: 100%;
-        width: 1px;
         height: var(--annotation-row-paper);
       }
 
       .pseudo-guide {
         bottom: calc(-1 * var(--annotation-row-pseudo) - var(--annotation-callout-height));
-        left: 156px;
+        left: 142px;
         color: var(--css);
       }
 
       .pseudo-guide::after {
-        left: 24px;
+        left: 36px;
         bottom: 100%;
-        width: 1px;
         height: calc(var(--annotation-row-pseudo) - var(--separator-midpoint));
       }
 
@@ -443,9 +458,8 @@
       }
 
       .shadow-guide::after {
-        left: 18px;
+        left: 15px;
         bottom: 100%;
-        width: 1px;
         height: calc(var(--annotation-row-shadow) - var(--separator-midpoint));
       }
 
@@ -457,8 +471,7 @@
 
       .transparent-guide::after {
         bottom: 100%;
-        left: 34px;
-        width: 1px;
+        left: 56px;
         height: calc(var(--annotation-row-transparent) - var(--separator-midpoint));
       }
 
@@ -469,9 +482,8 @@
       }
 
       .section-4-guide::after {
-        right: 226px;
+        right: 248px;
         bottom: 100%;
-        width: 1px;
         height: calc(var(--annotation-row-section-4) - var(--separator-midpoint));
       }
 
@@ -482,9 +494,8 @@
       }
 
       .under-scroll-guide::after {
-        right: 78px;
+        right: 98px;
         bottom: 100%;
-        width: 1px;
         height: calc(var(--annotation-row-under-scroll) - var(--separator-height));
       }
 
@@ -495,9 +506,8 @@
       }
 
       .visible-shadow-guide::after {
-        left: 178px;
+        left: 200px;
         bottom: 100%;
-        width: 1px;
         height: calc(var(--annotation-row-visible-shadow) - var(--shadow-paint-midpoint));
       }
 
@@ -509,8 +519,7 @@
 
       .offset-guide::after {
         bottom: 100%;
-        left: 22px;
-        width: 1px;
+        left: 27px;
         height: calc(var(--annotation-row-offset) - var(--separator-height));
       }
 
@@ -521,9 +530,8 @@
       }
 
       .buffer-start-guide::after {
-        right: 20px;
+        right: 17px;
         bottom: 100%;
-        width: 1px;
         height: calc(var(--annotation-row-buffer-start) + var(--buffer-height));
       }
 
@@ -534,9 +542,8 @@
       }
 
       .buffer-guide::after {
-        right: 20px;
+        right: 17px;
         bottom: 100%;
-        width: 1px;
         height: calc(var(--annotation-row-buffer) + 5px);
       }
 
@@ -547,9 +554,8 @@
       }
 
       .boundary-guide::after {
-        right: 132px;
+        right: 148px;
         bottom: 100%;
-        width: 1px;
         height: var(--annotation-row-boundary);
       }
 
@@ -1056,9 +1062,9 @@
           padding: 3px 5px;
         }
         .callout-dom::after { width: 28px; }
-        .section-4-guide::after { right: 180px; }
-        .under-scroll-guide::after { right: 64px; }
-        .visible-shadow-guide::after { left: 150px; }
+        .section-4-guide::after { right: 188px; }
+        .under-scroll-guide::after { right: 70px; }
+        .visible-shadow-guide::after { left: 158px; }
         .measure-10 { right: 132px; }
         .demo-intro { --intro-label-offset: 542px; }
         .demo-intro .callout { left: 160px; }
@@ -1125,15 +1131,15 @@
                   </nav>
 
                   <span class="layer-marker edge-marker" aria-hidden="true"><span>04E header paper edge</span></span>
-                  <span class="layer-marker pseudo-box" aria-hidden="true"><span>04A/04B transparent ::after box</span></span>
+                  <span class="layer-marker pseudo-box" aria-hidden="true"><span>04A box / 04B transparent</span></span>
                   <span class="layer-marker shadow-paint-band" aria-hidden="true"><span>04D shadow paint layer</span></span>
                   <span class="layer-marker buffer-band" aria-hidden="true"><span>05B header padding</span></span>
-                  <span class="callout paper-guide" aria-hidden="true">04E paper edge</span>
-                  <span class="callout shadow-guide" aria-hidden="true">04D shadow source</span>
+                  <span class="callout paper-guide" aria-hidden="true">04E paper surface</span>
+                  <span class="callout shadow-guide" aria-hidden="true">04D shadow paint</span>
                   <span class="callout offset-guide" aria-hidden="true">04C bottom: -13px</span>
-                  <span class="callout pseudo-guide" aria-hidden="true">04A ::after box</span>
+                  <span class="callout pseudo-guide" aria-hidden="true">04A generated box</span>
                   <span class="callout transparent-guide" aria-hidden="true">04B transparent surface</span>
-                  <span class="callout section-4-guide" aria-hidden="true">04 layered separator</span>
+                  <span class="callout section-4-guide" aria-hidden="true">04 separator stack</span>
                   <span class="callout under-scroll-guide" aria-hidden="true">04F content behind</span>
                   <span class="callout visible-shadow-guide" aria-hidden="true">04D visible shadow strip</span>
                   <span class="callout buffer-start-guide" aria-hidden="true">05A buffer starts</span>
