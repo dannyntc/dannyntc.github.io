@@ -257,8 +257,9 @@
         --annotation-row-boundary: 226px;
         --annotation-row-paper: 272px;
         --annotation-row-transparent: 318px;
-        --annotation-row-after-strip: 364px;
-        --annotation-row-visible-shadow: 410px;
+        --annotation-row-section-4: 364px;
+        --annotation-row-under-scroll: 410px;
+        --annotation-row-visible-shadow: 456px;
         position: sticky;
         z-index: 10;
         top: 0;
@@ -466,17 +467,30 @@
         height: calc(var(--annotation-row-transparent) - var(--separator-midpoint));
       }
 
-      .after-strip-guide {
+      .section-4-guide {
         right: 8px;
-        bottom: calc(-1 * var(--annotation-row-after-strip) - var(--annotation-callout-height));
+        bottom: calc(-1 * var(--annotation-row-section-4) - var(--annotation-callout-height));
         color: var(--css);
       }
 
-      .after-strip-guide::after {
+      .section-4-guide::after {
         right: 226px;
         bottom: 100%;
         width: 1px;
-        height: calc(var(--annotation-row-after-strip) - var(--separator-midpoint));
+        height: calc(var(--annotation-row-section-4) - var(--separator-midpoint));
+      }
+
+      .under-scroll-guide {
+        right: 86px;
+        bottom: calc(-1 * var(--annotation-row-under-scroll) - var(--annotation-callout-height));
+        color: var(--dom);
+      }
+
+      .under-scroll-guide::after {
+        right: 78px;
+        bottom: 100%;
+        width: 1px;
+        height: calc(var(--annotation-row-under-scroll) - var(--separator-height));
       }
 
       .visible-shadow-guide {
@@ -586,6 +600,11 @@
         color: var(--css);
       }
 
+      .pseudo-box span {
+        left: 156px;
+        top: 1px;
+      }
+
       .shadow-paint-band {
         bottom: calc(-1 * (var(--separator-height) + var(--shadow-paint-height)));
         height: var(--shadow-paint-height);
@@ -599,6 +618,11 @@
             rgba(180, 77, 43, 0)
           );
         color: var(--paint);
+      }
+
+      .shadow-paint-band span {
+        left: 184px;
+        top: 5px;
       }
 
       .buffer-band {
@@ -616,6 +640,11 @@
             transparent 8px
           );
         color: var(--buffer);
+      }
+
+      .buffer-band span {
+        left: 214px;
+        top: -12px;
       }
 
       .measurement {
@@ -1032,7 +1061,8 @@
           padding: 3px 5px;
         }
         .callout-dom::after { width: 28px; }
-        .after-strip-guide::after { right: 180px; }
+        .section-4-guide::after { right: 180px; }
+        .under-scroll-guide::after { right: 64px; }
         .visible-shadow-guide::after { left: 150px; }
         .measure-10 { right: 132px; }
         .demo-intro { --intro-label-offset: 542px; }
@@ -1063,7 +1093,7 @@
           <p class="card-intro">Use any inner scrollbar or wheel over a phone. The annotated preview explains the layers, while both comparison previews keep the generated <code>::after</code> shadow strip active.</p>
 
           <div class="control-row">
-            <p class="control-copy">The in-frame labels now include the internal 04 and 05 subcomponents.</p>
+            <p class="control-copy">The in-frame labels separate the 04 separator stack from the 05 mobile buffer.</p>
             <button class="focus-toggle" type="button" aria-pressed="false" id="focus-toggle">Focus 04/05 layers</button>
           </div>
 
@@ -1099,16 +1129,17 @@
                     <a href="#demo-musings">Musings</a>
                   </nav>
 
-                  <span class="layer-marker edge-marker" aria-hidden="true"></span>
-                  <span class="layer-marker pseudo-box" aria-hidden="true"></span>
-                  <span class="layer-marker shadow-paint-band" aria-hidden="true"></span>
-                  <span class="layer-marker buffer-band" aria-hidden="true"></span>
+                  <span class="layer-marker edge-marker" aria-hidden="true"><span>04E header paper edge</span></span>
+                  <span class="layer-marker pseudo-box" aria-hidden="true"><span>04A/04B transparent ::after box</span></span>
+                  <span class="layer-marker shadow-paint-band" aria-hidden="true"><span>04D shadow paint layer</span></span>
+                  <span class="layer-marker buffer-band" aria-hidden="true"><span>05B header padding</span></span>
                   <span class="callout paper-guide" aria-hidden="true">04E paper edge</span>
-                  <span class="callout shadow-guide" aria-hidden="true">04D shadow paint</span>
+                  <span class="callout shadow-guide" aria-hidden="true">04D shadow source</span>
                   <span class="callout offset-guide" aria-hidden="true">04C bottom: -13px</span>
                   <span class="callout pseudo-guide" aria-hidden="true">04A ::after box</span>
                   <span class="callout transparent-guide" aria-hidden="true">04B transparent surface</span>
-                  <span class="callout after-strip-guide" aria-hidden="true">04 .site-header::after strip</span>
+                  <span class="callout section-4-guide" aria-hidden="true">04 layered separator</span>
+                  <span class="callout under-scroll-guide" aria-hidden="true">04F content behind</span>
                   <span class="callout visible-shadow-guide" aria-hidden="true">04D visible shadow strip</span>
                   <span class="callout buffer-start-guide" aria-hidden="true">05A buffer starts</span>
                   <span class="callout buffer-guide" aria-hidden="true">05B 10px padding</span>
@@ -1341,6 +1372,13 @@
                 <span><code>.site-header</code> supplies <code>background: var(--paper)</code>; its border-box edge is the protected stacking boundary.</span>
               </div>
             </div>
+            <div class="layer-item layer-dom">
+              <span class="layer-code">04F</span>
+              <div>
+                <strong>Scrolling content behind the transparent strip</strong>
+                <span><code>main#top</code> keeps moving under the sticky stack; it remains visible anywhere the generated separator does not paint paper.</span>
+              </div>
+            </div>
             <div class="layer-item layer-buffer">
               <span class="layer-code">05A</span>
               <div>
@@ -1393,7 +1431,7 @@
               <span class="component-number">04</span>
               <div>
                 <p class="component-name"><code>.site-header::after</code> <small>(CSS only)</small></p>
-                <p class="component-description">The generated separator layer; its internal box, placement, transparency, and shadow paint are broken out as 04A-04E.</p>
+                <p class="component-description">The generated separator stack; its box, transparency, offset, shadow, paper edge, and underlying scroll layer are broken out as 04A-04F.</p>
                 <a class="source-ref" href="../style.css">style.css - .site-header::after</a>
               </div>
             </li>
