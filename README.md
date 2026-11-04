@@ -1,10 +1,12 @@
 # Danny Ng — Professional Profile
 
-This repository contains the static GitHub Pages profile site for Danny Ng. The site presents work in strategy, operations, transformation, and AI-enabled execution, alongside experience, education, side projects, and writing.
+This repository contains the static GitHub Pages personal portfolio for Danny Ng. The site presents a working philosophy, selected case studies, writing, practical software experiments, professional background, and contact details.
 
 ## Site content
 
-- `index.html` is the complete one-page profile: approach, experience, side projects, education, musings, and a link to the [NTU Economics Archives](https://dannyntc.github.io/NTU-Economics-archives/) for interactive economics analyses and research materials.
+- `index.html` is the main portfolio: introduction, Selected Work, How I Think, The Workbench, Experience & Education, and Get in Touch.
+- `work/` contains three detailed case studies covering HLS Interiors, Lu Strategy operations, and Premier's Tea market entry.
+- `thinking/` contains three essays, including one draft marked for editorial review.
 - `side-projects.html` and `musings.html` preserve older links by forwarding readers to the relevant `index.html` section.
 - Several root-level pages preserve older links by forwarding readers to the relevant current page or section.
 
@@ -12,7 +14,7 @@ For the complete page and asset map, see [docs/site-map.md](docs/site-map.md).
 
 ## Technology
 
-The site is built with hand-authored HTML, CSS, and JavaScript. Local assets include stylesheets, JavaScript, images, webfonts, and Sass source files under `assets/` and `images/`. There is no tracked build configuration in this repository.
+The site is built with hand-authored HTML, CSS, and a small navigation script. Local assets include stylesheets, JavaScript, images, webfonts, and Sass source files under `assets/` and `images/`. There is no tracked build configuration in this repository.
 
 ## Preview locally
 
