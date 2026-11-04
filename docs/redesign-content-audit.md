@@ -25,7 +25,7 @@ For overlapping career facts, the private CV supplied by the owner is the curren
 ## Essays and drafted copy
 
 - “Choosing the right tool for the problem” adapts the existing AI model selection essay.
-- “The hidden cost of automating everything” adapts the existing AI trade-offs essay.
+- “What I lose when AI does the first thinking” adapts the existing AI trade-offs essay; the URL remains thinking/hidden-cost-of-automation.html.
 - “Good processes should make work easier” is new editorial copy drafted from the documented emphasis on user feedback, training, standardisation, and adoption. Review before treating it as final personal writing.
 - Reflections on the project pages are editorial drafts grounded in the documented work. Review voice and personal specificity before publication.
 

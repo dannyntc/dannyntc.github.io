@@ -26,9 +26,10 @@ The site should feel like a well-kept personal working journal: warm paper, ink,
 
 ## Composition
 
-- A compact horizontal masthead replaces the fixed sidebar.
-- The introduction is spacious but keeps the next section within reach.
+- A compact sticky horizontal masthead replaces the fixed sidebar.
+- The introduction uses a restrained display headline and keeps the first evidence section within reach.
 - Selected Work uses open editorial rows rather than repeated cards.
+- The three connected dimensions of Danny's work follow Selected Work as a compact “thread” block.
 - How I Think is a typographic reading list.
 - The Workbench uses concise project entries with native disclosures for process detail.
 - Background is a two-column editorial timeline that collapses to one column.
