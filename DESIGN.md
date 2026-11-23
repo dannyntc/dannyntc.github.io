@@ -6,37 +6,38 @@ Personal portfolio in Experience mode with a strong Read mode for case studies a
 
 ## Visual world
 
-The site should feel like a well-kept personal working journal: warm paper, ink, blue annotations, quiet rules, and generous margins. The page should feel authored and reflective through precise observation, rather than through slogans or repeated self-description.
+The site follows the original profile layout: a warm off-white page, a fixed left sidebar on desktop, compact responsive navigation on smaller screens, thin neutral rules, and quiet blue/olive accents. Cards and borders organize information without creating colored section panels.
 
 ## Typography
 
-- Display and article headings use Source Serif 4 when available, with Georgia fallback.
-- Body and interface text use Source Sans 3 when available, with system sans-serif fallback.
+- Headings and body text use Source Sans Pro when available, with Helvetica and system sans-serif fallbacks.
+- Homepage and article headings use a compact scale and cap at approximately 26px.
+- Work, project, timeline, and essay titles stay around 18–20px.
 - Reading text stays around 65–75 characters per line.
-- Headings use restrained negative tracking, never below `-0.04em`.
+- Headings use normal tracking and weight to create hierarchy without oversized display type.
 
 ## Colour roles
 
 - `--paper`: warm off-white page surface.
-- `--paper-deep`: slightly darker paper for quiet callouts.
 - `--ink`: charcoal primary text.
 - `--muted`: readable secondary text.
 - `--blue`: ink-blue links and selected emphasis.
+- `--olive`: muted green for navigation and secondary links.
 - `--line`: low-contrast rules.
 
 ## Composition
 
-- A compact sticky horizontal masthead replaces the fixed sidebar.
-- The introduction uses a restrained display headline and keeps the first evidence section within reach.
-- Work uses open editorial rows rather than repeated cards; each row leads with context, contribution, and documented result.
-- Projects uses concise entries with native disclosures for implementation detail.
-- Writing is a typographic reading list for essays on tools, judgment, and usable processes.
-- About Me combines the professional timeline, education, community, and contact links.
-- Background remains a two-column editorial timeline that collapses to one column.
+- A fixed 246px desktop sidebar contains the portrait, identity, primary navigation, contact icons, and top link.
+- Below 1025px the sidebar becomes a compact sticky header with wrapped horizontal navigation.
+- The introduction uses a compact sans-serif headline and keeps the first evidence section within reach.
+- Work uses bordered full-width cards with context, contribution, and documented result.
+- Projects uses a two-column bordered-card grid with native disclosures for implementation detail.
+- Writing is a rule-separated reading list for essays on tools, judgment, and usable processes.
+- About Me combines bordered experience and education cards, community notes, and contact links without tinted backgrounds.
 
 ## Interaction
 
-- Navigation uses normal anchors and works without JavaScript.
+- Sidebar and responsive-header navigation use normal anchors and work without JavaScript.
 - Detail pages provide a home link and a parent-section return link.
 - Project detail uses native `<details>` disclosures.
 - Content is visible by default; no scroll reveal is required.
