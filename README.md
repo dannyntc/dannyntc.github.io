@@ -1,10 +1,12 @@
 # Danny Ng — Professional Profile
 
-This repository contains the static GitHub Pages profile site for Danny Ng. The site presents work in strategy, operations, transformation, and AI-enabled execution, alongside experience, education, side projects, and writing.
+This repository contains the static GitHub Pages personal portfolio for Danny Ng. The site presents documented work in strategy and operations, practical software projects, writing, professional background, and contact details.
 
 ## Site content
 
-- `index.html` is the complete one-page profile: approach, experience, side projects, education, musings, and a link to the [NTU Economics Archives](https://dannyntc.github.io/NTU-Economics-archives/) for interactive economics analyses and research materials.
+- `index.html` is the main portfolio: introduction, Work, Projects, Writing, and About Me.
+- `work/` contains three detailed case studies covering HLS Interiors, Lu Strategy operations, and Premier's Tea market entry.
+- `thinking/` contains three essays on tools, judgment, and usable processes.
 - `side-projects.html` and `musings.html` preserve older links by forwarding readers to the relevant `index.html` section.
 - Several root-level pages preserve older links by forwarding readers to the relevant current page or section.
 
@@ -12,7 +14,7 @@ For the complete page and asset map, see [docs/site-map.md](docs/site-map.md).
 
 ## Technology
 
-The site is built with hand-authored HTML, CSS, and JavaScript. Local assets include stylesheets, JavaScript, images, webfonts, and Sass source files under `assets/` and `images/`. There is no tracked build configuration in this repository.
+The site is built with hand-authored HTML, CSS, and a small navigation script. Local assets include stylesheets, JavaScript, images, webfonts, and Sass source files under `assets/` and `images/`. There is no tracked build configuration in this repository.
 
 ## Preview locally
 
@@ -30,4 +32,4 @@ This repository is intended for GitHub Pages deployment. GitHub Pages serves the
 
 ## Maintenance
 
-When updating the site, keep navigation, internal links, and forwarding pages aligned with the current content. Preview the site locally before publishing and review the resulting diff to ensure only intended content and asset changes are included.
+When updating the site, keep navigation, internal links, and forwarding pages aligned with the current content. Preserve the documented boundaries in `docs/redesign-content-audit.md`. Preview the site locally before publishing and review the resulting diff to ensure only intended content and asset changes are included.
