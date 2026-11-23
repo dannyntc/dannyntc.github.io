@@ -29,7 +29,7 @@ The site follows the original profile layout: a warm off-white page, a fixed lef
 
 - A fixed 246px desktop sidebar contains the portrait, identity, primary navigation, contact icons, and top link.
 - Below 1025px the sidebar becomes a compact sticky header with wrapped horizontal navigation.
-- The introduction uses a compact sans-serif headline and a pipe-separated specialization line that wraps within the content column.
+- The introduction uses a compact sans-serif headline, a muted pipe-separated specialization line, and a 32px desktop separation between those roles.
 - Section headings begin with the heading itself; small blue eyebrow and article-kicker labels are not used as section markers.
 - The transition from the introduction to Work uses a tighter first-section rhythm while later sections retain their established spacing.
 - Work uses bordered full-width cards with context, contribution, and documented result.

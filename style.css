@@ -231,16 +231,16 @@ h4 { font-size: 1.125rem; line-height: 1.25; margin-bottom: 0.45rem; }
 
 .intro { max-width: 1120px; padding: 76px 0 44px; }
 
-.intro-meta { display: block; margin-bottom: 16px; }
-.intro-note { align-items: baseline; color: var(--ink); display: flex; flex-wrap: wrap; font-size: clamp(1.05rem, 1.55vw, 1.3rem); font-weight: 600; gap: 0.35rem 1rem; letter-spacing: -0.01em; line-height: 1.25; margin: 0; max-width: 950px; }
+.intro-meta { display: block; margin-bottom: 32px; }
+.intro-note { align-items: baseline; color: var(--muted); display: flex; flex-wrap: wrap; font-size: 1rem; font-weight: 500; gap: 0.35rem 1rem; letter-spacing: 0; line-height: 1.4; margin: 0; max-width: 950px; }
 .intro-note-point { min-width: 0; }
 .intro-note-separator { color: var(--muted); flex: 0 0 auto; }
 .intro-copy { max-width: 950px; }
 
 .intro h1 {
-  font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+  font-size: clamp(1.25rem, 1.8vw, 1.5rem);
   font-weight: 600;
-  line-height: 1.08;
+  line-height: 1.2;
   margin-bottom: 1rem;
   max-width: none;
 }
@@ -527,6 +527,7 @@ summary::marker { color: var(--blue); }
   section[id] { scroll-margin-top: 220px; }
 
   .intro { padding: 73px 0 42px; }
+  .intro-meta { margin-bottom: 28px; }
   .intro + .section { padding-top: 36px; }
   .section { padding: 54px 0 84px; }
   .bench-list,
@@ -548,6 +549,7 @@ summary::marker { color: var(--blue); }
 
   section[id] { scroll-margin-top: 300px; }
   .intro { padding: 54px 0 36px; }
+  .intro-meta { margin-bottom: 24px; }
   .intro + .section { padding-top: 30px; }
   .intro-note { display: block; }
   .intro-note-separator { display: inline-block; margin-inline: 0.55rem; }
