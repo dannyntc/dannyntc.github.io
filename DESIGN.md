@@ -18,7 +18,7 @@ The site follows the original profile layout: a warm off-white page, a fixed lef
 
 ## Colour roles
 
-- `--paper`: warm off-white page surface.
+- `--paper`: warm beige page surface (`#f6f2ea`) used consistently across the site.
 - `--ink`: charcoal primary text.
 - `--muted`: readable secondary text.
 - `--blue`: ink-blue links and selected emphasis.
@@ -29,7 +29,7 @@ The site follows the original profile layout: a warm off-white page, a fixed lef
 
 - A fixed 246px desktop sidebar contains the portrait, identity, primary navigation, contact icons, and top link.
 - Below 1025px the sidebar becomes a compact sticky header with wrapped horizontal navigation.
-- The introduction uses a compact sans-serif headline and keeps the first evidence section within reach.
+- The introduction uses a compact sans-serif headline and a 16px professional description that wraps within the content column.
 - Work uses bordered full-width cards with context, contribution, and documented result.
 - Projects uses a two-column bordered-card grid with native disclosures for implementation detail.
 - Writing is a rule-separated reading list for essays on tools, judgment, and usable processes.

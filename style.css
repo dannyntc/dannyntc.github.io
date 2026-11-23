@@ -1,11 +1,11 @@
 :root {
-  --paper: #f7f5f0;
+  --paper: #f6f2ea;
   --ink: #272722;
   --muted: #5d5d54;
   --olive: #69725c;
   --blue: #174a8b;
   --line: #d7d0c1;
-  --card: #f7f5f0;
+  --card: #f6f2ea;
 }
 
 * { box-sizing: border-box; }
@@ -235,8 +235,8 @@ h4 { font-size: 1.125rem; line-height: 1.25; margin-bottom: 0.45rem; }
 
 .intro { max-width: 1120px; padding: 76px 0 78px; }
 
-.intro-meta { display: block; margin-bottom: 14px; }
-.intro-note { color: var(--muted); font-size: 1rem; margin: 0; }
+.intro-meta { display: block; margin-bottom: 20px; }
+.intro-note { color: var(--muted); font-size: 1rem; line-height: 1.5; margin: 6px 0 0; max-width: 680px; }
 .intro-copy { max-width: 950px; }
 
 .intro h1 {
@@ -265,7 +265,7 @@ h4 { font-size: 1.125rem; line-height: 1.25; margin-bottom: 0.45rem; }
 }
 
 .section--tinted,
-.section--background { background: transparent; }
+.section--background { background: var(--paper); }
 
 .section-heading { margin-bottom: 30px; }
 .section-heading > .eyebrow { margin-bottom: 8px; }
