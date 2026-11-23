@@ -21,18 +21,9 @@ This document describes the site structure represented by the files currently tr
 
 The primary navigation connects the homepage sections. GitHub and LinkedIn are in the masthead; email and WhatsApp are available in About Me under Contact.
 
-## Forwarding pages
+## Removed legacy routes
 
-| Path | Current role |
-| --- | --- |
-| `profile.html` | Points readers to `index.html#top`. |
-| `contact.html` | Points readers to `index.html#contact`. |
-| `experience.html` | Points readers to `index.html#background`. |
-| `education.html` | Points readers to `index.html#education`. |
-| `projects.html` and `side-projects.html` | Point readers to `index.html#workbench`. |
-| `musings.html` | Points readers to `index.html#how-i-think`. |
-
-`case-studies.html` and `roadmap-hover-demo.html` were intentionally removed during the one-page redesign.
+The previous standalone routes `profile.html`, `contact.html`, `experience.html`, `education.html`, `projects.html`, `side-projects.html`, and `musings.html` were removed when the approved redesign became the canonical site. Their content is represented by the homepage sections and reading pages above.
 
 ## Assets and behaviour
 
