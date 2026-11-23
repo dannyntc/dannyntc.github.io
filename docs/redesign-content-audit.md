@@ -25,12 +25,12 @@ For overlapping career facts, the private CV supplied by the owner is the curren
 ## Essays and drafted copy
 
 - “Choosing the right tool for the problem” adapts the existing AI model selection essay.
-- “What I lose when AI does the first thinking” adapts the existing AI trade-offs essay; the URL remains thinking/hidden-cost-of-automation.html.
-- “Good processes should make work easier” is new editorial copy drafted from the documented emphasis on user feedback, training, standardisation, and adoption. Review before treating it as final personal writing.
-- Reflections on the project pages are editorial drafts grounded in the documented work. Review voice and personal specificity before publication.
+- “When AI does the first thinking” adapts the existing AI trade-offs essay; the URL remains thinking/hidden-cost-of-automation.html.
+- “When a process becomes easier to use” is editorial copy grounded in the documented emphasis on user feedback, training, standardisation, and adoption. Review before treating it as final personal writing.
+- Reflections on the project pages are proposed publication copy grounded in the documented work. Review voice and personal specificity before publication.
 
 ## Open editorial review
 
-- Confirm the first-person voice of the new essay and project reflections.
+- Confirm the first-person voice of the revised essays and project reflections.
 - Confirm whether “TranscribeBuddy” and “VideoBuddy” are the preferred public names.
 - Confirm the exact HLS date range shown on the final public site.

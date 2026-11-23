@@ -1,12 +1,12 @@
 # Danny Ng — Professional Profile
 
-This repository contains the static GitHub Pages personal portfolio for Danny Ng. The site presents a working philosophy, selected case studies, writing, practical software experiments, professional background, and contact details.
+This repository contains the static GitHub Pages personal portfolio for Danny Ng. The site presents documented work in strategy and operations, practical software projects, writing, professional background, and contact details.
 
 ## Site content
 
-- `index.html` is the main portfolio: introduction, Selected Work, How I Think, The Workbench, Experience & Education, and Get in Touch.
+- `index.html` is the main portfolio: introduction, Work, Projects, Writing, and About Me.
 - `work/` contains three detailed case studies covering HLS Interiors, Lu Strategy operations, and Premier's Tea market entry.
-- `thinking/` contains three essays, including one draft marked for editorial review.
+- `thinking/` contains three essays on tools, judgment, and usable processes.
 - `side-projects.html` and `musings.html` preserve older links by forwarding readers to the relevant `index.html` section.
 - Several root-level pages preserve older links by forwarding readers to the relevant current page or section.
 
@@ -32,4 +32,4 @@ This repository is intended for GitHub Pages deployment. GitHub Pages serves the
 
 ## Maintenance
 
-When updating the site, keep navigation, internal links, and forwarding pages aligned with the current content. Preview the site locally before publishing and review the resulting diff to ensure only intended content and asset changes are included.
+When updating the site, keep navigation, internal links, and forwarding pages aligned with the current content. Preserve the documented boundaries in `docs/redesign-content-audit.md`. Preview the site locally before publishing and review the resulting diff to ensure only intended content and asset changes are included.

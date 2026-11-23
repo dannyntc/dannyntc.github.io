@@ -2,11 +2,11 @@
 
 ## Surface
 
-Personal portfolio in Experience mode with a strong Read mode for case studies and essays.
+Personal portfolio in Experience mode with a strong Read mode for case studies and essays. The site should read as a measured account of work: practical questions, documented contributions, and specific outcomes before interpretation.
 
 ## Visual world
 
-The site should feel like a well-kept personal working journal: warm paper, ink, blue annotations, quiet rules, and generous margins. The page should feel authored and reflective rather than like a generic consulting template.
+The site should feel like a well-kept personal working journal: warm paper, ink, blue annotations, quiet rules, and generous margins. The page should feel authored and reflective through precise observation, rather than through slogans or repeated self-description.
 
 ## Typography
 
@@ -28,11 +28,11 @@ The site should feel like a well-kept personal working journal: warm paper, ink,
 
 - A compact sticky horizontal masthead replaces the fixed sidebar.
 - The introduction uses a restrained display headline and keeps the first evidence section within reach.
-- Selected Work uses open editorial rows rather than repeated cards.
-- The three connected dimensions of Danny's work follow Selected Work as a compact “thread” block.
-- How I Think is a typographic reading list.
-- The Workbench uses concise project entries with native disclosures for process detail.
-- Background is a two-column editorial timeline that collapses to one column.
+- Work uses open editorial rows rather than repeated cards; each row leads with context, contribution, and documented result.
+- Projects uses concise entries with native disclosures for implementation detail.
+- Writing is a typographic reading list for essays on tools, judgment, and usable processes.
+- About Me combines the professional timeline, education, community, and contact links.
+- Background remains a two-column editorial timeline that collapses to one column.
 
 ## Interaction
 
